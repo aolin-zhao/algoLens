@@ -16,7 +16,6 @@ import {
 import Editor from "@monaco-editor/react";
 import { Drawer } from "@algovision/ui";
 import { WorkspaceSettings, useEditorPreferences } from "./workspace-settings";
-import { WorkspaceTimer } from "./workspace-timer";
 import { create } from "zustand";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -60,7 +59,7 @@ import "@algovision/ui/styles.css";
 import "./web.css";
 import "./responsive.css";
 import "./workspace.css";
-import "./leetcode.css";
+import "./leetcode-layout.css";
 
 type Problem = {
   id: string;
@@ -274,7 +273,7 @@ function ProblemList() {
             浏览题库 <ChevronRight size={15} />
           </a>
         </div>
-        <div className="catalog-feature">
+        <div className="catalog-feature spotlight">
           <Zap size={22} />
           <strong>让解题思路清晰可见</strong>
           <p>题目、代码、测试与图解，在同一个工作区里。</p>
@@ -411,10 +410,7 @@ function ProblemNavigator({ id }: { id: string }) {
     <Link to="/" onClick={() => setOpen(false)} className="drawer-catalog-link">查看全部题目 <ChevronRight size={14}/></Link>
   </Drawer></>;
 }
-function ProblemNotes({ id }: { id: string }) {
-  const [notes, setNotes] = useState(() => localStorage.getItem(`av_notes:${id}`) ?? "");
-  return <div className="notes-document"><div><strong>我的笔记</strong><span>本地自动保存</span></div><TextArea aria-label="题目笔记" placeholder="记录你的解题思路…" value={notes} onChange={event => {setNotes(event.target.value);localStorage.setItem(`av_notes:${id}`,event.target.value);}} /></div>;
-}
+
 function TestInput({ input, onChange, onValidity }: { input: string; onChange: (input: string) => void; onValidity: (valid: boolean) => void }) {
   let values: Record<string, unknown> | null = null;
   try { const parsed = JSON.parse(input); if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) values = parsed; } catch {}
@@ -589,7 +585,7 @@ function Workspace() {
   useEffect(() => { setCustomCases([]); setActiveCase(0); setCaseDrafts({}); }, [id]);
   if (error) return <p className="error">{errorZh(error)}</p>;
   if (!problem) return <Empty text="正在加载工作区…" />;
-  const runControl = <Button className="workspace-run-button" title={!runnable ? "此语言暂未接入运行" : !token ? "登录后运行" : "运行（⌘ / Ctrl + ’）"} aria-label="运行" onClick={run} disabled={busy || !runnable || !validInput || ["queued", "running"].includes(job?.status ?? "")}><Play size={15} fill="currentColor"/>{busy || ["queued", "running"].includes(job?.status ?? "") ? "运行中…" : null}</Button>;
+  const runControl = <Button variant="ghost" className="workspace-run-button" title={!runnable ? "此语言暂未接入运行" : !token ? "登录后运行" : "运行（⌘ / Ctrl + ’）"} aria-label="运行" onClick={run} disabled={busy || !runnable || !validInput || ["queued", "running"].includes(job?.status ?? "")}><Play size={15} fill="currentColor"/>{busy || ["queued", "running"].includes(job?.status ?? "") ? "运行中…" : null}</Button>;
   const cases = [...(problem.examples ?? []), ...customCases];
   const updateCode = (next: string) => {
     drafts.current[draftKey] = next;
@@ -602,12 +598,10 @@ function Workspace() {
       runControl={runControl}
       navigationControl={<ProblemNavigator id={id}/>}
       settingsControl={<WorkspaceSettings preferences={preferences} onChange={setPreferences} onReset={() => setResetKey(value => value + 1)}/>}
-      timerControl={<WorkspaceTimer problemId={id} autoReset={preferences.timerAutoReset} alert={preferences.timerAlert}/>}
       resetKey={resetKey}
       realtimeResize={preferences.realtimeResize}
       toolbarRun={preferences.runPosition === "toolbar"}
       panels={{
-        notes: <ProblemNotes key={id} id={id}/>,
         problem: (
           <div className="problem-document">
             <div className="problem-title">
