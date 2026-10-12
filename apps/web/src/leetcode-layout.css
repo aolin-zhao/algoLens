@@ -42,6 +42,13 @@
 .workspace-back:hover { color: var(--accent-text); }
 .workspace-run { position: static; margin-left: auto; transform: none; }
 .workspace-run .workspace-run-button { min-height: 32px; padding: 5px 18px; font-size: 13px; }
+.button.workspace-run-button,
+.button.workspace-run-button:hover:not(:disabled),
+.button.workspace-run-button:active:not(:disabled),
+.button.workspace-run-button:disabled { background: transparent; border-color: transparent; box-shadow: none; }
+.button.workspace-run-button { color: var(--accent-text); }
+.button.workspace-run-button:hover:not(:disabled) { color: var(--accent-bright); }
+.button.workspace-run-button:disabled { color: var(--muted); }
 .flexlayout__tabset { border-color: var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow); }
 .flexlayout__tabset_tabbar_outer { background: var(--surface); border-bottom: 1px solid var(--border); }
 .flexlayout__tab_button { padding: 8px 12px; gap: 6px; font-size: 12px; }

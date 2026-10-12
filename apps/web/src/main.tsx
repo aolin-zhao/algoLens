@@ -589,7 +589,7 @@ function Workspace() {
   useEffect(() => { setCustomCases([]); setActiveCase(0); setCaseDrafts({}); }, [id]);
   if (error) return <p className="error">{errorZh(error)}</p>;
   if (!problem) return <Empty text="正在加载工作区…" />;
-  const runControl = <Button className="workspace-run-button" title={!runnable ? "此语言暂未接入运行" : !token ? "登录后运行" : "运行（⌘ / Ctrl + ’）"} aria-label="运行" onClick={run} disabled={busy || !runnable || !validInput || ["queued", "running"].includes(job?.status ?? "")}><Play size={15} fill="currentColor"/>{busy || ["queued", "running"].includes(job?.status ?? "") ? "运行中…" : null}</Button>;
+  const runControl = <Button variant="ghost" className="workspace-run-button" title={!runnable ? "此语言暂未接入运行" : !token ? "登录后运行" : "运行（⌘ / Ctrl + ’）"} aria-label="运行" onClick={run} disabled={busy || !runnable || !validInput || ["queued", "running"].includes(job?.status ?? "")}><Play size={15} fill="currentColor"/>{busy || ["queued", "running"].includes(job?.status ?? "") ? "运行中…" : null}</Button>;
   const cases = [...(problem.examples ?? []), ...customCases];
   const updateCode = (next: string) => {
     drafts.current[draftKey] = next;
