@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { SettingsModal as Modal, Switch } from "@algovision/ui";
-import { Code2, Keyboard, LayoutGrid, FlaskConical, Settings, Sparkles, Timer } from "lucide-react";
+import { Code2, Keyboard, LayoutGrid, FlaskConical, Settings, Sparkles } from "lucide-react";
 import { Button, Select } from "@algovision/ui";
 
 export const defaultPreferences = {
   font: "default", fontSize: 13, ligatures: false, tabSize: 4,
   wordWrap: true, relativeLines: false, autocomplete: true,
   runPosition: "toolbar", realtimeResize: true, runShortcut: true,
-  timerAutoReset: false, timerAlert: false,
 };
 export type EditorPreferences = typeof defaultPreferences;
 export function useEditorPreferences() {
@@ -31,7 +30,7 @@ export function useEditorPreferences() {
 const sections = [
   ["layout", "灵动布局", LayoutGrid], ["editor", "代码编辑器", Code2],
   ["keyboard", "键盘快捷键", Keyboard], ["advanced", "高级设置", FlaskConical],
-  ["leet", "Leet", Sparkles], ["timer", "计时器", Timer],
+  ["leet", "Leet", Sparkles],
 ] as const;
 export function WorkspaceSettings({ preferences, onChange, onReset }: {
   preferences: EditorPreferences; onChange: (value: EditorPreferences) => void; onReset: () => void;
@@ -78,7 +77,6 @@ export function WorkspaceSettings({ preferences, onChange, onReset }: {
             <div className="setting-row"><div><strong>保存自定义布局</strong><p>在布局菜单中保存，存储在当前浏览器。</p></div></div>
           </>}
           {section === "leet" && <div className="settings-unavailable"><Sparkles size={25} /><h3>AI 编程助手</h3><p>尚未接入 AI 服务。你可以使用图解题解查看算法思路。</p></div>}
-          {section === "timer" && <>{toggle("timerAutoReset", "自动重置", "切换题目时重置计时器。")}{toggle("timerAlert", "结束提醒", "倒计时结束时显示提醒。")}</>}
         </section>
       </div>
     </Modal>

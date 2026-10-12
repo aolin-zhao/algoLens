@@ -22,12 +22,10 @@ import {
   RotateCcw,
   Sparkles,
   SquareTerminal,
-  NotebookPen,
-  MessageSquare,
 } from "lucide-react";
 import { Button } from "@algovision/ui";
 import "flexlayout-react/style/light.css";
-const keys = ["problem", "solution", "editor", "tests", "result", "notes"] as const;
+const keys = ["problem", "solution", "editor", "tests", "result"] as const;
 type Panel = (typeof keys)[number];
 const names: Record<Panel, string> = {
   problem: "题目描述",
@@ -35,7 +33,6 @@ const names: Record<Panel, string> = {
   editor: "代码",
   tests: "测试用例",
   result: "测试结果",
-  notes: "笔记",
 };
 const icons = {
   problem: BookOpen,
@@ -43,7 +40,6 @@ const icons = {
   editor: Code2,
   tests: FlaskConical,
   result: SquareTerminal,
-  notes: NotebookPen,
 };
 const storageKey = "av_docking_layout_v2";
 const global = {
@@ -72,7 +68,7 @@ const group = (id: string, panels: Panel[], weight = 50): IJsonTabSetNode => ({
   children: panels.map(tab),
 });
 function preset(
-  kind: "default" | "solution" | "notes" | "mobile" = "default",
+  kind: "default" | "solution" | "mobile" = "default",
 ): IJsonModel {
   if (kind === "mobile")
     return {
@@ -92,28 +88,34 @@ function preset(
     layout: {
       type: "row",
       children:
-        (kind === "solution" || kind === "notes")
+        kind === "solution"
           ? [
               group("description", ["problem"], 28),
-              group("explanation", [kind === "notes" ? "notes" : "solution"], 36),
+              group("explanation", ["solution"], 36),
               { ...right, weight: 36 },
             ]
           : [group("description", ["problem", "solution"]), right],
     },
   };
 }
+function loadLayout(json: IJsonModel) {
+  const model = Model.fromJson(json);
+  const removed: string[] = [];
+  let panelCount = 0;
+  model.visitNodes((node) => {
+    if (node instanceof TabNode) {
+      if (keys.includes(node.getComponent() as Panel)) panelCount++;
+      else removed.push(node.getId());
+    }
+  });
+  if (!panelCount) return Model.fromJson(preset());
+  removed.forEach(id => model.doAction(Actions.deleteTab(id)));
+  return model;
+}
 function restore() {
   try {
     const json = JSON.parse(localStorage.getItem(storageKey) ?? "null");
-    if (json) {
-      const model = Model.fromJson(json);
-      let valid = true;
-      model.visitNodes((n) => {
-        if (n instanceof TabNode && !keys.includes(n.getComponent() as Panel))
-          valid = false;
-      });
-      if (valid) return model;
-    }
+    if (json) return loadLayout(json);
   } catch {}
   return Model.fromJson(preset());
 }
@@ -139,7 +141,6 @@ export function IslandLayout({
   resultKey,
   navigationControl,
   settingsControl,
-  timerControl,
   resetKey,
   realtimeResize = true,
   toolbarRun = true,
@@ -149,7 +150,6 @@ export function IslandLayout({
   resultKey: string;
   navigationControl?: ReactNode;
   settingsControl?: ReactNode;
-  timerControl?: ReactNode;
   resetKey?: number;
   realtimeResize?: boolean;
   toolbarRun?: boolean;
@@ -161,7 +161,7 @@ export function IslandLayout({
   );
   const [settings, setSettings] = useState(false);
   const [custom, setCustom] = useState(() => !!localStorage.getItem("av_custom_layout"));
-  const [selected, setSelected] = useState<"default" | "solution" | "notes">("default");
+  const [selected, setSelected] = useState<"default" | "solution">("default");
   const [, setRevision] = useState(0);
   const menu = useRef<HTMLDivElement>(null);
   const model = mobile ? mobileModel : desktopModel;
@@ -210,7 +210,7 @@ export function IslandLayout({
       localStorage.setItem(storageKey, JSON.stringify(next.toJson()));
     setRevision((v) => v + 1);
   }
-  function reset(kind: "default" | "solution" | "notes") {
+  function reset(kind: "default" | "solution") {
     const next = Model.fromJson(preset(kind));
     setDesktopModel(next);
     localStorage.setItem(storageKey, JSON.stringify(next.toJson()));
@@ -251,7 +251,7 @@ export function IslandLayout({
     <main className="island-workspace docking-workspace">
       <div className="workspace-bar">
         {navigationControl ?? <Link className="workspace-back" to="/" aria-label="返回题目列表"><PanelLeft size={17} /> <span>题库</span></Link>}
-        <div className="workspace-run">{toolbarRun && runControl}<Button variant="ghost" title="笔记" aria-label="笔记" onClick={() => open("notes")}><MessageSquare size={17} /></Button></div>
+        <div className="workspace-run">{toolbarRun && runControl}</div>
         <div className="workspace-utilities">
         <div className="layout-menu-anchor" ref={menu}>
           <Button
@@ -274,7 +274,6 @@ export function IslandLayout({
                   [
                     ["default", "预设"],
                     ["solution", "题解"],
-                    ["notes", "笔记"],
                   ] as const
                 ).map(([key, label]) => (
                   <button
@@ -282,7 +281,7 @@ export function IslandLayout({
                     className={selected === key ? "selected" : ""}
                     onClick={() => setSelected(key)}
                   >
-                    <span className={`layout-thumbnail thumbnail-${key === "notes" ? "solution" : key}`}>
+                    <span className={`layout-thumbnail thumbnail-${key}`}>
                       <i />
                       <i />
                       <i />
@@ -313,7 +312,7 @@ export function IslandLayout({
                   </button>
                 ))}
               </div>
-              <div className="custom-layout-row"><strong>自定义布局</strong><Button variant="ghost" onClick={() => { localStorage.setItem("av_custom_layout", JSON.stringify(desktopModel.toJson())); setCustom(true); }}>保存当前布局</Button>{custom && <Button variant="secondary" onClick={() => { try { const next = Model.fromJson(JSON.parse(localStorage.getItem("av_custom_layout")!)); setDesktopModel(next); localStorage.setItem(storageKey, JSON.stringify(next.toJson())); setSettings(false); } catch { localStorage.removeItem("av_custom_layout"); setCustom(false); } }}>应用</Button>}</div>
+              <div className="custom-layout-row"><strong>自定义布局</strong><Button variant="ghost" onClick={() => { localStorage.setItem("av_custom_layout", JSON.stringify(desktopModel.toJson())); setCustom(true); }}>保存当前布局</Button>{custom && <Button variant="secondary" onClick={() => { try { const next = loadLayout(JSON.parse(localStorage.getItem("av_custom_layout")!)); setDesktopModel(next); localStorage.setItem(storageKey, JSON.stringify(next.toJson())); setSettings(false); } catch { localStorage.removeItem("av_custom_layout"); setCustom(false); } }}>应用</Button>}</div>
               <div className="layout-menu-footer">
                 <Button variant="ghost" onClick={() => reset("default")}>
                   <RotateCcw size={13} /> 恢复默认
@@ -325,7 +324,7 @@ export function IslandLayout({
             </div>
           )}
         </div>
-        {settingsControl}{timerControl}
+        {settingsControl}
         </div>
       </div>
       <div className="dock-surface">
