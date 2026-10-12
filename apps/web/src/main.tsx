@@ -60,7 +60,7 @@ import "@algovision/ui/styles.css";
 import "./web.css";
 import "./responsive.css";
 import "./workspace.css";
-import "./leetcode.css";
+import "./leetcode-layout.css";
 
 type Problem = {
   id: string;
@@ -274,7 +274,7 @@ function ProblemList() {
             浏览题库 <ChevronRight size={15} />
           </a>
         </div>
-        <div className="catalog-feature">
+        <div className="catalog-feature spotlight">
           <Zap size={22} />
           <strong>让解题思路清晰可见</strong>
           <p>题目、代码、测试与图解，在同一个工作区里。</p>
