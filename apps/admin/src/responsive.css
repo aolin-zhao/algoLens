@@ -1,0 +1,5 @@
+@media (max-width: 800px) {
+  .admin-layout { display: flex; flex-direction: column; }
+  .sidebar { height: 56px; flex: none; align-items: center; overflow-x: auto; overflow-y: hidden; }
+  .sidebar a { height: 42px; flex: none; }
+}

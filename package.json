@@ -1,0 +1,22 @@
+{
+  "name": "algovision",
+  "private": true,
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev:web": "pnpm --filter @algovision/web dev",
+    "dev:admin": "pnpm --filter @algovision/admin dev",
+    "dev:api": "pnpm --filter @algovision/api dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply algovision --local --config apps/api/wrangler.jsonc",
+    "db:migrate:remote": "wrangler d1 migrations apply algovision --remote --config apps/api/wrangler.jsonc",
+    "db:seed:local": "wrangler d1 execute algovision --local --config apps/api/wrangler.jsonc --file scripts/seed.sql"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "drizzle-kit": "^0.31.0",
+    "typescript": "^5.8.0",
+    "wrangler": "^4.40.0"
+  }
+}

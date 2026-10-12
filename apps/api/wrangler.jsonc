@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "algovision-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [{ "binding": "DB", "database_name": "algovision", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "../../migrations" }],
+  "r2_buckets": [{ "binding": "OBJECTS", "bucket_name": "algovision-objects" }],
+  "kv_namespaces": [{ "binding": "CACHE", "id": "00000000000000000000000000000000" }],
+  "queues": {
+    "producers": [{ "binding": "EXECUTIONS", "queue": "algovision-executions" }],
+    "consumers": [{ "queue": "algovision-executions", "max_batch_size": 1, "max_retries": 3, "dead_letter_queue": "algovision-executions-dlq" }]
+  },
+  "durable_objects": { "bindings": [{ "name": "PYTHON_RUNNER", "class_name": "PythonRunner" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PythonRunner"] }],
+  "containers": [{ "class_name": "PythonRunner", "image": "../../containers/python-runner/Dockerfile", "max_instances": 10 }],
+  "vars": { "APP_ORIGIN": "http://localhost:5173", "ADMIN_ORIGIN": "http://localhost:5174" }
+}

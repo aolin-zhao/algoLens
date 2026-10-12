@@ -1,0 +1,40 @@
+/* Default theme. Additional themes override these semantic tokens on html[data-theme]. */
+:root, :root[data-theme="linear"] {
+  --font-sans: "Inter", "Geist Sans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-size-base: 13px; --control-height: 38px;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --radius-sm: 6px; --radius-control: 8px; --radius-card: 16px; --radius-pill: 100px;
+  --duration-fast: 200ms; --duration-normal: 300ms; --duration-enter: 600ms;
+  --accent-soft: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-selected: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-outline: color-mix(in srgb, var(--accent) 50%, transparent);
+  --on-accent: #ededef; --accent-secondary: #b49ce0;
+  --ambient-primary: color-mix(in srgb, var(--accent) 24%, transparent);
+  --ambient-secondary: #8b5cc41f; --ambient-tertiary: #5479d21f;
+  --spotlight-color: color-mix(in srgb, var(--accent) 15%, transparent);
+  --highlight: #ffffff0d; --shine: #ffffff25; --highlight-strong: #ffffff33;
+  --overlay: #020203b3;
+  --shadow-accent: 0 0 0 1px var(--accent-outline), 0 4px 12px var(--accent-glow), inset 0 1px 0 var(--highlight-strong);
+  --shadow-accent-hover: 0 0 0 1px var(--accent-outline), 0 4px 24px var(--accent-glow), inset 0 1px 0 var(--highlight-strong);
+  --shadow-modal: inset 0 1px 0 var(--highlight), 0 24px 80px #02020380, 0 0 100px var(--accent-soft);
+  --editor-background: #ffffff; --editor-foreground: #242735;
+  --editor-line-number: #73798b; --editor-line-highlight: #171c3805; --editor-selection: #5e6ad240;
+
+  --bg-deep: #e8eaf3; --bg: #f5f6fa; --bg-elevated: #fff; --panel: #ffffffc9;
+  --surface: #171c3805; --surface-hover: #171c380a; --fg: #242735; --muted: #626879; --subtle: #73798b;
+  --accent: #5e6ad2; --accent-bright: #6872d9; --accent-text: #505aba; --accent-glow: color-mix(in srgb, var(--accent) 19%, transparent);
+  --border: #23284316; --border-hover: #23284328; --border-accent: color-mix(in srgb, var(--accent) 30%, transparent);
+  --success: #238362; --warning: #936613; --danger: #ba455d;
+  --shadow: inset 0 1px 0 #ffffff18, 0 2px 20px #19214208, 0 12px 40px #19214205;
+  --ease: cubic-bezier(.16, 1, .3, 1); color-scheme: light;
+}
+:root body.dark {
+  --editor-background: #0a0a0c; --editor-foreground: #ededef;
+  --editor-line-number: #626875; --editor-line-highlight: #ffffff05;
+  --bg-deep: #020203; --bg: #050506; --bg-elevated: #0a0a0c; --panel: #0d0d12dc;
+  --surface: #ffffff0d; --surface-hover: #ffffff14; --fg: #ededef;
+  --muted: #8a8f98; --subtle: #a1a5b0; --accent-text: #a5adff;
+  --border: #ffffff10; --border-hover: #ffffff1a; --success: #72d4ab; --warning: #e5c280; --danger: #f28b9f;
+  --shadow: inset 0 1px 0 #ffffff08, 0 2px 20px #02020366, 0 0 40px #02020333;
+  color-scheme: dark;
+}

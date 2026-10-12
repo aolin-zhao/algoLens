@@ -1,0 +1,3 @@
+ADMIN_BOOTSTRAP_TOKEN=replace-with-long-random-one-time-token
+# Local Podman fallback when Wrangler's container sidecar is unavailable:
+# LOCAL_RUNNER_URL=http://127.0.0.1:8081
