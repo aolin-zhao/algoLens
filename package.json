@@ -8,6 +8,7 @@
     "dev:api": "pnpm --filter @algovision/api dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
+    "test:runner": "python3 -m unittest discover -s containers/python-runner -p test_runtime.py -v",
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply algovision --local --config apps/api/wrangler.jsonc",
     "db:migrate:remote": "wrangler d1 migrations apply algovision --remote --config apps/api/wrangler.jsonc",

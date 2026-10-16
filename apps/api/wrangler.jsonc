@@ -13,6 +13,6 @@
   },
   "durable_objects": { "bindings": [{ "name": "PYTHON_RUNNER", "class_name": "PythonRunner" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PythonRunner"] }],
-  "containers": [{ "class_name": "PythonRunner", "image": "../../containers/python-runner/Dockerfile", "max_instances": 10 }],
+  "containers": [{ "class_name": "PythonRunner", "image": "../../containers/python-runner/Dockerfile", "instance_type": "basic", "max_instances": 10 }],
   "vars": { "APP_ORIGIN": "http://localhost:5173", "ADMIN_ORIGIN": "http://localhost:5174" }
 }

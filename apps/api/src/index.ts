@@ -7,6 +7,7 @@ import { audit, auditLogs, dashboard, dbFor, executionJobs, getExecution, langua
 import { PythonRunner } from './runner';
 import { createResource, deleteResource, listResource, updateResource } from './admin-resources';
 import type { Bindings, Variables, ExecutionMessage } from './types';
+import { executionLanguage } from './execution-languages';
 
 export { PythonRunner };
 
@@ -21,7 +22,8 @@ app.use('/api/*', async (c, next) => {
 const credentials = z.object({ email: z.email(), password: z.string().min(10).max(200) });
 const problemInput = z.object({ slug: z.string().regex(/^[a-z0-9-]{2,100}$/), title: z.string().min(2).max(200), description: z.string().min(1).max(50000), difficulty: z.enum(['easy', 'medium', 'hard']), status: z.enum(['draft', 'published']).default('draft') });
 const codeMode = z.enum(['core', 'main']);
-const invocationSchema = z.object({ className: z.string().regex(/^[A-Za-z_]\w*$/), method: z.string().regex(/^[A-Za-z_]\w*$/), arguments: z.array(z.string()).max(20) });
+const invocationSchema = z.object({ className: z.string().regex(/^[A-Za-z_]\w*$/), method: z.string().regex(/^[A-Za-z_]\w*$/), arguments: z.array(z.string()).max(20), adapter: z.enum(['two-sum']).optional() });
+const twoSumInput = z.object({ nums: z.array(z.number().int().min(-2147483648).max(2147483647)).min(1).max(10000), target: z.number().int().min(-2147483648).max(2147483647) });
 const executionInput = z.object({ mode: codeMode.default('main'), problemId: z.string().uuid(), languageId: z.string(), code: z.string().min(1).max(50000), input: z.string().max(20000).default('') });
 const jsonError = (error: unknown) => ({ error: error instanceof Error ? error.message : String(error) });
 
@@ -89,7 +91,8 @@ app.post('/api/executions', async c => {
     db.select().from(languages).where(and(eq(languages.id, languageId), eq(languages.enabled, true))).get(),
   ]);
   if (!problem || !language) return c.json({ error: 'Problem or language unavailable' }, 400);
-  if (language.id !== 'python' || language.supportLevel < 2) return c.json({ error: 'This language is not executable yet' }, 422);
+  const runtime = executionLanguage(language.id);
+  if (!runtime || language.supportLevel < 1) return c.json({ error: 'This language is not executable yet' }, 422);
   let invocation: string | undefined;
   if (mode === 'core') {
     const template = await db.select().from(languageTemplates).where(and(eq(languageTemplates.problemId, problemId), eq(languageTemplates.languageId, languageId), eq(languageTemplates.mode, mode), isNull(languageTemplates.deletedAt))).get();
@@ -97,14 +100,19 @@ app.post('/api/executions', async c => {
     try { rawConfig = JSON.parse(template?.invocation ?? 'null'); } catch {}
     const config = invocationSchema.safeParse(rawConfig);
     if (!config.success) return c.json({ error: 'Core code mode unavailable for this problem' }, 422);
-    try { const data = JSON.parse(input); if (!data || typeof data !== 'object' || Array.isArray(data) || config.data.arguments.some(key => !Object.hasOwn(data, key))) throw new Error(); }
+    if (!['python', 'javascript', 'typescript'].includes(languageId) && config.data.adapter !== 'two-sum') return c.json({ error: 'Core code mode unavailable for this problem' }, 422);
+    try {
+      const data = JSON.parse(input);
+      if (!data || typeof data !== 'object' || Array.isArray(data) || config.data.arguments.some(key => !Object.hasOwn(data, key))) throw new Error();
+      if (config.data.adapter === 'two-sum' && (!twoSumInput.safeParse(data).success || JSON.stringify(config.data.arguments) !== '["nums","target"]')) throw new Error();
+    }
     catch { return c.json({ error: 'Core mode requires a JSON object with the problem arguments' }, 400); }
     invocation = JSON.stringify(config.data);
   }
   const active = await db.select({ value: count() }).from(executionJobs).where(and(eq(executionJobs.userId, user.id), or(eq(executionJobs.status, 'queued'), eq(executionJobs.status, 'running')))).get();
   if ((active?.value ?? 0) >= 3) return c.json({ error: 'Too many queued runs' }, 429);
-  const id = crypto.randomUUID(), codeKey = `code/${user.id}/${id}.py`;
-  await c.env.OBJECTS.put(codeKey, code, { httpMetadata: { contentType: 'text/x-python' }, customMetadata: { mode, ...(invocation ? { invocation } : {}) } });
+  const id = crypto.randomUUID(), codeKey = `code/${user.id}/${id}.${runtime.extension}`;
+  await c.env.OBJECTS.put(codeKey, code, { httpMetadata: { contentType: 'text/plain; charset=utf-8' }, customMetadata: { mode, languageId, ...(invocation ? { invocation } : {}) } });
   try {
     await db.insert(executionJobs).values({ id, userId: user.id, languageId, codeKey, input, status: 'queued' });
     await c.env.EXECUTIONS.send({ jobId: id });
@@ -216,8 +224,8 @@ app.onError((error, c) => { console.error(error); return c.json({ error: 'Intern
 async function consume(message: Message<ExecutionMessage>, env: Bindings) {
   const id = message.body.jobId;
   if (!/^[0-9a-f-]{36}$/.test(id)) { message.ack(); return; }
-  const claim = await env.DB.prepare("UPDATE execution_jobs SET status='running',attempts=attempts+1,updated_at=? WHERE id=? AND (status='queued' OR (status='running' AND updated_at<?)) RETURNING user_id,code_key,input,attempts")
-    .bind(Date.now(), id, Date.now() - 120000).first<{ user_id: string; code_key: string; input: string; attempts: number }>();
+  const claim = await env.DB.prepare("UPDATE execution_jobs SET status='running',attempts=attempts+1,updated_at=? WHERE id=? AND (status='queued' OR (status='running' AND updated_at<?)) RETURNING user_id,code_key,input,language_id,attempts")
+    .bind(Date.now(), id, Date.now() - 120000).first<{ user_id: string; code_key: string; input: string; language_id: string; attempts: number }>();
   if (!claim) { message.ack(); return; }
   try {
     const codeObject = await env.OBJECTS.get(claim.code_key);
@@ -226,7 +234,8 @@ async function consume(message: Message<ExecutionMessage>, env: Bindings) {
     if (localRunner && (localRunner.protocol !== 'http:' || !['localhost', '127.0.0.1'].includes(localRunner.hostname))) throw new Error('Invalid local runner address');
     const target = localRunner ? new URL('/run', localRunner).toString() : 'http://container/run';
     const runner = localRunner ? null : env.PYTHON_RUNNER.getByName(id);
-    const response = await (runner ? runner.fetch(target, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ code: await codeObject.text(), input: claim.input, invocation: codeObject.customMetadata?.invocation ? JSON.parse(codeObject.customMetadata.invocation) : null }) }) : fetch(target, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ code: await codeObject.text(), input: claim.input, invocation: codeObject.customMetadata?.invocation ? JSON.parse(codeObject.customMetadata.invocation) : null }) }));
+    const request = { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ languageId: claim.language_id, code: await codeObject.text(), input: claim.input, invocation: codeObject.customMetadata?.invocation ? JSON.parse(codeObject.customMetadata.invocation) : null }) };
+    const response = await (runner ? runner.fetch(target, request) : fetch(target, request));
     if (!response.ok) throw new Error(`Runner returned ${response.status}`);
     const result = await response.json() as { stdout: string; stderr: string; exitCode: number; durationMs: number; frames: unknown[]; error?: string };
     const traceKey = `traces/${claim.user_id}/${id}/trace.json.gz`;

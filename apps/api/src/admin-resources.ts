@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { Bindings } from './types';
 import { audit } from './repository';
+import { executionLanguage } from './execution-languages';
 
 const specs = {
   roles: { table: 'roles', fields: { name: z.string().regex(/^[a-z][a-z0-9_-]{1,50}$/) }, search: 'name' },
@@ -57,7 +58,7 @@ export async function updateResource(env: Bindings, actorId: string, name: strin
   const parsed = inputFor(spec).safeParse(raw);
   if (!parsed.success) return { status: 400, body: { error: parsed.error.flatten() } };
   if (name === 'roles' && id === 'admin' && parsed.data.name !== 'admin') return { status: 403, body: { error: 'Core admin role cannot be renamed' } };
-  if (name === 'languages' && (id !== 'python' && (parsed.data.enabled !== 0 || parsed.data.support_level !== 0) || id === 'python' && parsed.data.support_level !== 2)) return { status: 400, body: { error: 'Support level must match the deployed runner' } };
+  if (name === 'languages' && (executionLanguage(id) ? parsed.data.support_level !== executionLanguage(id)!.supportLevel : parsed.data.enabled !== 0 || parsed.data.support_level !== 0)) return { status: 400, body: { error: 'Support level must match the deployed runner' } };
   const columns = Object.keys(parsed.data);
   try {
     const result = await env.DB.prepare(`UPDATE ${spec.table} SET ${columns.map(column => `${column}=?`).join(',')},updated_at=? WHERE ${'key' in spec ? 'key' : 'id'}=? AND deleted_at IS NULL`)

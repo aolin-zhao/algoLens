@@ -15,6 +15,13 @@
       "when": 1791789787924,
       "tag": "0001_worthless_dazzler",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792022400000,
+      "tag": "0002_multilanguage_execution",
+      "breakpoints": true
     }
   ]
 }
