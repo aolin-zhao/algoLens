@@ -22,14 +22,16 @@ import {
   RotateCcw,
   Sparkles,
   SquareTerminal,
+  Activity,
 } from "lucide-react";
 import { Button } from "@algovision/ui";
 import "flexlayout-react/style/light.css";
-const keys = ["problem", "solution", "editor", "tests", "result"] as const;
+const keys = ["problem", "trace", "solution", "editor", "tests", "result"] as const;
 type Panel = (typeof keys)[number];
 const names: Record<Panel, string> = {
   problem: "题目描述",
   solution: "图解题解",
+  trace: "实际运行轨迹",
   editor: "代码",
   tests: "测试用例",
   result: "测试结果",
@@ -37,6 +39,7 @@ const names: Record<Panel, string> = {
 const icons = {
   problem: BookOpen,
   solution: Sparkles,
+  trace: Activity,
   editor: Code2,
   tests: FlaskConical,
   result: SquareTerminal,
@@ -91,10 +94,10 @@ function preset(
         kind === "solution"
           ? [
               group("description", ["problem"], 28),
-              group("explanation", ["solution"], 36),
+              group("explanation", ["trace", "solution"], 36),
               { ...right, weight: 36 },
             ]
-          : [group("description", ["problem", "solution"]), right],
+          : [group("description", ["problem", "trace", "solution"]), right],
     },
   };
 }
@@ -110,6 +113,10 @@ function loadLayout(json: IJsonModel) {
   });
   if (!panelCount) return Model.fromJson(preset());
   removed.forEach(id => model.doAction(Actions.deleteTab(id)));
+  model.visitNodes(node => {
+    if (node instanceof TabNode && keys.includes(node.getComponent() as Panel))
+      model.doAction(Actions.renameTab(node.getId(), names[node.getComponent() as Panel]));
+  });
   return model;
 }
 function restore() {
@@ -139,6 +146,7 @@ export function IslandLayout({
   panels,
   runControl,
   resultKey,
+  traceKey,
   navigationControl,
   settingsControl,
   resetKey,
@@ -148,6 +156,7 @@ export function IslandLayout({
   panels: Record<Panel, ReactNode>;
   runControl: ReactNode;
   resultKey: string;
+  traceKey?: string;
   navigationControl?: ReactNode;
   settingsControl?: ReactNode;
   resetKey?: number;
@@ -194,6 +203,7 @@ export function IslandLayout({
   useEffect(() => {
     if (resultKey) open("result");
   }, [resultKey, model]);
+  useEffect(() => { if (traceKey) open("trace"); }, [traceKey, model]);
   useEffect(() => { if (resetKey) reset("default"); }, [resetKey]);
   useEffect(() => {
     const handle = (event: KeyboardEvent) => {
@@ -220,7 +230,7 @@ export function IslandLayout({
     const node = model.getNodeById(key);
     if (node) model.doAction(Actions.selectTab(key));
     else {
-      let target = model.getActiveTabset();
+      let target = key === "trace" ? model.getNodeById("solution")?.getParent() ?? model.getNodeById("problem")?.getParent() : model.getActiveTabset();
       if (!target)
         model.visitNodes((n) => {
           if (!target && n instanceof TabSetNode) target = n;

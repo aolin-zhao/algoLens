@@ -6,7 +6,8 @@
     "dev": "vite --port 5173",
     "build": "tsc -p tsconfig.json && vite build",
     "typecheck": "tsc -p tsconfig.json",
-    "test:diagram": "node --experimental-strip-types --test tests/solution-scenes.test.mjs"
+    "test:diagram": "node --experimental-strip-types --test tests/solution-scenes.test.mjs",
+    "test:trace": "node --experimental-strip-types --test tests/execution-trace.test.mjs"
   },
   "dependencies": {
     "@algovision/ui": "workspace:*",

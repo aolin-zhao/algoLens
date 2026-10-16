@@ -21,6 +21,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { IslandLayout } from "./workspace-layout";
 import { SolutionDiagram } from "./solution-diagram";
+import { ExecutionTracePanel } from "./execution-trace-panel";
+import { parseExecutionTrace, previousScopeFrames, traceLineForEditor } from "./execution-trace";
 import { editorLanguages, starterCode } from "./editor-languages";
 import {
   ChevronRight,
@@ -440,6 +442,8 @@ function Workspace() {
     | Parameters<NonNullable<React.ComponentProps<typeof Editor>["onMount"]>>[1]
     | null
   >(null);
+  const traceDecorations = useRef<ReturnType<NonNullable<typeof editorRef.current>["createDecorationsCollection"]> | null>(null);
+  const traceHighlightRef = useRef<number | null>(null);
   function syncEditorTheme(monaco = monacoRef.current) {
     if (!monaco) return;
     const css = getComputedStyle(document.body);
@@ -485,7 +489,13 @@ function Workspace() {
   const [code, setCode] = useState("");
   const [input, setInput] = useState("");
   const [jobId, setJobId] = useState("");
-  const [runSnapshot, setRunSnapshot] = useState({input:"",output:""});
+  const [runSnapshot, setRunSnapshot] = useState({input:"",output:"",code:"",language:"python",draftKey:""});
+  const [traceStep, setTraceStep] = useState(0);
+  const [tracePlaying, setTracePlaying] = useState(false);
+  const [traceSpeed, setTraceSpeed] = useState(1);
+  const runRequest = useRef(0);
+  const contextRef = useRef(draftKey);
+  contextRef.current = draftKey;
 
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
@@ -504,25 +514,25 @@ function Workspace() {
         template,
     );
     setJobId("");
+    runRequest.current++;
+    setBusy(false);
+    setMessage("");
   }, [template, draftKey]);
   useEffect(() => {
     setInput(problem?.examples?.[0]?.input ?? "");
   }, [problem]);
   useEffect(() => {
     if (
-      problem?.templates?.length &&
-      !problem.templates.some(
-        (t) => t.languageId === language && t.mode === mode,
+      problem && mode === "core" &&
+      !problem.templates?.some(
+        (t) => t.languageId === language && t.mode === "core",
       )
     ) {
-      const available = problem.templates.find(
-        (t) => t.languageId === language,
-      );
-      if (available) setMode(available.mode);
+      setMode("main");
     }
   }, [problem, language, mode]);
   const { data: job } = useQuery({
-    queryKey: ["execution", jobId],
+    queryKey: ["execution", jobId, token],
     queryFn: () => request<Execution>(`/executions/${jobId}`, token),
     enabled: !!jobId && !!token,
     refetchInterval: (query) =>
@@ -530,10 +540,46 @@ function Workspace() {
         ? 1500
         : false,
   });
+  const sameRunContext = runSnapshot.draftKey === draftKey;
+  const traceQuery = useQuery({
+    queryKey: ["execution-trace", jobId, token],
+    queryFn: async () => parseExecutionTrace(await request<unknown>(`/executions/${jobId}/trace`, token)),
+    enabled: !!token && !!jobId && sameRunContext && runSnapshot.language === "python" &&
+      !!job?.result && ["completed", "failed"].includes(job.status),
+    staleTime: Infinity,
+    retry: false,
+  });
+  const frames = useMemo(() => sameRunContext ? traceQuery.data?.frames ?? [] : [], [sameRunContext, traceQuery.data]);
+  const scopeHistory = useMemo(() => previousScopeFrames(frames), [frames]);
+  const currentStep = Math.min(traceStep, Math.max(0, frames.length - 1));
+  const currentFrame = frames[currentStep];
+  const highlightLine = traceLineForEditor(currentFrame, code, runSnapshot.code, sameRunContext);
+  traceHighlightRef.current = highlightLine;
+  function syncTraceHighlight() {
+    const line = traceHighlightRef.current;
+    traceDecorations.current?.set(line === null ? [] : [{
+      range: { startLineNumber: line, startColumn: 1, endLineNumber: line, endColumn: 1 },
+      options: { isWholeLine: true, className: "trace-current-line", linesDecorationsClassName: "trace-current-gutter" },
+    }]);
+    if (line !== null) editorRef.current?.revealLineInCenterIfOutsideViewport(line);
+  }
+  useEffect(() => { syncTraceHighlight(); }, [highlightLine, currentStep, draftKey, code]);
+  useEffect(() => () => { traceDecorations.current?.clear(); }, []);
+  useEffect(() => { setTraceStep(0); setTracePlaying(false); }, [jobId, traceQuery.data, draftKey, token]);
+  useEffect(() => {
+    if (!tracePlaying || !frames.length) return;
+    if (currentStep >= frames.length - 1) { setTracePlaying(false); return; }
+    const timer = window.setTimeout(() => setTraceStep(currentStep + 1), 1000 / traceSpeed);
+    return () => window.clearTimeout(timer);
+  }, [tracePlaying, currentStep, frames, traceSpeed]);
   async function run() {
     if (!problem) return;
     if (!token) { window.dispatchEvent(new Event("av:login")); return; }
-    setRunSnapshot({input,output:problem.examples?.find(example => example.input === input)?.output ?? ""});
+    const requestId = ++runRequest.current;
+    const requestContext = draftKey;
+    setRunSnapshot({input,output:problem.examples?.find(example => example.input === input)?.output ?? "",code,language,draftKey});
+    setTracePlaying(false);
+    setTraceStep(0);
     setBusy(true);
     setMessage("");
     setJobId("");
@@ -548,11 +594,11 @@ function Workspace() {
           input,
         }),
       });
-      setJobId(result.id);
+      if (runRequest.current === requestId && contextRef.current === requestContext) setJobId(result.id);
     } catch (e) {
-      setMessage(errorZh(e));
+      if (runRequest.current === requestId && contextRef.current === requestContext) setMessage(errorZh(e));
     } finally {
-      setBusy(false);
+      if (runRequest.current === requestId && contextRef.current === requestContext) setBusy(false);
     }
   }
   async function save() {
@@ -568,8 +614,7 @@ function Workspace() {
     }
   }
   const runnable =
-    language === "python" &&
-    !!languages?.some((l) => l.id === language && l.supportLevel >= 2) &&
+    !!languages?.some((l) => l.id === language && l.supportLevel >= 1) &&
     (mode === "main" ||
       !!problem?.templates?.some(
         (t) => t.languageId === language && t.mode === mode,
@@ -595,6 +640,7 @@ function Workspace() {
   return (
     <IslandLayout
       resultKey={jobId || message}
+      traceKey={frames.length ? jobId : ""}
       runControl={runControl}
       navigationControl={<ProblemNavigator id={id}/>}
       settingsControl={<WorkspaceSettings preferences={preferences} onChange={setPreferences} onReset={() => setResetKey(value => value + 1)}/>}
@@ -683,7 +729,7 @@ function Workspace() {
                 value={mode}
                 onChange={(v) => setMode(v as "core" | "main")}
                 options={[
-                  { value: "core", label: "核心代码" },
+                  { value: "core", label: "核心代码", disabled: !problem.templates?.some(t => t.languageId === language && t.mode === "core") },
                   { value: "main", label: "完整程序" },
                 ]}
               />
@@ -723,7 +769,9 @@ function Workspace() {
                   editorRef.current = editor;
                   editor.onDidChangeCursorPosition(event => setCursor(event.position));
                   monacoRef.current = monaco;
+                  traceDecorations.current = editor.createDecorationsCollection();
                   syncEditorTheme(monaco);
+                  syncTraceHighlight();
                 }}
                 onChange={(v) => updateCode(v ?? "")}
                 options={{
@@ -749,11 +797,20 @@ function Workspace() {
             {preferences.runPosition === "editor" && <div className="editor-run-actions">{runControl}</div>}
             <footer className="editor-footer">
               <span title="代码已自动保存到当前浏览器">已存储</span>
+              {highlightLine !== null && <span>轨迹 · 第 {highlightLine} 行</span>}
               <span>行 {cursor.lineNumber}，列 {cursor.column}</span>
             </footer>
           </>
         ),
         solution: <SolutionDiagram slug={problem.slug} input={input} />,
+        trace: <ExecutionTracePanel
+          frames={frames} previous={scopeHistory[currentStep]} step={currentStep}
+          playing={tracePlaying} speed={traceSpeed} onStep={setTraceStep} onPlaying={setTracePlaying} onSpeed={setTraceSpeed}
+          source={runSnapshot.code} input={runSnapshot.input} edited={sameRunContext && code !== runSnapshot.code}
+          status={job?.status} language={jobId ? runSnapshot.language : language}
+          loading={traceQuery.isFetching} error={traceQuery.error ? errorZh(traceQuery.error) : undefined}
+          onRetry={() => { void traceQuery.refetch(); }} failed={job?.status === "failed"}
+        />,
         tests: (
           <div className="test-document">
             <div className="test-tabs">
@@ -768,7 +825,7 @@ function Workspace() {
                   ? "登录后可运行代码"
                   : mode === "core"
                     ? "输入 JSON 参数，系统调用题目函数。"
-                    : "程序从标准输入读取 JSON，自行输出结果。"}
+                    : "程序从标准输入读取数据，自行输出结果。"}
             </p>
           </div>
         ),
@@ -797,10 +854,9 @@ function Workspace() {
                 )}
               </strong>
               <pre>
-                {job?.result?.stdout ||
-                  job?.result?.stderr ||
-                  job?.error ||
-                  (["queued", "running"].includes(job?.status ?? "") ? "正在执行，请稍候…" : "运行代码后，结果会显示在这里。")}
+                {job?.result
+                  ? [job.result.stdout, job.result.stderr].filter(Boolean).join("\n") || job.error || "程序已结束，没有输出。"
+                  : job?.error || (["queued", "running"].includes(job?.status ?? "") ? "正在执行，请稍候…" : "运行代码后，结果会显示在这里。")}
               </pre>
               {job?.result && <div className="result-details"><label>输入</label><pre>{runSnapshot.input}</pre>{runSnapshot.output && <><label>预期结果</label><pre>{runSnapshot.output}</pre></>}</div>}
               {job?.result && (
