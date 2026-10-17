@@ -256,22 +256,45 @@ function AuthModal({
     </Modal>
   );
 }
+const problemPageSize = 20;
+type ProblemPage = { items: Problem[]; total: number; page: number };
+
+function loadProblemPage(q: string, difficulty: string, page: number) {
+  return request<ProblemPage>(
+    `/problems?q=${encodeURIComponent(q)}&difficulty=${difficulty}&page=${page}&size=${problemPageSize}`,
+  );
+}
+
 function ProblemList() {
   const [q, setQ] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [page, setPage] = useState(1);
-  const pageSize = 20;
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isPlaceholderData, error } = useQuery({
     queryKey: ["problems", q, difficulty, page],
-    queryFn: () =>
-      request<{ items: Problem[]; total: number }>(
-        `/problems?q=${encodeURIComponent(q)}&difficulty=${difficulty}&page=${page}&size=${pageSize}`,
-      ),
+    queryFn: () => loadProblemPage(q, difficulty, page),
+    placeholderData: (previous, previousQuery) =>
+      previousQuery?.queryKey[1] === q && previousQuery.queryKey[2] === difficulty
+        ? previous
+        : undefined,
+    staleTime: 60_000,
   });
-  const pageCount = Math.ceil((data?.total ?? 0) / pageSize);
+  const pageCount = Math.ceil((data?.total ?? 0) / problemPageSize);
   useEffect(() => {
-    if (data && page > Math.max(1, pageCount)) setPage(Math.max(1, pageCount));
-  }, [data, page, pageCount]);
+    if (data && !isPlaceholderData && page > Math.max(1, pageCount)) setPage(Math.max(1, pageCount));
+  }, [data, isPlaceholderData, page, pageCount]);
+  useEffect(() => {
+    if (!data || isPlaceholderData || page >= pageCount) return;
+    void queryClient.prefetchQuery({
+      queryKey: ["problems", q, difficulty, page + 1],
+      queryFn: () => loadProblemPage(q, difficulty, page + 1),
+      staleTime: 60_000,
+    });
+  }, [data, isPlaceholderData, q, difficulty, page, pageCount]);
+  const changePage = (nextPage: number) => {
+    if (nextPage === page) return;
+    setPage(nextPage);
+    document.getElementById("problem-catalog")?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+  };
   const pageNumbers = Array.from(
     { length: Math.min(5, pageCount) },
     (_, index) => Math.min(Math.max(1, page - 2), Math.max(1, pageCount - 4)) + index,
@@ -328,7 +351,7 @@ function ProblemList() {
       ) : !data?.items.length ? (
         <Empty text="没有找到匹配的题目" />
       ) : (
-        <div className="problem-list">
+        <div className="problem-list" aria-busy={isPlaceholderData}>
           <div className="problem-list-heading" aria-hidden="true">
             <span>编号</span><span>题目</span><span>难度</span><span />
           </div>
@@ -336,11 +359,10 @@ function ProblemList() {
             <Link
               className="problem-row"
               key={problem.id}
-              style={{ animationDelay: `${Math.min(i, 8) * 80}ms` }}
               to={`/problems/${problem.id}`}
             >
               <span className="row-index">
-                {String((page - 1) * pageSize + i + 1).padStart(2, "0")}
+                {String((data.page - 1) * problemPageSize + i + 1).padStart(2, "0")}
               </span>
               <span className="row-title">
                 {problem.title}
@@ -364,13 +386,13 @@ function ProblemList() {
       )}
       {!isLoading && !error && pageCount > 1 && (
         <nav className="catalog-pagination" aria-label="题库分页">
-          <span>第 {page} / {pageCount} 页</span>
+          <span aria-live="polite">{isPlaceholderData ? `正在加载第 ${page} 页…` : `第 ${page} / ${pageCount} 页`}</span>
           <div className="catalog-page-buttons">
-            <Button variant="secondary" aria-label="上一页" title="上一页" disabled={page === 1} onClick={() => setPage(page - 1)}><ChevronLeft size={16} /></Button>
+            <Button variant="secondary" aria-label="上一页" title="上一页" disabled={page === 1} onClick={() => changePage(page - 1)}><ChevronLeft size={16} /></Button>
             {pageNumbers.map(number => (
-              <Button key={number} variant={number === page ? "primary" : "secondary"} aria-label={`第 ${number} 页`} aria-current={number === page ? "page" : undefined} onClick={() => setPage(number)}>{number}</Button>
+              <Button key={number} variant={number === page ? "primary" : "secondary"} aria-label={`第 ${number} 页`} aria-current={number === page ? "page" : undefined} onClick={() => changePage(number)}>{number}</Button>
             ))}
-            <Button variant="secondary" aria-label="下一页" title="下一页" disabled={page === pageCount} onClick={() => setPage(page + 1)}><ChevronRight size={16} /></Button>
+            <Button variant="secondary" aria-label="下一页" title="下一页" disabled={page === pageCount} onClick={() => changePage(page + 1)}><ChevronRight size={16} /></Button>
           </div>
         </nav>
       )}

@@ -38,6 +38,7 @@
 .problem-row:hover { background: var(--surface-hover); }
 .problem-row > svg { color: var(--muted); transition: transform var(--duration-fast) var(--ease); }
 .problem-row:hover > svg { transform: translateX(4px); color: var(--accent-text); }
+.catalog > .problem-list .problem-row { animation: none; }
 .catalog-pagination { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; color: var(--muted); font-size: 12px; }
 .catalog-page-buttons { display: flex; align-items: center; gap: 6px; }
 .catalog-page-buttons .button { min-width: 36px; height: 36px; padding: 0 8px; justify-content: center; }
