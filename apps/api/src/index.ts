@@ -1,5 +1,6 @@
 import { OpenAPIHono, createRoute, z } from '@hono/zod-openapi';
 import { cors } from 'hono/cors';
+import type { SelectedFields } from 'drizzle-orm/sqlite-core';
 import { and, count, desc, eq, isNull, like, or } from 'drizzle-orm';
 import { roles, userRoles, users, problemExamples, languageTemplates, visualizationTemplates, tags, problemTags, systemSettings } from '@algovision/db';
 import { createSession, getUser, hashPassword, revokeSession, verifyPassword } from './auth';
@@ -209,14 +210,34 @@ app.delete('/api/admin/problems/:id', async c => {
   return c.json({ ok: true });
 });
 
-const adminTables = { languages, tags, testCases, languageTemplates, problemExamples, visualizationTemplates, systemSettings } as const;
-app.get('/api/admin/executions', async c => c.json(await dbFor(c.env).select().from(executionJobs).orderBy(desc(executionJobs.createdAt)).limit(size(c.req.query('size'))).offset((page(c.req.query('page')) - 1) * size(c.req.query('size')))));
-app.get('/api/admin/audit-logs', async c => c.json(await dbFor(c.env).select().from(auditLogs).orderBy(desc(auditLogs.createdAt)).limit(size(c.req.query('size'))).offset((page(c.req.query('page')) - 1) * size(c.req.query('size')))));
-app.get('/api/admin/users', async c => c.json(await dbFor(c.env).select({ id: users.id, email: users.email, displayName: users.displayName, status: users.status, createdAt: users.createdAt }).from(users).where(isNull(users.deletedAt)).orderBy(desc(users.createdAt)).limit(size(c.req.query('size'))).offset((page(c.req.query('page')) - 1) * size(c.req.query('size')))));
+for (const kind of ['executions', 'audit-logs', 'users'] as const) {
+  app.get(`/api/admin/${kind}`, async c => {
+    const db = dbFor(c.env);
+    const current = page(c.req.query('page')), limit = size(c.req.query('size'));
+    const term = c.req.query('q')?.trim().slice(0, 100);
+    const table = kind === 'users' ? users : kind === 'executions' ? executionJobs : auditLogs;
+    const search = !term ? undefined : kind === 'users'
+      ? or(like(users.email, `%${term}%`), like(users.displayName, `%${term}%`))
+      : kind === 'executions'
+        ? or(like(executionJobs.id, `%${term}%`), like(executionJobs.userId, `%${term}%`), like(executionJobs.status, `%${term}%`))
+        : or(like(auditLogs.actorId, `%${term}%`), like(auditLogs.action, `%${term}%`), like(auditLogs.entity, `%${term}%`));
+    const where = and(kind === 'users' ? isNull(users.deletedAt) : undefined, search);
+    const selection: SelectedFields = kind === 'users'
+      ? { id: users.id, email: users.email, displayName: users.displayName, status: users.status, createdAt: users.createdAt }
+      : kind === 'executions'
+        ? { id: executionJobs.id, userId: executionJobs.userId, languageId: executionJobs.languageId, status: executionJobs.status, attempts: executionJobs.attempts, error: executionJobs.error, createdAt: executionJobs.createdAt }
+        : { id: auditLogs.id, actorId: auditLogs.actorId, action: auditLogs.action, entity: auditLogs.entity, entityId: auditLogs.entityId, detail: auditLogs.detail, createdAt: auditLogs.createdAt };
+    const [items, total] = await Promise.all([
+      db.select(selection).from(table).where(where).orderBy(desc(table.createdAt), desc(table.id)).limit(limit).offset((current - 1) * limit),
+      db.select({ value: count() }).from(table).where(where).get(),
+    ]);
+    return c.json({ items, total: total?.value ?? 0, page: current, size: limit });
+  });
+}
 app.get('/api/admin/objects', async c => {
   const prefix = c.req.query('prefix') ?? '';
   if (prefix && !/^(traces|code|uploads)\/[a-zA-Z0-9/_-]*$/.test(prefix)) return c.json({ error: 'Invalid prefix' }, 400);
-  const result = await c.env.OBJECTS.list({ prefix, limit: 100 });
+  const result = await c.env.OBJECTS.list({ prefix, limit: size(c.req.query('size')), cursor: c.req.query('cursor') || undefined });
   return c.json({ objects: result.objects.map(x => ({ key: x.key, size: x.size, uploaded: x.uploaded })), truncated: result.truncated, cursor: result.truncated ? result.cursor : null });
 });
 app.onError((error, c) => { console.error(error); return c.json({ error: 'Internal server error' }, 500); });

@@ -4,7 +4,10 @@ import { auditLogs, executionJobs, executionRecords, languages, problems, savedC
 import type { Bindings } from './types';
 
 export const dbFor = (env: Bindings) => drizzle(env.DB);
-export const page = (raw: string | undefined) => Math.max(1, Number.parseInt(raw ?? '1', 10) || 1);
+export const page = (raw: string | undefined) => {
+  const value = Number(raw ?? '1');
+  return Number.isSafeInteger(value) && value > 0 ? Math.min(value, Math.floor(Number.MAX_SAFE_INTEGER / 100)) : 1;
+};
 export const size = (raw: string | undefined) => Math.min(100, Math.max(1, Number.parseInt(raw ?? '20', 10) || 20));
 
 export async function listProblems(env: Bindings, params: { page?: string; size?: string; q?: string; difficulty?: string; admin?: boolean }) {
@@ -15,7 +18,7 @@ export async function listProblems(env: Bindings, params: { page?: string; size?
     term ? or(like(problems.title, `%${term}%`), like(problems.slug, `%${term}%`)) : undefined);
   const current = page(params.page), limit = size(params.size);
   const [items, total] = await Promise.all([
-    db.select().from(problems).where(where).orderBy(desc(problems.createdAt)).limit(limit).offset((current - 1) * limit),
+    db.select().from(problems).where(where).orderBy(desc(problems.createdAt), desc(problems.id)).limit(limit).offset((current - 1) * limit),
     db.select({ value: count() }).from(problems).where(where).get(),
   ]);
   return { items, total: total?.value ?? 0, page: current, size: limit };

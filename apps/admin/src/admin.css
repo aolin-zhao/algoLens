@@ -27,3 +27,7 @@
 .form-footer .button { flex: 1; }
 @media(max-width:800px) { .admin-layout { grid-template-columns: 1fr; } .sidebar { display: flex; overflow-x: auto; padding: 8px; border-right: 0; border-bottom: 1px solid var(--border); } .sidebar a { white-space: nowrap; margin: 0; } .admin-main { padding: 24px 16px; } .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .stat, .stat:first-child, .stat:last-child { grid-column: span 1; grid-row: span 1; padding: 20px; } .stat:first-child strong { font-size: 36px; } }
 @media(max-width:500px) { .page-head { align-items: start; flex-direction: column; } .login-form { padding: 28px; } .admin-controls .select { width: 110px; } }
+
+.pagination { flex-wrap: wrap; }
+.pagination .select { width: 130px; }
+.table td { max-width: 320px; overflow-wrap: anywhere; }

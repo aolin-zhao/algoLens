@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Bindings } from './types';
-import { audit } from './repository';
+import { audit, page as parsePage, size as parseSize } from './repository';
 import { executionLanguage } from './execution-languages';
 
 const specs = {
@@ -25,12 +25,12 @@ function inputFor(spec: NonNullable<ReturnType<typeof specFor>>) { return z.obje
 export async function listResource(env: Bindings, name: string, query: { page?: string; size?: string; q?: string }) {
   const spec = specFor(name);
   if (!spec) return null;
-  const page = Math.max(1, parseInt(query.page ?? '1', 10) || 1);
-  const size = Math.min(100, Math.max(1, parseInt(query.size ?? '20', 10) || 20));
+  const page = parsePage(query.page);
+  const size = parseSize(query.size);
   const term = (query.q ?? '').trim().slice(0, 100);
   const filter = term ? ` AND ${spec.search} LIKE ?` : '';
   const binds = term ? [`%${term}%`] : [];
-  const items = await env.DB.prepare(`SELECT * FROM ${spec.table} WHERE deleted_at IS NULL${filter} ORDER BY created_at DESC LIMIT ? OFFSET ?`).bind(...binds, size, (page - 1) * size).all();
+  const items = await env.DB.prepare(`SELECT * FROM ${spec.table} WHERE deleted_at IS NULL${filter} ORDER BY created_at DESC, ${'key' in spec ? 'key' : 'id'} DESC LIMIT ? OFFSET ?`).bind(...binds, size, (page - 1) * size).all();
   const total = await env.DB.prepare(`SELECT count(*) AS count FROM ${spec.table} WHERE deleted_at IS NULL${filter}`).bind(...binds).first<{ count: number }>();
   return { items: items.results, total: total?.count ?? 0, page, size };
 }

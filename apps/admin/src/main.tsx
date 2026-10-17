@@ -25,6 +25,7 @@ import { ThemeProvider, Select, TextArea, Badge, Button, Empty, Field, Input, Mo
 import "@algovision/ui/styles.css";
 import "./admin.css";
 import "./responsive.css";
+import { Pagination, usePageBounds } from "./Pagination";
 import { Resources } from "./Resources";
 
 type Problem = {
@@ -221,6 +222,7 @@ function ProblemForm({
 }
 function Problems({ token }: { token: string }) {
   const [page, setPage] = useState(1);
+  const [size, setSize] = useState(20);
   const [q, setQ] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [editing, setEditing] = useState<Problem | null>(null);
@@ -228,14 +230,15 @@ function Problems({ token }: { token: string }) {
   const [deleting, setDeleting] = useState<Problem | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const { data, isLoading, refetch } = useQuery({
-    queryKey: ["admin-problems", page, q, difficulty],
+  const { data, isLoading, isFetching, error: queryError, refetch } = useQuery({
+    queryKey: ["admin-problems", page, size, q, difficulty],
     queryFn: () =>
       api<ProblemPage>(
-        `/admin/problems?page=${page}&q=${encodeURIComponent(q)}&difficulty=${difficulty}`,
+        `/admin/problems?page=${page}&size=${size}&q=${encodeURIComponent(q)}&difficulty=${difficulty}`,
         token,
       ),
   });
+  usePageBounds(page, size, data?.total, setPage);
   async function save(value: Omit<Problem, "id">) {
     setBusy(true);
     setError("");
@@ -245,6 +248,7 @@ function Problems({ token }: { token: string }) {
         body: JSON.stringify(value),
       });
       setOpen(false);
+      await client.invalidateQueries({ queryKey: ["dashboard"] });
       await refetch();
     } catch (e) {
       setError(errorZh(e));
@@ -259,6 +263,7 @@ function Problems({ token }: { token: string }) {
     try {
       await api(`/admin/problems/${deleting.id}`, token, { method: "DELETE" });
       setDeleting(null);
+      await client.invalidateQueries({ queryKey: ["dashboard"] });
       await refetch();
     } catch (e) {
       setError(errorZh(e));
@@ -275,6 +280,7 @@ function Problems({ token }: { token: string }) {
         </div>
         <Button
           onClick={() => {
+            setError("");
             setEditing(null);
             setOpen(true);
           }}
@@ -299,7 +305,9 @@ function Problems({ token }: { token: string }) {
           onChange={(value) => { setDifficulty(value); setPage(1); }} options={[{"value": "", "label": "全部难度"}, {"value": "easy", "label": "简单"}, {"value": "medium", "label": "中等"}, {"value": "hard", "label": "困难"}]} />
       </div>
       {error && <p className="error">{error}</p>}
-      {isLoading ? (
+      {queryError ? (
+        <p className="error" role="alert">{errorZh(queryError)} <Button variant="secondary" onClick={() => refetch()}>重试</Button></p>
+      ) : isLoading ? (
         <Empty text="正在加载题目…" />
       ) : !data?.items.length ? (
         <Empty text="没有找到匹配的题目" />
@@ -349,6 +357,7 @@ function Problems({ token }: { token: string }) {
                         title="编辑"
                         aria-label="编辑"
                         onClick={() => {
+                          setError("");
                           setEditing(row);
                           setOpen(true);
                         }}
@@ -359,7 +368,7 @@ function Problems({ token }: { token: string }) {
                         className="icon-button"
                         title="删除"
                         aria-label="删除"
-                        onClick={() => setDeleting(row)}
+                        onClick={() => { setError(""); setDeleting(row); }}
                       >
                         <Trash2 size={15} />
                       </Button>
@@ -371,28 +380,13 @@ function Problems({ token }: { token: string }) {
           </table>
         </div>
       )}
-      <div className="pagination">
-        <Button
-          variant="secondary"
-          disabled={page === 1}
-          onClick={() => setPage(page - 1)}
-        >
-          上一页
-        </Button>
-        <span>第 {page} 页</span>
-        <Button
-          variant="secondary"
-          disabled={!data || page * data.size >= data.total}
-          onClick={() => setPage(page + 1)}
-        >
-          下一页
-        </Button>
-      </div>
+      <Pagination page={page} size={size} total={data?.total} busy={isFetching || !!queryError} onPage={setPage} onSize={value => { setSize(value); setPage(1); }} />
       <Modal
         title={editing ? "编辑题目" : "创建题目"}
         open={open}
-        onOpenChange={setOpen}
+        onOpenChange={value => { if (!busy) setOpen(value); }}
       >
+        {error && <p className="error" role="alert">{error}</p>}
         <ProblemForm
           key={editing?.id ?? "new"}
           initial={editing ?? undefined}
@@ -404,9 +398,10 @@ function Problems({ token }: { token: string }) {
         title="删除题目"
         open={!!deleting}
         onOpenChange={(value) => {
-          if (!value) setDeleting(null);
+          if (!busy && !value) setDeleting(null);
         }}
       >
+        {error && <p className="error" role="alert">{error}</p>}
         <p>
           确定删除题目 <strong>{deleting?.title}</strong>？
         </p>
@@ -429,22 +424,36 @@ function Records({
   token: string;
   kind: "users" | "executions" | "audit-logs" | "objects";
 }) {
-  const { data, error, isLoading } = useQuery({
-    queryKey: [kind],
-    queryFn: () => api<unknown>(`/admin/${kind}`, token),
+  const [page, setPage] = useState(1);
+  const [size, setSize] = useState(20);
+  const [q, setQ] = useState('');
+  const [search, setSearch] = useState('');
+  const [cursors, setCursors] = useState<string[]>(['']);
+  type Row = Record<string, unknown>;
+  type RecordPage = { items?: Row[]; total?: number; objects?: Row[]; cursor?: string | null; truncated?: boolean };
+  const { data, error, isLoading, isFetching, refetch } = useQuery({
+    queryKey: ['admin-records', kind, page, size, search, cursors[page - 1]],
+    queryFn: () => api<RecordPage>(`/admin/${kind}?${new URLSearchParams({ page: String(page), size: String(size), q: search, prefix: kind === 'objects' ? search : '', cursor: cursors[page - 1] ?? '' })}`, token),
   });
-  const rows = Array.isArray(data)
-    ? data
-    : kind === "objects"
-      ? ((data as { objects?: object[] })?.objects ?? [])
-      : [];
+  usePageBounds(page, size, data?.total, setPage);
+  const rows = data?.items ?? data?.objects ?? [];
+  const columns = rows.length ? Object.keys(rows[0]) : [];
+  function changePage(next: number) {
+    if (kind === 'objects' && next > page && data?.cursor) setCursors(current => [...current.slice(0, page), data.cursor!]);
+    setPage(next);
+  }
+
   return (
     <>
       <div className="page-head">
         <h1>{labelZh(kind)}</h1>
       </div>
+      <form className="admin-controls" onSubmit={event => { event.preventDefault(); setSearch(q.trim()); setPage(1); setCursors(['']); }}>
+        <Input aria-label="搜索记录" placeholder={kind === 'objects' ? '对象前缀，如 traces/' : kind === 'users' ? '搜索邮箱或昵称' : kind === 'executions' ? '搜索任务、用户标识或状态' : '搜索操作人、操作或资源'} value={q} onChange={event => setQ(event.target.value)} />
+        <Button type="submit">搜索</Button>
+      </form>
       {error ? (
-        <p className="error">{errorZh(error)}</p>
+        <p className="error" role="alert">{errorZh(error)} <Button variant="secondary" onClick={() => refetch()}>重试</Button></p>
       ) : isLoading ? (
         <Empty text="正在加载…" />
       ) : !rows.length ? (
@@ -454,8 +463,7 @@ function Records({
           <table className="table">
             <thead>
               <tr>
-                {Object.keys(rows[0])
-                  .slice(0, 7)
+                {columns
                   .map((key) => (
                     <th key={key}>{labelZh(key)}</th>
                   ))}
@@ -463,9 +471,8 @@ function Records({
             </thead>
             <tbody>
               {rows.map((row: Record<string, unknown>, i: number) => (
-                <tr key={i}>
-                  {Object.values(row)
-                    .slice(0, 7)
+                <tr key={String(row.id ?? row.key ?? i)}>
+                  {columns.map(key => row[key])
                     .map((value, j) => (
                       <td key={j}>
                         {typeof value === "object"
@@ -479,6 +486,7 @@ function Records({
           </table>
         </div>
       )}
+    <Pagination page={page} size={size} total={data?.total} hasNext={kind === "objects" ? !!data?.truncated : undefined} busy={isFetching || !!error} onPage={changePage} onSize={value => { setSize(value); setPage(1); setCursors(['']); }} />
     </>
   );
 }
@@ -493,6 +501,7 @@ function App() {
   }
   function logout() {
     localStorage.removeItem("av_admin_token");
+    client.clear();
     setToken("");
   }
   return (
@@ -565,19 +574,19 @@ function App() {
                 <Route path="/resources/:kind" element={<Resources token={token} api={api} />} />
                 <Route
                   path="/users"
-                  element={<Records token={token} kind="users" />}
+                  element={<Records key="users" token={token} kind="users" />}
                 />
                 <Route
                   path="/executions"
-                  element={<Records token={token} kind="executions" />}
+                  element={<Records key="executions" token={token} kind="executions" />}
                 />
                 <Route
                   path="/audit-logs"
-                  element={<Records token={token} kind="audit-logs" />}
+                  element={<Records key="audit-logs" token={token} kind="audit-logs" />}
                 />
                 <Route
                   path="/objects"
-                  element={<Records token={token} kind="objects" />}
+                  element={<Records key="objects" token={token} kind="objects" />}
                 />
               </Routes>
             </main>
