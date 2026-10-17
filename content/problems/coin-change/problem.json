@@ -1,0 +1,62 @@
+{
+  "id": "0544b2db-be27-4e73-8452-d9e1fdbb9543",
+  "slug": "coin-change",
+  "title": "322. 零钱兑换",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "breadth-first-search",
+    "array",
+    "dynamic-programming",
+    "knapsack-problem",
+    "complete-knapsack"
+  ],
+  "templates": [
+    {
+      "id": "6a133274-1887-4396-86d9-ca683a4d080a",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "coinChange",
+        "arguments": [
+          "coins",
+          "amount"
+        ]
+      }
+    },
+    {
+      "id": "07382a40-f044-4f38-83fe-742219be6d56",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "coinChange",
+        "arguments": [
+          "coins",
+          "amount"
+        ]
+      }
+    },
+    {
+      "id": "5109483b-7d97-47b7-87cd-33779463fa24",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "coinChange",
+        "arguments": [
+          "coins",
+          "amount"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

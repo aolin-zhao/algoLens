@@ -1,0 +1,23 @@
+[
+  {
+    "id": "67ae0c5b-3c2a-4205-832f-7c5aef62a607",
+    "input": "{\"s\":\"leetcode\",\"wordDict\":[\"leet\",\"code\"]}",
+    "output": "true",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "f8a65174-26aa-44a6-8479-4824a63b3e4d",
+    "input": "{\"s\":\"applepenapple\",\"wordDict\":[\"apple\",\"pen\"]}",
+    "output": "true",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "9b04d4a7-51d5-48e3-87e2-dfe348ee97e9",
+    "input": "{\"s\":\"catsandog\",\"wordDict\":[\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]}",
+    "output": "false",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

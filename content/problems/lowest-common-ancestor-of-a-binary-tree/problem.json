@@ -1,0 +1,19 @@
+{
+  "id": "8968704b-96ea-455e-83f9-67be42732b8a",
+  "slug": "lowest-common-ancestor-of-a-binary-tree",
+  "title": "236. 二叉树的最近公共祖先",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "binary-tree",
+    "lowest-common-ancestor",
+    "binary-lifting"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

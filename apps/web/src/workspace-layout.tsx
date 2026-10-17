@@ -30,7 +30,7 @@ const keys = ["problem", "trace", "solution", "editor", "tests", "result"] as co
 type Panel = (typeof keys)[number];
 const names: Record<Panel, string> = {
   problem: "题目描述",
-  solution: "图解题解",
+  solution: "题解",
   trace: "实际运行轨迹",
   editor: "代码",
   tests: "测试用例",

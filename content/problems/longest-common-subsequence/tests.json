@@ -1,0 +1,20 @@
+[
+  {
+    "id": "5275983e-f327-4a10-8c6b-62de84c26496",
+    "input": "{\"text1\":\"abcde\",\"text2\":\"ace\"}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "72a68199-3420-4794-8f7d-4adc3f96532c",
+    "input": "{\"text1\":\"abc\",\"text2\":\"abc\"}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "dfc84b4e-a445-4a9a-8869-b14ee23c7902",
+    "input": "{\"text1\":\"abc\",\"text2\":\"def\"}",
+    "expected_output": "0",
+    "hidden": 0
+  }
+]

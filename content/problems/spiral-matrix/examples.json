@@ -1,0 +1,16 @@
+[
+  {
+    "id": "da9ee9d3-4851-4acf-8952-d9e5a256b460",
+    "input": "{\"matrix\":[[1,2,3],[4,5,6],[7,8,9]]}",
+    "output": "[1,2,3,6,9,8,7,4,5]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "7722110b-6d4b-448b-8d7a-5af7d79ceb9e",
+    "input": "{\"matrix\":[[1,2,3,4],[5,6,7,8],[9,10,11,12]]}",
+    "output": "[1,2,3,4,8,12,11,10,9,5,6,7]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

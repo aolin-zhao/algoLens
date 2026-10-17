@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-linked-list-cycle-reference",
+  "slug": "reference",
+  "title": "哈希表",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-linked-list-cycle-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    }
+  ]
+}

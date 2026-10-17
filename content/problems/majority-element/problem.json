@@ -1,0 +1,60 @@
+{
+  "id": "10b8b364-b7d7-42f4-8eab-afb716ac1c05",
+  "slug": "majority-element",
+  "title": "169. 多数元素",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table",
+    "divide-and-conquer",
+    "counting",
+    "sorting",
+    "boyer-moore-majority-vote-algorithm"
+  ],
+  "templates": [
+    {
+      "id": "7766f1d2-8f91-4462-8412-a53c7515e4b2",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "majorityElement",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "e05938d9-43e9-4e44-85ba-876e23af68c7",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "majorityElement",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "c88809c3-0b01-4e20-8c5f-47c69fd54f2e",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "majorityElement",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

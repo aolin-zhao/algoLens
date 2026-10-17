@@ -1,0 +1,59 @@
+{
+  "id": "cfe179f6-ec9e-4de4-8681-59d60c4db1e2",
+  "slug": "search-insert-position",
+  "title": "35. 搜索插入位置",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search"
+  ],
+  "templates": [
+    {
+      "id": "2f0d1422-6563-48e0-8de8-1f6b0aded3da",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchInsert",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "1a87660a-21f5-4dce-88dd-c5b818d4c531",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchInsert",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "bfe8755b-4256-47aa-831d-a8ef2ce36d48",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchInsert",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

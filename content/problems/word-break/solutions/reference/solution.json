@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-word-break-reference",
+  "slug": "reference",
+  "title": "哈希表 + 动态规划",
+  "timeComplexity": "O(n^3)",
+  "spaceComplexity": "O(n)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-word-break-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-word-break-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-word-break-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-word-break-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-word-break-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-word-break-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

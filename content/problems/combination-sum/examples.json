@@ -1,0 +1,23 @@
+[
+  {
+    "id": "b7d73adc-3e52-488f-8bc7-8ec1f68c21a8",
+    "input": "{\"candidates\":[2,3,6,7],\"target\":7}",
+    "output": "[[2,2,3],[7]]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "bb596a25-f2cc-4c65-8eb9-55b71e516d2f",
+    "input": "{\"candidates\":[2,3,5],\"target\":8}",
+    "output": "[[2,2,2,2],[2,3,3],[3,5]]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "a7ac4608-4884-455b-8d25-74433bdde6b1",
+    "input": "{\"candidates\":[2],\"target\":1}",
+    "output": "[]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

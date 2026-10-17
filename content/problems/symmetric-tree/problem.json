@@ -1,0 +1,18 @@
+{
+  "id": "ea7fe5ea-9aa8-4f04-8533-85160fd75213",
+  "slug": "symmetric-tree",
+  "title": "101. 对称二叉树",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "breadth-first-search",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

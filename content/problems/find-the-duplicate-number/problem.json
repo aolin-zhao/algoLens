@@ -1,0 +1,60 @@
+{
+  "id": "ed9b7240-6d84-48e4-89cc-d825473e07d6",
+  "slug": "find-the-duplicate-number",
+  "title": "287. 寻找重复数",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "bit-manipulation",
+    "array",
+    "two-pointers",
+    "binary-search",
+    "floyds-cycle-finding-algorithm",
+    "pigeonhole-principle"
+  ],
+  "templates": [
+    {
+      "id": "d7ce8c00-43f4-4226-87e1-30d983ea5203",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "findDuplicate",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "77c4feb6-83df-4518-8011-eb84e0690045",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "findDuplicate",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "e3484553-5816-48b6-8261-518fff2aba05",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "findDuplicate",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

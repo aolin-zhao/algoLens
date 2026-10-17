@@ -1,0 +1,18 @@
+{
+  "id": "e440ec7e-e1b7-4c6b-8690-9bb898841417",
+  "slug": "binary-tree-inorder-traversal",
+  "title": "94. 二叉树的中序遍历",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "tree",
+    "depth-first-search",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

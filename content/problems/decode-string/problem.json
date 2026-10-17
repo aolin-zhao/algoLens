@@ -1,0 +1,57 @@
+{
+  "id": "7ad75068-634e-47b5-8ad9-c27f0037def9",
+  "slug": "decode-string",
+  "title": "394. 字符串解码",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "recursion",
+    "string"
+  ],
+  "templates": [
+    {
+      "id": "564e3521-3f08-4edb-8175-1749ace46e19",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "decodeString",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "5731dcc3-130f-4bd4-8006-c04c32904559",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "decodeString",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "068dbe6e-98e9-4d10-82c5-34cb99d039f5",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "decodeString",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "db1160d5-07a8-43bd-8f41-e47b78d41231",
+    "input": "{\"digits\":\"23\"}",
+    "output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "94c4cd25-9ada-47b5-8ff2-54e479bbdf8d",
+    "input": "{\"digits\":\"2\"}",
+    "output": "[\"a\",\"b\",\"c\"]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

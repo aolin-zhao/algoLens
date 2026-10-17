@@ -1,0 +1,58 @@
+{
+  "id": "b63ed46a-76fd-4d99-8317-f2f1669b4e56",
+  "slug": "longest-increasing-subsequence",
+  "title": "300. 最长递增子序列",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search",
+    "dynamic-programming",
+    "longest-increasing-subsequence"
+  ],
+  "templates": [
+    {
+      "id": "19dacf76-5b8d-461c-83f7-15bf4de1a4a3",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLIS",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "8277a612-1a6b-4e71-8f00-09ccfb1c96bd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLIS",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "df9569f7-bae3-4588-86e8-3d9aa839c537",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLIS",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

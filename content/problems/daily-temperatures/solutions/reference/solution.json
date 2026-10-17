@@ -1,0 +1,54 @@
+{
+  "id": "leetcode-daily-temperatures-reference",
+  "slug": "reference",
+  "title": "单调栈",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-daily-temperatures-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-daily-temperatures-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

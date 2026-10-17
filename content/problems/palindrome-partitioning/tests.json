@@ -1,0 +1,14 @@
+[
+  {
+    "id": "bfeb8fae-03cd-445d-800b-951d0c338ddd",
+    "input": "{\"s\":\"aab\"}",
+    "expected_output": "[[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]",
+    "hidden": 0
+  },
+  {
+    "id": "c415bb7f-490f-407e-89f7-e31f047930da",
+    "input": "{\"s\":\"a\"}",
+    "expected_output": "[[\"a\"]]",
+    "hidden": 0
+  }
+]

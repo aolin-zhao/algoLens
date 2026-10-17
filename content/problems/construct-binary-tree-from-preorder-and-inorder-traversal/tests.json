@@ -1,0 +1,14 @@
+[
+  {
+    "id": "d53efeb3-024f-4499-8b35-238ddab23bb4",
+    "input": "{\"preorder\":[3,9,20,15,7],\"inorder\":[9,3,15,20,7]}",
+    "expected_output": "[3,9,20,null,null,15,7]",
+    "hidden": 0
+  },
+  {
+    "id": "f3b4f2b5-a784-435a-8137-920f1733d4c2",
+    "input": "{\"preorder\":[-1],\"inorder\":[-1]}",
+    "expected_output": "[-1]",
+    "hidden": 0
+  }
+]

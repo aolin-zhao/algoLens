@@ -1,0 +1,19 @@
+{
+  "id": "47c2b2f9-8889-44a1-8896-334ca8563458",
+  "slug": "sort-colors",
+  "title": "75. 颜色分类",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers",
+    "bubble-sort",
+    "sorting",
+    "quicksort"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

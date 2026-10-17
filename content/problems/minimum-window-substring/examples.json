@@ -1,0 +1,23 @@
+[
+  {
+    "id": "842b4e48-4aab-4583-8aca-cf3e88897b21",
+    "input": "{\"s\":\"ADOBECODEBANC\",\"t\":\"ABC\"}",
+    "output": "\"BANC\"",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "b6f0837b-bf0b-47a0-8102-8ec10e3d2546",
+    "input": "{\"s\":\"a\",\"t\":\"a\"}",
+    "output": "\"a\"",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "0b907763-ceae-40fa-8533-2153153c6b6b",
+    "input": "{\"s\":\"a\",\"t\":\"aa\"}",
+    "output": "\"\"",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

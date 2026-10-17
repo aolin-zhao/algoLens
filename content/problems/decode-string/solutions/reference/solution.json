@@ -1,0 +1,30 @@
+{
+  "id": "leetcode-decode-string-reference",
+  "slug": "reference",
+  "title": "参考解法",
+  "timeComplexity": "O(n + 输出长度)",
+  "spaceComplexity": "O(n + 输出长度)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-decode-string-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-decode-string-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-decode-string-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    }
+  ]
+}

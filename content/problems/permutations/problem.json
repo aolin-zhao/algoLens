@@ -1,0 +1,56 @@
+{
+  "id": "01d557ba-465b-44b5-8cd1-f39424733999",
+  "slug": "permutations",
+  "title": "46. 全排列",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "backtracking"
+  ],
+  "templates": [
+    {
+      "id": "d0bd68c4-bcf2-479e-817b-072dd6d49424",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "permute",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "75f619c7-d6c3-441e-8e77-317612470413",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "permute",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "782f2151-e8f0-4eb6-8793-3dac8bcc43a7",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "permute",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

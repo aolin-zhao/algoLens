@@ -1,0 +1,56 @@
+{
+  "id": "fa87c22c-6014-4c5a-894f-31eaafbfdd58",
+  "slug": "longest-consecutive-sequence",
+  "title": "128. 最长连续序列",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table"
+  ],
+  "templates": [
+    {
+      "id": "a0c15a8e-7439-4121-835b-fab323bd4a6f",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestConsecutive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "d09da2b6-39e9-4002-85f5-da5c94fc12d0",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestConsecutive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "9445d0be-5802-46b2-8f58-3401a714ad80",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestConsecutive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

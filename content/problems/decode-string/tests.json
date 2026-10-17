@@ -1,0 +1,20 @@
+[
+  {
+    "id": "4850cc32-6acb-4843-83b0-b57c577ae55a",
+    "input": "{\"s\":\"3[a]2[bc]\"}",
+    "expected_output": "\"aaabcbc\"",
+    "hidden": 0
+  },
+  {
+    "id": "094dc72f-ed85-44d4-8fad-0d0c483eaccf",
+    "input": "{\"s\":\"3[a2[c]]\"}",
+    "expected_output": "\"accaccacc\"",
+    "hidden": 0
+  },
+  {
+    "id": "c7f4c350-771d-4251-8bcb-fb41ec89fe9d",
+    "input": "{\"s\":\"2[abc]3[cd]ef\"}",
+    "expected_output": "\"abcabccdcdcdef\"",
+    "hidden": 0
+  }
+]

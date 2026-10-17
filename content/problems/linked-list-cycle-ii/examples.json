@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a22f5dba-fa2e-4337-8a63-0164e3473857",
+    "input": "{\"head\":[3,2,0,-4],\"pos\":1}",
+    "output": "\"返回索引为 1 的链表节点\"",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "2642f378-05d4-4769-8e11-bc53862c4345",
+    "input": "{\"head\":[1,2],\"pos\":0}",
+    "output": "\"返回索引为 0 的链表节点\"",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "b5e6eec9-bc5d-4517-8692-0a383e390e2d",
+    "input": "{\"head\":[1],\"pos\":-1}",
+    "output": "\"返回 null\"",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

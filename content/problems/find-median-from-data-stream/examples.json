@@ -1,0 +1,9 @@
+[
+  {
+    "id": "00b7a2d8-fb25-4b76-8365-fa54a14f542e",
+    "input": "{\"operations\":[\"MedianFinder\",\"addNum\",\"addNum\",\"findMedian\",\"addNum\",\"findMedian\"],\"arguments\":[[],[1],[2],[],[3],[]]}",
+    "output": "[null,null,null,1.5,null,2]",
+    "explanation": null,
+    "sort_order": 0
+  }
+]

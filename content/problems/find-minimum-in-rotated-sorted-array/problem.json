@@ -1,0 +1,56 @@
+{
+  "id": "750a34d3-2d69-4e9e-836e-d59fca616583",
+  "slug": "find-minimum-in-rotated-sorted-array",
+  "title": "153. 寻找旋转排序数组中的最小值",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search"
+  ],
+  "templates": [
+    {
+      "id": "48884e5d-432d-4a16-8d5a-20d6c4ba4a87",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMin",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "20dd0ae2-0251-48cd-87cc-6b24406275a8",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMin",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "fbaf85db-485d-463e-8378-753647b8f245",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMin",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

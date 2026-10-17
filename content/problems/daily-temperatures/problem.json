@@ -1,0 +1,57 @@
+{
+  "id": "511e920b-30d1-4b43-8e07-42cc50bc4044",
+  "slug": "daily-temperatures",
+  "title": "739. 每日温度",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "array",
+    "monotonic-stack"
+  ],
+  "templates": [
+    {
+      "id": "4384d614-117f-42cd-8f32-4e624423f18f",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "dailyTemperatures",
+        "arguments": [
+          "temperatures"
+        ]
+      }
+    },
+    {
+      "id": "3cdb8d49-389e-49d4-8aaf-570ab9d00591",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "dailyTemperatures",
+        "arguments": [
+          "temperatures"
+        ]
+      }
+    },
+    {
+      "id": "8ac81121-4884-485b-88b9-2b2ff1ee0535",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "dailyTemperatures",
+        "arguments": [
+          "temperatures"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

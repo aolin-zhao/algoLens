@@ -1,0 +1,14 @@
+[
+  {
+    "id": "9276d572-ea9c-4737-8ae9-6010fb1f4e7d",
+    "input": "{\"root\":[10,5,-3,3,2,null,11,3,-2,null,1],\"targetSum\":8}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "3447694c-5f34-43db-8601-a24e777e446b",
+    "input": "{\"root\":[5,4,8,11,null,13,4,7,2,null,null,5,1],\"targetSum\":22}",
+    "expected_output": "3",
+    "hidden": 0
+  }
+]

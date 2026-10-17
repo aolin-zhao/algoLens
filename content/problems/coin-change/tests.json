@@ -1,0 +1,20 @@
+[
+  {
+    "id": "0c13b00f-cdd8-4d56-8354-961cb3600f0c",
+    "input": "{\"coins\":[1,2,5],\"amount\":11}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "379b2903-eff7-491d-8fbf-cf21cdeb743f",
+    "input": "{\"coins\":[2],\"amount\":3}",
+    "expected_output": "-1",
+    "hidden": 0
+  },
+  {
+    "id": "f1a7b9da-9d2d-46f2-843d-2140c38dc23e",
+    "input": "{\"coins\":[1],\"amount\":0}",
+    "expected_output": "0",
+    "hidden": 0
+  }
+]

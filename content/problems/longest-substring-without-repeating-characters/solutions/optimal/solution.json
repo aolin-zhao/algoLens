@@ -1,0 +1,60 @@
+{
+  "id": "leetcode-longest-substring-without-repeating-characters-optimal",
+  "slug": "optimal",
+  "title": "高效解法",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(min(n, 字符集大小))",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-longest-substring-without-repeating-characters-optimal-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "b1b0caff-b563-47bf-8452-472aabf7723f",
+  "slug": "3sum",
+  "title": "15. 三数之和",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers",
+    "sorting"
+  ],
+  "templates": [
+    {
+      "id": "577832da-ef20-4e78-8bd7-d30a37e2cbbd",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "threeSum",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "e5f637a5-9090-471b-80f1-2b56fc29a775",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "threeSum",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "4200c262-9ddc-4dc2-88c3-fd86b46f905d",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "threeSum",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

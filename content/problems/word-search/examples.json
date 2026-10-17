@@ -1,0 +1,23 @@
+[
+  {
+    "id": "b08dfecb-c285-4959-8073-e825c174a035",
+    "input": "{\"board\":[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]],\"word\":\"ABCCED\"}",
+    "output": "true",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "725511b4-47eb-4f2c-86f3-0776dc9806e2",
+    "input": "{\"board\":[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]],\"word\":\"SEE\"}",
+    "output": "true",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "2ea3f88e-58c0-4cd9-84c9-2fdf8d66ac16",
+    "input": "{\"board\":[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]],\"word\":\"ABCB\"}",
+    "output": "false",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

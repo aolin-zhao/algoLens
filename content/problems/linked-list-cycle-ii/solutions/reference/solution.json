@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-linked-list-cycle-ii-reference",
+  "slug": "reference",
+  "title": "快慢指针",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-linked-list-cycle-ii-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    }
+  ]
+}

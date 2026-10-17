@@ -1,0 +1,57 @@
+{
+  "id": "4688c4b7-05a6-40a2-8f45-49fc3917eed2",
+  "slug": "spiral-matrix",
+  "title": "54. 螺旋矩阵",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "matrix",
+    "simulation"
+  ],
+  "templates": [
+    {
+      "id": "71b4c70d-1385-43e4-813e-a95220683033",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "spiralOrder",
+        "arguments": [
+          "matrix"
+        ]
+      }
+    },
+    {
+      "id": "e2b51ea0-1be7-4936-8715-4b7eaefb5691",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "spiralOrder",
+        "arguments": [
+          "matrix"
+        ]
+      }
+    },
+    {
+      "id": "0249efe9-ca58-49c7-8757-ac3e464d2e5f",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "spiralOrder",
+        "arguments": [
+          "matrix"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

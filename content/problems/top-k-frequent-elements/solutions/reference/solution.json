@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-top-k-frequent-elements-reference",
+  "slug": "reference",
+  "title": "哈希表 + 优先队列（小根堆）",
+  "timeComplexity": "O(n × log k)",
+  "spaceComplexity": "O(k)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-top-k-frequent-elements-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

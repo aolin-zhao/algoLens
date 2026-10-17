@@ -1,0 +1,59 @@
+{
+  "id": "5bfebba4-5dce-43f9-82e6-24c0d4092142",
+  "slug": "edit-distance",
+  "title": "72. 编辑距离",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "string",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "f2ef1532-4617-40bd-85da-77daac228f51",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "minDistance",
+        "arguments": [
+          "word1",
+          "word2"
+        ]
+      }
+    },
+    {
+      "id": "e244ad83-b4d9-4bd6-8466-1651e3ab7e76",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "minDistance",
+        "arguments": [
+          "word1",
+          "word2"
+        ]
+      }
+    },
+    {
+      "id": "1443c302-e984-4292-8a7d-7d79e531561e",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "minDistance",
+        "arguments": [
+          "word1",
+          "word2"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

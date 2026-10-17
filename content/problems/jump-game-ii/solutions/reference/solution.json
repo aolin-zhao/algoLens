@@ -1,0 +1,54 @@
+{
+  "id": "leetcode-jump-game-ii-reference",
+  "slug": "reference",
+  "title": "贪心",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-jump-game-ii-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-jump-game-ii-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

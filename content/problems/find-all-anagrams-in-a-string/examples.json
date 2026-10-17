@@ -1,0 +1,16 @@
+[
+  {
+    "id": "add0b096-5fb9-4165-8657-dfeda5fb3050",
+    "input": "{\"s\":\"cbaebabacd\",\"p\":\"abc\"}",
+    "output": "[0,6]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "fb68426d-455b-4c43-8a43-80123fc52ccd",
+    "input": "{\"s\":\"abab\",\"p\":\"ab\"}",
+    "output": "[0,1,2]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

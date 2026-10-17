@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-find-all-anagrams-in-a-string-reference",
+  "slug": "reference",
+  "title": "滑动窗口",
+  "timeComplexity": "O(m × C)",
+  "spaceComplexity": "O(C)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-find-all-anagrams-in-a-string-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

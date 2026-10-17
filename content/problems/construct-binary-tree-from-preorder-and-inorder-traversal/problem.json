@@ -1,0 +1,19 @@
+{
+  "id": "620cfc12-20b1-4f8c-8d2d-b5d411b22c5d",
+  "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "title": "105. 从前序与中序遍历序列构造二叉树",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "array",
+    "hash-table",
+    "divide-and-conquer",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

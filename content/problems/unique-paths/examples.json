@@ -1,0 +1,16 @@
+[
+  {
+    "id": "4aee8dc2-1488-4435-8991-e78a6fcd3763",
+    "input": "{\"m\":3,\"n\":7}",
+    "output": "28",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "b8f80f07-c4a1-44c4-8cd9-e0c225ea94b6",
+    "input": "{\"m\":3,\"n\":2}",
+    "output": "3",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

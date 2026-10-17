@@ -1,0 +1,43 @@
+{
+  "id": "leetcode-two-sum-brute-force",
+  "slug": "brute-force",
+  "title": "暴力枚举",
+  "timeComplexity": "O(n²)",
+  "spaceComplexity": "O(1)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-two-sum-brute-force-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-two-sum-brute-force-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-two-sum-brute-force-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-two-sum-brute-force-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-two-sum-brute-force-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    }
+  ],
+  "sourceUrl": "https://leetcode.cn/problems/two-sum/solutions/434597/liang-shu-zhi-he-by-leetcode-solution/"
+}

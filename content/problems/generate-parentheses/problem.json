@@ -1,0 +1,58 @@
+{
+  "id": "089ef506-3af4-49d9-8e61-73f78a1ce607",
+  "slug": "generate-parentheses",
+  "title": "22. 括号生成",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "string",
+    "dynamic-programming",
+    "backtracking",
+    "bracket-sequences"
+  ],
+  "templates": [
+    {
+      "id": "5b4f5491-bd87-4f86-8d0d-7603e0aea7da",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "generateParenthesis",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "1ae1b296-9f6c-48f3-8f0a-724bcb2bacdd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "generateParenthesis",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "5615b1a2-382f-4e59-89f4-747c8e545db9",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "generateParenthesis",
+        "arguments": [
+          "n"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

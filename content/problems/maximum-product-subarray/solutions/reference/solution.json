@@ -1,0 +1,54 @@
+{
+  "id": "leetcode-maximum-product-subarray-reference",
+  "slug": "reference",
+  "title": "动态规划",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-maximum-product-subarray-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-maximum-product-subarray-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

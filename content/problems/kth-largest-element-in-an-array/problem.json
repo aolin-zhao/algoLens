@@ -1,0 +1,62 @@
+{
+  "id": "cede7c1d-f5d6-4e17-87c6-b090736d3a33",
+  "slug": "kth-largest-element-in-an-array",
+  "title": "215. 数组中的第K个最大元素",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "divide-and-conquer",
+    "quickselect",
+    "sorting",
+    "heap-priority-queue"
+  ],
+  "templates": [
+    {
+      "id": "08ac4fb2-a2ec-4db4-879e-edc0a44ed505",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "findKthLargest",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "6d8c279d-2f18-40d7-83d5-914ff0647e12",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "findKthLargest",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "a4d3df2f-388c-462e-87f1-ec3f3b05172d",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "findKthLargest",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

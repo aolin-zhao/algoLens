@@ -1,0 +1,8 @@
+[
+  {
+    "id": "a3cb8197-1ace-48ee-8169-284965ebe008",
+    "input": "{\"operations\":[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"],\"arguments\":[[],[-2],[0],[-3],[],[],[],[]]}",
+    "expected_output": "[null,null,null,null,-3,null,0,-2]",
+    "hidden": 0
+  }
+]

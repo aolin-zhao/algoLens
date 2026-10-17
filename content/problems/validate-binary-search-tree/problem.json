@@ -1,0 +1,18 @@
+{
+  "id": "7dbe7a13-45e5-4caa-8f48-7d788d30949d",
+  "slug": "validate-binary-search-tree",
+  "title": "98. 验证二叉搜索树",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "binary-search-tree",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

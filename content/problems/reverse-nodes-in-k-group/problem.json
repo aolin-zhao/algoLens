@@ -1,0 +1,16 @@
+{
+  "id": "140226db-ac85-4328-8db0-bed3ee92dfeb",
+  "slug": "reverse-nodes-in-k-group",
+  "title": "25. K 个一组翻转链表",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "recursion",
+    "linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "d6ac5261-84c5-4c5f-8612-e8ca59430239",
+    "input": "{\"head\":[3,2,0,-4],\"pos\":1}",
+    "expected_output": "\"返回索引为 1 的链表节点\"",
+    "hidden": 0
+  },
+  {
+    "id": "4de44e31-f659-41c8-849c-50314b544d05",
+    "input": "{\"head\":[1,2],\"pos\":0}",
+    "expected_output": "\"返回索引为 0 的链表节点\"",
+    "hidden": 0
+  },
+  {
+    "id": "45289ff3-be4a-4afe-87c3-14833e00d86f",
+    "input": "{\"head\":[1],\"pos\":-1}",
+    "expected_output": "\"返回 null\"",
+    "hidden": 0
+  }
+]

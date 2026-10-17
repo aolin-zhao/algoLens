@@ -1,0 +1,54 @@
+{
+  "id": "leetcode-median-of-two-sorted-arrays-reference",
+  "slug": "reference",
+  "title": "分治",
+  "timeComplexity": "O(m+n)",
+  "spaceComplexity": "O(log(m + n))",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-median-of-two-sorted-arrays-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "8548a12d-c580-40f9-8002-ba2de3969f36",
+  "slug": "jump-game-ii",
+  "title": "45. 跳跃游戏 II",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "greedy",
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "3a93fb56-49f5-4d7b-8cce-7c47f343020c",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "jump",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "5225ee84-13eb-4515-8cc2-92f54ae50ebd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "jump",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "7820c992-9d9c-4a6c-857b-8d999ef1b5ad",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "jump",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

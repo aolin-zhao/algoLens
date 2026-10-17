@@ -1,0 +1,56 @@
+{
+  "id": "1a0d7034-445a-4ac2-87c8-75bc8be3d044",
+  "slug": "maximum-subarray",
+  "title": "53. 最大子数组和",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "8669b945-7258-4f1a-8132-8bd85cbefbaa",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSubArray",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "cb7c5ddc-fab3-402a-8ba1-515e970871fd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSubArray",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "5fa0eb35-3480-4baf-861e-b7ecc4f8fbce",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSubArray",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

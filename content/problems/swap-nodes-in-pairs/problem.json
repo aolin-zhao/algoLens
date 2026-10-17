@@ -1,0 +1,16 @@
+{
+  "id": "a73ef10b-71c5-4e77-8373-8cf50cbe257e",
+  "slug": "swap-nodes-in-pairs",
+  "title": "24. 两两交换链表中的节点",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "recursion",
+    "linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

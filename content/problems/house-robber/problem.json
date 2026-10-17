@@ -1,0 +1,56 @@
+{
+  "id": "1688b2c3-14e3-486c-8a84-c9e7f0ab2200",
+  "slug": "house-robber",
+  "title": "198. 打家劫舍",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "9fa04b62-6b33-4fc4-8df1-f503b151230a",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "rob",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "6f2866e6-788c-4289-80b0-8e146a0842c9",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "rob",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "0dd0a62e-50b9-4c24-8eb7-11eb64a0d5b9",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "rob",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

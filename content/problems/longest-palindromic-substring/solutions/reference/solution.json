@@ -1,0 +1,60 @@
+{
+  "id": "leetcode-longest-palindromic-substring-reference",
+  "slug": "reference",
+  "title": "动态规划",
+  "timeComplexity": "O(n^3)",
+  "spaceComplexity": "O(n^2)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-longest-palindromic-substring-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

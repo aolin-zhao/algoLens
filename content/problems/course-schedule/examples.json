@@ -1,0 +1,16 @@
+[
+  {
+    "id": "a7e33635-fba8-4357-8751-7a1d7aca1247",
+    "input": "{\"numCourses\":2,\"prerequisites\":[[1,0]]}",
+    "output": "true",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "dbdf4617-a234-44a4-857e-089ba4b9c2e2",
+    "input": "{\"numCourses\":2,\"prerequisites\":[[1,0],[0,1]]}",
+    "output": "false",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

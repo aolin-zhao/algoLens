@@ -1,0 +1,16 @@
+{
+  "id": "6f54617a-2159-43f0-8307-126159f28ead",
+  "slug": "move-zeroes",
+  "title": "283. 移动零",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

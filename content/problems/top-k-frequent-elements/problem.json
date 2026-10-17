@@ -1,0 +1,65 @@
+{
+  "id": "74aec268-ac53-4dc7-8654-fe2b79d5a172",
+  "slug": "top-k-frequent-elements",
+  "title": "347. 前 K 个高频元素",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table",
+    "divide-and-conquer",
+    "bucket-sort",
+    "counting",
+    "quickselect",
+    "sorting",
+    "heap-priority-queue"
+  ],
+  "templates": [
+    {
+      "id": "994a9214-9e95-4b32-83d6-6776618c13e9",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "topKFrequent",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "42ead26d-4ba7-4c88-8a6f-b3494ab8678a",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "topKFrequent",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "c9a7615c-bf6a-4bac-8495-2dcfe2c60756",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "topKFrequent",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

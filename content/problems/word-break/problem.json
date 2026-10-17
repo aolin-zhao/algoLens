@@ -1,0 +1,64 @@
+{
+  "id": "afb54562-3684-447b-8073-b8f702a06512",
+  "slug": "word-break",
+  "title": "139. 单词拆分",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "trie",
+    "memoization",
+    "array",
+    "hash-table",
+    "string",
+    "dynamic-programming",
+    "brute-force-search"
+  ],
+  "templates": [
+    {
+      "id": "d128d9a2-37b7-4a8d-8daf-569eb139d0c4",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "wordBreak",
+        "arguments": [
+          "s",
+          "wordDict"
+        ]
+      }
+    },
+    {
+      "id": "03bd9b64-c5ec-4d9b-8814-1154ad653c83",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "wordBreak",
+        "arguments": [
+          "s",
+          "wordDict"
+        ]
+      }
+    },
+    {
+      "id": "292d29c9-8e84-45e7-886a-65a3833bd444",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "wordBreak",
+        "arguments": [
+          "s",
+          "wordDict"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

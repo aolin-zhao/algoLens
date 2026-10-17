@@ -1,0 +1,56 @@
+{
+  "id": "7e0acca9-bfb3-4fdc-875d-60c8773aa53f",
+  "slug": "single-number",
+  "title": "136. 只出现一次的数字",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "bit-manipulation",
+    "array"
+  ],
+  "templates": [
+    {
+      "id": "11f1a9f6-d945-4e3f-8f44-5e05d86beb35",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "singleNumber",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "39085ad0-7142-41da-8a66-3768842fcb03",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "singleNumber",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "12575ec6-d449-4476-85dd-2a3af4752882",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "singleNumber",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

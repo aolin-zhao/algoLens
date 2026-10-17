@@ -1,0 +1,16 @@
+{
+  "id": "829bd039-e655-4163-8a27-b5323a3978dc",
+  "slug": "merge-two-sorted-lists",
+  "title": "21. 合并两个有序链表",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "recursion",
+    "linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

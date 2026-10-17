@@ -1,0 +1,14 @@
+[
+  {
+    "id": "42e7efc8-8b68-467e-855f-596f4e507b31",
+    "input": "{\"root\":[1,2,3,4,5]}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "53acd703-0644-44d4-82d5-cc2122fe1908",
+    "input": "{\"root\":[1,2]}",
+    "expected_output": "1",
+    "hidden": 0
+  }
+]

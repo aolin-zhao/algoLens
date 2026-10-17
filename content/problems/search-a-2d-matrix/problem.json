@@ -1,0 +1,60 @@
+{
+  "id": "446da14d-e022-40c5-878b-ca7b26fda433",
+  "slug": "search-a-2d-matrix",
+  "title": "74. 搜索二维矩阵",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search",
+    "matrix"
+  ],
+  "templates": [
+    {
+      "id": "cdef9f60-e727-4cff-8b25-0f438e6deb24",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchMatrix",
+        "arguments": [
+          "matrix",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "3a6d74e6-3f80-463f-821d-7dd93de13699",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchMatrix",
+        "arguments": [
+          "matrix",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "72d74c8e-ccea-43cc-860d-f0086be6bbc6",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchMatrix",
+        "arguments": [
+          "matrix",
+          "target"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

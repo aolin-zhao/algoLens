@@ -1,0 +1,57 @@
+{
+  "id": "dc314fd8-83cd-499f-8832-4fd4ff259f15",
+  "slug": "letter-combinations-of-a-phone-number",
+  "title": "17. 电话号码的字母组合",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "string",
+    "backtracking"
+  ],
+  "templates": [
+    {
+      "id": "c46d60d3-fc33-46c7-8bef-949872e9849c",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "letterCombinations",
+        "arguments": [
+          "digits"
+        ]
+      }
+    },
+    {
+      "id": "dfca7ed4-6dc6-4753-88d6-b79dcfbf549c",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "letterCombinations",
+        "arguments": [
+          "digits"
+        ]
+      }
+    },
+    {
+      "id": "1a6be473-2211-431d-8905-aaead8461462",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "letterCombinations",
+        "arguments": [
+          "digits"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

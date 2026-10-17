@@ -1,0 +1,57 @@
+{
+  "id": "3be6b7d2-911d-43f2-8c7e-71549298333b",
+  "slug": "palindrome-partitioning",
+  "title": "131. 分割回文串",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "string",
+    "dynamic-programming",
+    "backtracking"
+  ],
+  "templates": [
+    {
+      "id": "4ad9d7ff-51be-4b0e-84b4-be9f23cd6385",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "partition",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "9352e50b-ec6a-4b04-8c55-0e3c5d1a7b52",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "partition",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "a9d57d7f-0af9-40ea-8df3-670511443349",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "partition",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "334aa019-4d7d-4ce4-8eb1-36ca00c80980",
+  "slug": "linked-list-cycle",
+  "title": "141. 环形链表",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "linked-list",
+    "two-pointers",
+    "floyds-cycle-finding-algorithm"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

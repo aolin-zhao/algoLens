@@ -1,0 +1,18 @@
+{
+  "id": "abfc4cab-764a-4c31-8e31-c4cd0ed46448",
+  "slug": "search-a-2d-matrix-ii",
+  "title": "240. 搜索二维矩阵 II",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search",
+    "divide-and-conquer",
+    "matrix"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

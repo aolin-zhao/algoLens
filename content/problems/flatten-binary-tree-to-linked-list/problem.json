@@ -1,0 +1,19 @@
+{
+  "id": "1e5cb7d0-cfe2-4476-81be-952ec2b01828",
+  "slug": "flatten-binary-tree-to-linked-list",
+  "title": "114. 二叉树展开为链表",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "tree",
+    "depth-first-search",
+    "linked-list",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

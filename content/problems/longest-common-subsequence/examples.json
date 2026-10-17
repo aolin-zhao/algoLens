@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ac42e313-a190-4d6f-8036-33deb8f8cdf7",
+    "input": "{\"text1\":\"abcde\",\"text2\":\"ace\"}",
+    "output": "3",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "9e495761-7a98-41ff-8861-6cb90dd3c7ab",
+    "input": "{\"text1\":\"abc\",\"text2\":\"abc\"}",
+    "output": "3",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "929a81e1-e84b-43b0-8cad-1c8654e4e5f3",
+    "input": "{\"text1\":\"abc\",\"text2\":\"def\"}",
+    "output": "0",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

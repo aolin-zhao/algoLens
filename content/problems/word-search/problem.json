@@ -1,0 +1,62 @@
+{
+  "id": "73c884fe-4209-4178-8863-8780079992e6",
+  "slug": "word-search",
+  "title": "79. 单词搜索",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "depth-first-search",
+    "array",
+    "string",
+    "backtracking",
+    "matrix"
+  ],
+  "templates": [
+    {
+      "id": "ed524026-473c-4d47-8fa0-f480ee685c16",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "exist",
+        "arguments": [
+          "board",
+          "word"
+        ]
+      }
+    },
+    {
+      "id": "b248a1e9-075b-4669-8960-353e3a35295d",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "exist",
+        "arguments": [
+          "board",
+          "word"
+        ]
+      }
+    },
+    {
+      "id": "22b1dcb1-d04c-4fda-80bc-c7c9b0a4bb5e",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "exist",
+        "arguments": [
+          "board",
+          "word"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

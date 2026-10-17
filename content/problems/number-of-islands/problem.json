@@ -1,0 +1,19 @@
+{
+  "id": "71565f4c-5df4-45e8-8036-ff36985265af",
+  "slug": "number-of-islands",
+  "title": "200. 岛屿数量",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "depth-first-search",
+    "breadth-first-search",
+    "union-find",
+    "array",
+    "matrix"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

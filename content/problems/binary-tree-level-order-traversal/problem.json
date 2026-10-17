@@ -1,0 +1,17 @@
+{
+  "id": "7b5f146f-670d-4d60-8b94-b064bdfee214",
+  "slug": "binary-tree-level-order-traversal",
+  "title": "102. 二叉树的层序遍历",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "breadth-first-search",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

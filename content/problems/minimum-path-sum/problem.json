@@ -1,0 +1,57 @@
+{
+  "id": "e0dad9e8-70f1-49ca-8a2c-e1a73b225129",
+  "slug": "minimum-path-sum",
+  "title": "64. 最小路径和",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming",
+    "matrix"
+  ],
+  "templates": [
+    {
+      "id": "3685ce04-4b65-4d2f-82c9-58ea4f5e69c4",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "minPathSum",
+        "arguments": [
+          "grid"
+        ]
+      }
+    },
+    {
+      "id": "a5501ac2-8bde-4cd5-8b1b-cc22a56bf850",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "minPathSum",
+        "arguments": [
+          "grid"
+        ]
+      }
+    },
+    {
+      "id": "e438bfb9-ada3-4889-8a47-ab75e78620a1",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "minPathSum",
+        "arguments": [
+          "grid"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "94fa2df4-f3d8-4c0a-8c52-24e1658c9027",
+  "slug": "course-schedule",
+  "title": "207. 课程表",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "depth-first-search",
+    "breadth-first-search",
+    "graph",
+    "topological-sort",
+    "directed-acyclic-graph"
+  ],
+  "templates": [
+    {
+      "id": "dd1763b0-f246-4995-861f-081bdd76237c",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "canFinish",
+        "arguments": [
+          "numCourses",
+          "prerequisites"
+        ]
+      }
+    },
+    {
+      "id": "576061f1-a415-46dd-8f87-3efad40d403a",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "canFinish",
+        "arguments": [
+          "numCourses",
+          "prerequisites"
+        ]
+      }
+    },
+    {
+      "id": "3ebb39a3-c151-48c7-8657-0ca961b5a8af",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "canFinish",
+        "arguments": [
+          "numCourses",
+          "prerequisites"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

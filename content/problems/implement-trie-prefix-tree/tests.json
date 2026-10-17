@@ -1,0 +1,8 @@
+[
+  {
+    "id": "a1fb91f4-ede2-45d4-8357-a8cb92fc85fa",
+    "input": "{\"operations\":[\"Trie\",\"insert\",\"search\",\"search\",\"startsWith\",\"insert\",\"search\"],\"arguments\":[[],[\"apple\"],[\"apple\"],[\"app\"],[\"app\"],[\"app\"],[\"app\"]]}",
+    "expected_output": "[null,null,true,false,true,null,true]",
+    "hidden": 0
+  }
+]

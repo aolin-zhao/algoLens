@@ -1,0 +1,18 @@
+{
+  "id": "28c94ad1-d921-4bbe-812e-0a249792392d",
+  "slug": "invert-binary-tree",
+  "title": "226. 翻转二叉树",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "breadth-first-search",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

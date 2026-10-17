@@ -1,0 +1,193 @@
+{
+  "id": "11111111-1111-4111-8111-111111111111",
+  "slug": "two-sum",
+  "title": "1. 两数之和",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table"
+  ],
+  "templates": [
+    {
+      "id": "22222222-2222-4222-8222-222222222222",
+      "languageId": "python",
+      "mode": "main",
+      "code": "templates/python-main.py",
+      "invocation": null
+    },
+    {
+      "id": "22222222-2222-4222-8222-222222222223",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000001",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000002",
+      "languageId": "javascript",
+      "mode": "main",
+      "code": "templates/javascript-main.js",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000003",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000004",
+      "languageId": "typescript",
+      "mode": "main",
+      "code": "templates/typescript-main.ts",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000005",
+      "languageId": "java",
+      "mode": "core",
+      "code": "templates/java-core.java",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000006",
+      "languageId": "java",
+      "mode": "main",
+      "code": "templates/java-main.java",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000007",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "templates/cpp-core.cpp",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000008",
+      "languageId": "cpp",
+      "mode": "main",
+      "code": "templates/cpp-main.cpp",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000009",
+      "languageId": "c",
+      "mode": "core",
+      "code": "templates/c-core.c",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000010",
+      "languageId": "c",
+      "mode": "main",
+      "code": "templates/c-main.c",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000011",
+      "languageId": "go",
+      "mode": "core",
+      "code": "templates/go-core.go",
+      "invocation": {
+        "className": "Solution",
+        "method": "twoSum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000012",
+      "languageId": "go",
+      "mode": "main",
+      "code": "templates/go-main.go",
+      "invocation": null
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000013",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "templates/rust-core.rs",
+      "invocation": {
+        "className": "Solution",
+        "method": "two_sum",
+        "arguments": [
+          "nums",
+          "target"
+        ],
+        "adapter": "two-sum"
+      }
+    },
+    {
+      "id": "55555555-5555-4555-8555-000000000014",
+      "languageId": "rust",
+      "mode": "main",
+      "code": "templates/rust-main.rs",
+      "invocation": null
+    }
+  ],
+  "solutions": [
+    "brute-force",
+    "hash-map"
+  ]
+}

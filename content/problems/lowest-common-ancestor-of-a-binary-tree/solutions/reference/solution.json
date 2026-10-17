@@ -1,0 +1,54 @@
+{
+  "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference",
+  "slug": "reference",
+  "title": "递归",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-lowest-common-ancestor-of-a-binary-tree-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

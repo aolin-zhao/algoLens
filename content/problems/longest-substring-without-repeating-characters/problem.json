@@ -1,0 +1,57 @@
+{
+  "id": "69ea8396-a164-43cd-89de-ea5b3b4f4ded",
+  "slug": "longest-substring-without-repeating-characters",
+  "title": "3. 无重复字符的最长子串",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+  ],
+  "templates": [
+    {
+      "id": "03f3f8d6-cf19-41a4-8f27-6d907c84f3a9",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLongestSubstring",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "84a8271c-d2a8-403d-80ec-b695305b3a99",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLongestSubstring",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "c600b284-0585-4943-830d-eccf727be978",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "lengthOfLongestSubstring",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

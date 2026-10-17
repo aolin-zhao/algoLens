@@ -1,0 +1,16 @@
+[
+  {
+    "id": "aae2b06d-70db-4389-8af7-24fe3aaec3fa",
+    "input": "{\"s\":\"aab\"}",
+    "output": "[[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "942483d8-fa71-429a-878a-92b187bc5f6e",
+    "input": "{\"s\":\"a\"}",
+    "output": "[[\"a\"]]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fe5e8969-9415-4d90-85a8-30b0d3001da1",
+    "input": "{\"prices\":[7,1,5,3,6,4]}",
+    "expected_output": "5",
+    "hidden": 0
+  },
+  {
+    "id": "2dc49107-9e65-4263-84e8-b1251bc91abf",
+    "input": "{\"prices\":[7,6,4,3,1]}",
+    "expected_output": "0",
+    "hidden": 0
+  },
+  {
+    "id": "06894265-6e08-4765-82c2-8073478215a7",
+    "input": "{\"prices\":[1]}",
+    "expected_output": "0",
+    "hidden": 1
+  },
+  {
+    "id": "df65872c-3d47-455d-8ebc-d2545bc0630c",
+    "input": "{\"prices\":[2,4,1,8]}",
+    "expected_output": "7",
+    "hidden": 1
+  }
+]

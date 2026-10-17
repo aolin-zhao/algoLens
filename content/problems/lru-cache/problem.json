@@ -1,0 +1,18 @@
+{
+  "id": "887644be-790e-45a3-8207-235d08b19b06",
+  "slug": "lru-cache",
+  "title": "146. LRU 缓存",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "design",
+    "hash-table",
+    "linked-list",
+    "doubly-linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "fd2997ad-3f8f-4f28-8f69-1c924343c8a0",
+    "input": "{\"s\":\"(()\"}",
+    "expected_output": "2",
+    "hidden": 0
+  },
+  {
+    "id": "04219795-e450-4b65-83e1-d662008e229d",
+    "input": "{\"s\":\")()())\"}",
+    "expected_output": "4",
+    "hidden": 0
+  },
+  {
+    "id": "690c4450-ba96-4d06-8f0f-90371321a43c",
+    "input": "{\"s\":\"\"}",
+    "expected_output": "0",
+    "hidden": 0
+  }
+]

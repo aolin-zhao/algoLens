@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cb3327a4-dbf7-4bdc-8615-84908c52813b",
+    "input": "{\"matrix\":[[1,3,5,7],[10,11,16,20],[23,30,34,60]],\"target\":3}",
+    "expected_output": "true",
+    "hidden": 0
+  },
+  {
+    "id": "b268dc6b-3970-4215-87b2-8ccaec67659f",
+    "input": "{\"matrix\":[[1,3,5,7],[10,11,16,20],[23,30,34,60]],\"target\":13}",
+    "expected_output": "false",
+    "hidden": 0
+  }
+]

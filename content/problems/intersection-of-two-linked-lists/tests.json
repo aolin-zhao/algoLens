@@ -1,0 +1,20 @@
+[
+  {
+    "id": "3f22b7c6-e519-4b5d-860f-2139841b2a67",
+    "input": "{\"intersectVal\":8,\"listA\":[4,1,8,4,5],\"listB\":[5,6,1,8,4,5],\"skipA\":2,\"skipB\":3}",
+    "expected_output": "\"Intersected at '8'\"",
+    "hidden": 0
+  },
+  {
+    "id": "89f77ded-0cfe-444a-8cc4-aa931dec27c6",
+    "input": "{\"intersectVal\":2,\"listA\":[1,9,1,2,4],\"listB\":[3,2,4],\"skipA\":3,\"skipB\":1}",
+    "expected_output": "\"Intersected at '2'\"",
+    "hidden": 0
+  },
+  {
+    "id": "2ee8088e-77c6-4663-8ea1-bee3dfeeb8ce",
+    "input": "{\"intersectVal\":0,\"listA\":[2,6,4],\"listB\":[1,5],\"skipA\":3,\"skipB\":2}",
+    "expected_output": "\"No intersection\"",
+    "hidden": 0
+  }
+]

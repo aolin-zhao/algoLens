@@ -1,0 +1,59 @@
+{
+  "id": "7d8194b6-de53-460b-8653-e93fdccc9d07",
+  "slug": "find-first-and-last-position-of-element-in-sorted-array",
+  "title": "34. 在排序数组中查找元素的第一个和最后一个位置",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search"
+  ],
+  "templates": [
+    {
+      "id": "d975b61c-097f-4dad-8a84-34315cadfc58",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchRange",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "c28454f4-f826-4678-8ae0-586f107cc850",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchRange",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "47908b10-f1a4-44d0-8ac6-de02f3f08bc0",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "searchRange",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

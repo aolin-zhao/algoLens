@@ -1,0 +1,19 @@
+{
+  "id": "4d8eff5c-82d9-4f20-88b2-f226b776c71f",
+  "slug": "sort-list",
+  "title": "148. 排序链表",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "linked-list",
+    "two-pointers",
+    "divide-and-conquer",
+    "sorting",
+    "merge-sort"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

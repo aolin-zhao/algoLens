@@ -1,0 +1,18 @@
+{
+  "id": "ec2b5b34-410b-455a-88e8-701b0c5f9321",
+  "slug": "binary-tree-right-side-view",
+  "title": "199. 二叉树的右视图",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "breadth-first-search",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "e7df6d4d-6bef-4368-82a1-c5881df8b97c",
+    "input": "{\"preorder\":[3,9,20,15,7],\"inorder\":[9,3,15,20,7]}",
+    "output": "[3,9,20,null,null,15,7]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "e7ad31ff-12d1-4625-8a5e-70448707879a",
+    "input": "{\"preorder\":[-1],\"inorder\":[-1]}",
+    "output": "[-1]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

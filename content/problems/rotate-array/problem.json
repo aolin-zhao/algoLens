@@ -1,0 +1,17 @@
+{
+  "id": "6a0f8bc3-018c-4d2c-8014-e517b293544f",
+  "slug": "rotate-array",
+  "title": "189. 轮转数组",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "math",
+    "two-pointers"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "828910fa-195e-457c-8019-c14cdc538030",
+  "slug": "unique-paths",
+  "title": "62. 不同路径",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "math",
+    "dynamic-programming",
+    "combinatorics"
+  ],
+  "templates": [
+    {
+      "id": "a69f29ac-0fc3-4f2e-87f7-82a3f7fc5f2c",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "uniquePaths",
+        "arguments": [
+          "m",
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "47374434-908f-4849-8465-a351d2966aba",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "uniquePaths",
+        "arguments": [
+          "m",
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "0ac6d04a-88b7-4d0b-8fd3-11243ae57193",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "uniquePaths",
+        "arguments": [
+          "m",
+          "n"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

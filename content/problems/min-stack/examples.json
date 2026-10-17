@@ -1,0 +1,9 @@
+[
+  {
+    "id": "ba3f9b6a-ad0a-44af-833f-7f0b3f9c262d",
+    "input": "{\"operations\":[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"],\"arguments\":[[],[-2],[0],[-3],[],[],[],[]]}",
+    "output": "[null,null,null,null,-3,null,0,-2]",
+    "explanation": null,
+    "sort_order": 0
+  }
+]

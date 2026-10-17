@@ -1,0 +1,16 @@
+[
+  {
+    "id": "6ea7cc66-0260-4fac-8a2c-e8e8dbdcd78c",
+    "input": "{\"nums\":[3,2,3]}",
+    "output": "3",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "ae068c12-0891-4502-873c-b3d2451bb5d1",
+    "input": "{\"nums\":[2,2,1,1,1,2,2]}",
+    "output": "2",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

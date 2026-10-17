@@ -1,0 +1,23 @@
+[
+  {
+    "id": "bd568b26-f30d-4f21-820e-4712fe65519f",
+    "input": "{\"coins\":[1,2,5],\"amount\":11}",
+    "output": "3",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "6cc4381e-a9f9-4725-8bb9-073f62c384b4",
+    "input": "{\"coins\":[2],\"amount\":3}",
+    "output": "-1",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "167781d0-025b-49b6-8f3e-39d9431a50f2",
+    "input": "{\"coins\":[1],\"amount\":0}",
+    "output": "0",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

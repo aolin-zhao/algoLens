@@ -1,0 +1,18 @@
+{
+  "id": "b371b991-15e8-4d88-8c70-77f02e4ea285",
+  "slug": "palindrome-linked-list",
+  "title": "234. 回文链表",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "recursion",
+    "linked-list",
+    "two-pointers"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

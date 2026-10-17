@@ -1,0 +1,48 @@
+{
+  "id": "leetcode-kth-smallest-element-in-a-bst-reference",
+  "slug": "reference",
+  "title": "中序遍历",
+  "timeComplexity": "O(h + k)",
+  "spaceComplexity": "O(h)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-kth-smallest-element-in-a-bst-reference-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ]
+}

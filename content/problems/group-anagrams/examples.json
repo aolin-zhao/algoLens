@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ee62f963-23f5-4f02-8987-12cd23582e90",
+    "input": "{\"strs\":[\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]}",
+    "output": "[[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "39fcc491-a527-429a-85ce-5720757e7687",
+    "input": "{\"strs\":[\"\"]}",
+    "output": "[[\"\"]]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "90e368e5-d95a-45d4-8d4f-d36a6f6590a8",
+    "input": "{\"strs\":[\"a\"]}",
+    "output": "[[\"a\"]]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

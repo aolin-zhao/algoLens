@@ -1,0 +1,16 @@
+{
+  "id": "fa075310-080d-4638-8131-e74ad5021e56",
+  "slug": "next-permutation",
+  "title": "31. 下一个排列",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

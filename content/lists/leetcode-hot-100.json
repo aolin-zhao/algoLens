@@ -1,0 +1,509 @@
+{
+  "id": "leetcode-hot-100",
+  "slug": "leetcode-hot-100",
+  "title": "力扣 Hot 100",
+  "description": "力扣热题 100 道经典题目，按官方学习计划分组，提供多语言参考题解。",
+  "sourceUrl": "https://leetcode.cn/studyplan/top-100-liked/",
+  "items": [
+    {
+      "problem": "two-sum",
+      "group": "哈希",
+      "order": 0
+    },
+    {
+      "problem": "group-anagrams",
+      "group": "哈希",
+      "order": 1
+    },
+    {
+      "problem": "longest-consecutive-sequence",
+      "group": "哈希",
+      "order": 2
+    },
+    {
+      "problem": "move-zeroes",
+      "group": "双指针",
+      "order": 3
+    },
+    {
+      "problem": "container-with-most-water",
+      "group": "双指针",
+      "order": 4
+    },
+    {
+      "problem": "3sum",
+      "group": "双指针",
+      "order": 5
+    },
+    {
+      "problem": "trapping-rain-water",
+      "group": "双指针",
+      "order": 6
+    },
+    {
+      "problem": "longest-substring-without-repeating-characters",
+      "group": "滑动窗口",
+      "order": 7
+    },
+    {
+      "problem": "find-all-anagrams-in-a-string",
+      "group": "滑动窗口",
+      "order": 8
+    },
+    {
+      "problem": "subarray-sum-equals-k",
+      "group": "子串",
+      "order": 9
+    },
+    {
+      "problem": "sliding-window-maximum",
+      "group": "子串",
+      "order": 10
+    },
+    {
+      "problem": "minimum-window-substring",
+      "group": "子串",
+      "order": 11
+    },
+    {
+      "problem": "maximum-subarray",
+      "group": "普通数组",
+      "order": 12
+    },
+    {
+      "problem": "merge-intervals",
+      "group": "普通数组",
+      "order": 13
+    },
+    {
+      "problem": "rotate-array",
+      "group": "普通数组",
+      "order": 14
+    },
+    {
+      "problem": "product-of-array-except-self",
+      "group": "普通数组",
+      "order": 15
+    },
+    {
+      "problem": "first-missing-positive",
+      "group": "普通数组",
+      "order": 16
+    },
+    {
+      "problem": "set-matrix-zeroes",
+      "group": "矩阵",
+      "order": 17
+    },
+    {
+      "problem": "spiral-matrix",
+      "group": "矩阵",
+      "order": 18
+    },
+    {
+      "problem": "rotate-image",
+      "group": "矩阵",
+      "order": 19
+    },
+    {
+      "problem": "search-a-2d-matrix-ii",
+      "group": "矩阵",
+      "order": 20
+    },
+    {
+      "problem": "intersection-of-two-linked-lists",
+      "group": "链表",
+      "order": 21
+    },
+    {
+      "problem": "reverse-linked-list",
+      "group": "链表",
+      "order": 22
+    },
+    {
+      "problem": "palindrome-linked-list",
+      "group": "链表",
+      "order": 23
+    },
+    {
+      "problem": "linked-list-cycle",
+      "group": "链表",
+      "order": 24
+    },
+    {
+      "problem": "linked-list-cycle-ii",
+      "group": "链表",
+      "order": 25
+    },
+    {
+      "problem": "merge-two-sorted-lists",
+      "group": "链表",
+      "order": 26
+    },
+    {
+      "problem": "add-two-numbers",
+      "group": "链表",
+      "order": 27
+    },
+    {
+      "problem": "remove-nth-node-from-end-of-list",
+      "group": "链表",
+      "order": 28
+    },
+    {
+      "problem": "swap-nodes-in-pairs",
+      "group": "链表",
+      "order": 29
+    },
+    {
+      "problem": "reverse-nodes-in-k-group",
+      "group": "链表",
+      "order": 30
+    },
+    {
+      "problem": "copy-list-with-random-pointer",
+      "group": "链表",
+      "order": 31
+    },
+    {
+      "problem": "sort-list",
+      "group": "链表",
+      "order": 32
+    },
+    {
+      "problem": "merge-k-sorted-lists",
+      "group": "链表",
+      "order": 33
+    },
+    {
+      "problem": "lru-cache",
+      "group": "链表",
+      "order": 34
+    },
+    {
+      "problem": "binary-tree-inorder-traversal",
+      "group": "二叉树",
+      "order": 35
+    },
+    {
+      "problem": "maximum-depth-of-binary-tree",
+      "group": "二叉树",
+      "order": 36
+    },
+    {
+      "problem": "invert-binary-tree",
+      "group": "二叉树",
+      "order": 37
+    },
+    {
+      "problem": "symmetric-tree",
+      "group": "二叉树",
+      "order": 38
+    },
+    {
+      "problem": "diameter-of-binary-tree",
+      "group": "二叉树",
+      "order": 39
+    },
+    {
+      "problem": "binary-tree-level-order-traversal",
+      "group": "二叉树",
+      "order": 40
+    },
+    {
+      "problem": "convert-sorted-array-to-binary-search-tree",
+      "group": "二叉树",
+      "order": 41
+    },
+    {
+      "problem": "validate-binary-search-tree",
+      "group": "二叉树",
+      "order": 42
+    },
+    {
+      "problem": "kth-smallest-element-in-a-bst",
+      "group": "二叉树",
+      "order": 43
+    },
+    {
+      "problem": "binary-tree-right-side-view",
+      "group": "二叉树",
+      "order": 44
+    },
+    {
+      "problem": "flatten-binary-tree-to-linked-list",
+      "group": "二叉树",
+      "order": 45
+    },
+    {
+      "problem": "construct-binary-tree-from-preorder-and-inorder-traversal",
+      "group": "二叉树",
+      "order": 46
+    },
+    {
+      "problem": "path-sum-iii",
+      "group": "二叉树",
+      "order": 47
+    },
+    {
+      "problem": "lowest-common-ancestor-of-a-binary-tree",
+      "group": "二叉树",
+      "order": 48
+    },
+    {
+      "problem": "binary-tree-maximum-path-sum",
+      "group": "二叉树",
+      "order": 49
+    },
+    {
+      "problem": "number-of-islands",
+      "group": "图论",
+      "order": 50
+    },
+    {
+      "problem": "rotting-oranges",
+      "group": "图论",
+      "order": 51
+    },
+    {
+      "problem": "course-schedule",
+      "group": "图论",
+      "order": 52
+    },
+    {
+      "problem": "implement-trie-prefix-tree",
+      "group": "图论",
+      "order": 53
+    },
+    {
+      "problem": "permutations",
+      "group": "回溯",
+      "order": 54
+    },
+    {
+      "problem": "subsets",
+      "group": "回溯",
+      "order": 55
+    },
+    {
+      "problem": "letter-combinations-of-a-phone-number",
+      "group": "回溯",
+      "order": 56
+    },
+    {
+      "problem": "combination-sum",
+      "group": "回溯",
+      "order": 57
+    },
+    {
+      "problem": "generate-parentheses",
+      "group": "回溯",
+      "order": 58
+    },
+    {
+      "problem": "word-search",
+      "group": "回溯",
+      "order": 59
+    },
+    {
+      "problem": "palindrome-partitioning",
+      "group": "回溯",
+      "order": 60
+    },
+    {
+      "problem": "n-queens",
+      "group": "回溯",
+      "order": 61
+    },
+    {
+      "problem": "search-insert-position",
+      "group": "二分查找",
+      "order": 62
+    },
+    {
+      "problem": "search-a-2d-matrix",
+      "group": "二分查找",
+      "order": 63
+    },
+    {
+      "problem": "find-first-and-last-position-of-element-in-sorted-array",
+      "group": "二分查找",
+      "order": 64
+    },
+    {
+      "problem": "search-in-rotated-sorted-array",
+      "group": "二分查找",
+      "order": 65
+    },
+    {
+      "problem": "find-minimum-in-rotated-sorted-array",
+      "group": "二分查找",
+      "order": 66
+    },
+    {
+      "problem": "median-of-two-sorted-arrays",
+      "group": "二分查找",
+      "order": 67
+    },
+    {
+      "problem": "valid-parentheses",
+      "group": "栈",
+      "order": 68
+    },
+    {
+      "problem": "min-stack",
+      "group": "栈",
+      "order": 69
+    },
+    {
+      "problem": "decode-string",
+      "group": "栈",
+      "order": 70
+    },
+    {
+      "problem": "daily-temperatures",
+      "group": "栈",
+      "order": 71
+    },
+    {
+      "problem": "largest-rectangle-in-histogram",
+      "group": "栈",
+      "order": 72
+    },
+    {
+      "problem": "kth-largest-element-in-an-array",
+      "group": "堆",
+      "order": 73
+    },
+    {
+      "problem": "top-k-frequent-elements",
+      "group": "堆",
+      "order": 74
+    },
+    {
+      "problem": "find-median-from-data-stream",
+      "group": "堆",
+      "order": 75
+    },
+    {
+      "problem": "best-time-to-buy-and-sell-stock",
+      "group": "贪心算法",
+      "order": 76
+    },
+    {
+      "problem": "jump-game",
+      "group": "贪心算法",
+      "order": 77
+    },
+    {
+      "problem": "jump-game-ii",
+      "group": "贪心算法",
+      "order": 78
+    },
+    {
+      "problem": "partition-labels",
+      "group": "贪心算法",
+      "order": 79
+    },
+    {
+      "problem": "climbing-stairs",
+      "group": "动态规划",
+      "order": 80
+    },
+    {
+      "problem": "pascals-triangle",
+      "group": "动态规划",
+      "order": 81
+    },
+    {
+      "problem": "house-robber",
+      "group": "动态规划",
+      "order": 82
+    },
+    {
+      "problem": "perfect-squares",
+      "group": "动态规划",
+      "order": 83
+    },
+    {
+      "problem": "coin-change",
+      "group": "动态规划",
+      "order": 84
+    },
+    {
+      "problem": "word-break",
+      "group": "动态规划",
+      "order": 85
+    },
+    {
+      "problem": "longest-increasing-subsequence",
+      "group": "动态规划",
+      "order": 86
+    },
+    {
+      "problem": "maximum-product-subarray",
+      "group": "动态规划",
+      "order": 87
+    },
+    {
+      "problem": "partition-equal-subset-sum",
+      "group": "动态规划",
+      "order": 88
+    },
+    {
+      "problem": "longest-valid-parentheses",
+      "group": "动态规划",
+      "order": 89
+    },
+    {
+      "problem": "unique-paths",
+      "group": "多维动态规划",
+      "order": 90
+    },
+    {
+      "problem": "minimum-path-sum",
+      "group": "多维动态规划",
+      "order": 91
+    },
+    {
+      "problem": "longest-palindromic-substring",
+      "group": "多维动态规划",
+      "order": 92
+    },
+    {
+      "problem": "longest-common-subsequence",
+      "group": "多维动态规划",
+      "order": 93
+    },
+    {
+      "problem": "edit-distance",
+      "group": "多维动态规划",
+      "order": 94
+    },
+    {
+      "problem": "single-number",
+      "group": "技巧",
+      "order": 95
+    },
+    {
+      "problem": "majority-element",
+      "group": "技巧",
+      "order": 96
+    },
+    {
+      "problem": "sort-colors",
+      "group": "技巧",
+      "order": 97
+    },
+    {
+      "problem": "next-permutation",
+      "group": "技巧",
+      "order": 98
+    },
+    {
+      "problem": "find-the-duplicate-number",
+      "group": "技巧",
+      "order": 99
+    }
+  ]
+}

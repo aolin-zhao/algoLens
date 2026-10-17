@@ -1,0 +1,56 @@
+{
+  "id": "70cd45d6-a55f-499a-8a29-bb708d15e520",
+  "slug": "container-with-most-water",
+  "title": "11. 盛最多水的容器",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers"
+  ],
+  "templates": [
+    {
+      "id": "18c0e86f-e93e-4e03-8834-e6c27a3c76de",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxArea",
+        "arguments": [
+          "height"
+        ]
+      }
+    },
+    {
+      "id": "d68da991-a767-4001-885d-5c73306fbfbc",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxArea",
+        "arguments": [
+          "height"
+        ]
+      }
+    },
+    {
+      "id": "672310d6-b5ed-4379-8e52-78cf3fcbb4d6",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxArea",
+        "arguments": [
+          "height"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

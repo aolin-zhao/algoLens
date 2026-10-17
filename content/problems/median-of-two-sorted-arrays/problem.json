@@ -1,0 +1,60 @@
+{
+  "id": "fbeab802-d302-4e77-8fa7-5092442eb212",
+  "slug": "median-of-two-sorted-arrays",
+  "title": "4. 寻找两个正序数组的中位数",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search",
+    "divide-and-conquer"
+  ],
+  "templates": [
+    {
+      "id": "43d131d7-4b4b-41ab-852e-5cdcbcd722c2",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMedianSortedArrays",
+        "arguments": [
+          "nums1",
+          "nums2"
+        ]
+      }
+    },
+    {
+      "id": "fff64892-96ad-439a-8bd8-335c35f17292",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMedianSortedArrays",
+        "arguments": [
+          "nums1",
+          "nums2"
+        ]
+      }
+    },
+    {
+      "id": "26964039-ef38-47a2-843b-98d49dc37499",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "findMedianSortedArrays",
+        "arguments": [
+          "nums1",
+          "nums2"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "e937fd18-4c11-4bca-8b12-337618c9c767",
+  "slug": "reverse-linked-list",
+  "title": "206. 反转链表",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "recursion",
+    "linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

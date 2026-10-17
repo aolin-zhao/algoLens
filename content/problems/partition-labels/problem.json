@@ -1,0 +1,58 @@
+{
+  "id": "d3b90bf4-0001-4382-8afa-92e3e0640f23",
+  "slug": "partition-labels",
+  "title": "763. 划分字母区间",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "greedy",
+    "hash-table",
+    "two-pointers",
+    "string"
+  ],
+  "templates": [
+    {
+      "id": "e93a93b4-9f2e-4e60-8f9d-2fe5f03918f3",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "partitionLabels",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "3429ef0b-2ef1-4e5a-88e7-70d740843dac",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "partitionLabels",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "18326384-a4f8-45f8-8fd0-e05b6e0d5037",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "partitionLabels",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

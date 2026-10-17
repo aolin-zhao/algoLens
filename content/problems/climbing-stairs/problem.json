@@ -1,0 +1,57 @@
+{
+  "id": "f2d58f86-d4e5-4d44-8761-a5bc0a8ad071",
+  "slug": "climbing-stairs",
+  "title": "70. 爬楼梯",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "memoization",
+    "math",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "351ba2a9-d8c3-4dca-8ed5-560d55789233",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "climbStairs",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "81118460-ff0f-4489-8867-04ed32933c07",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "climbStairs",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "190b1ba3-187b-4ae6-8bec-82f61c67c6d1",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "climbStairs",
+        "arguments": [
+          "n"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -38,6 +38,9 @@
 .problem-row:hover { background: var(--surface-hover); }
 .problem-row > svg { color: var(--muted); transition: transform var(--duration-fast) var(--ease); }
 .problem-row:hover > svg { transform: translateX(4px); color: var(--accent-text); }
+.catalog-pagination { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+.catalog-page-buttons { display: flex; align-items: center; gap: 6px; }
+.catalog-page-buttons .button { min-width: 36px; height: 36px; padding: 0 8px; justify-content: center; }
 .row-index { font: 11px var(--font-mono); color: var(--muted); width: 25px; }
 .row-title { flex: 1; font-size: 14px; font-weight: 550; min-width: 0; overflow-wrap: anywhere; }
 .row-title small { display: block; margin-top: 6px; color: var(--muted); font: 11px var(--font-mono); }
@@ -84,6 +87,7 @@
 @media(max-width:1100px) { .workspace { grid-template-columns: 1fr 1fr; height: auto; } .problem-pane { grid-column: 1 / -1; max-height: 250px; } .editor-pane, .trace-pane { min-height: 650px; } .catalog-hero { gap: 32px; } }
 @media(max-width:767px) { .catalog { width: calc(100% - 32px); } .catalog-hero { grid-template-columns: 1fr; padding: 48px 0 40px; gap: 36px; } .hero-copy h1 { font-size: 40px; } .algorithm-preview { width: 100%; max-width: 480px; } .catalog-head { align-items: stretch; flex-direction: column; gap: 20px; } .catalog-filters { width: 100%; } .problem-row { padding: 18px 16px; gap: 12px; } .preview-body { padding: 22px; } .workspace { display: block; } .problem-pane { max-height: none; } .editor-pane { height: 620px; } .trace-pane { height: 580px; } }
 @media(max-width:400px) { .hero-copy h1 { font-size: 34px; } .hero-features { gap: 14px; } .pane-toolbar { flex-wrap: wrap; } .toolbar-actions { width: 100%; justify-content: flex-end; } .playback { gap: 5px; padding-inline: 8px; } .playback .icon-button { width: 30px; } .desktop-break { display: none; } .preview-code { font-size: 9px; } }
+@media(max-width:767px) { .catalog-pagination { flex-wrap: wrap; justify-content: center; } .catalog-pagination > span { width: 100%; text-align: center; } .catalog-page-buttons { max-width: 100%; overflow-x: auto; } }
 
 .editor-pane .pane-toolbar { flex-wrap: wrap; gap: 8px; }
 .editor-pane .toolbar-actions { flex-wrap: wrap; }

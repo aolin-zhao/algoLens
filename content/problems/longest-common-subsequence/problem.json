@@ -1,0 +1,60 @@
+{
+  "id": "b0d0ebef-7639-42cd-8490-f2167d9dd5d6",
+  "slug": "longest-common-subsequence",
+  "title": "1143. 最长公共子序列",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "string",
+    "dynamic-programming",
+    "longest-common-subsequence"
+  ],
+  "templates": [
+    {
+      "id": "317e6cf9-a006-4db9-8311-3e1152c7bbfe",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestCommonSubsequence",
+        "arguments": [
+          "text1",
+          "text2"
+        ]
+      }
+    },
+    {
+      "id": "69b82ca1-1274-4a23-88b7-9872d8a13bea",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestCommonSubsequence",
+        "arguments": [
+          "text1",
+          "text2"
+        ]
+      }
+    },
+    {
+      "id": "8b6e9934-3f3c-4e0f-8810-48e02035eee0",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestCommonSubsequence",
+        "arguments": [
+          "text1",
+          "text2"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "5f46f88f-1717-41c3-8455-6144337c89c7",
+  "slug": "min-stack",
+  "title": "155. 最小栈",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "design"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

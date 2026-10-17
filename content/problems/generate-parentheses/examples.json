@@ -1,0 +1,16 @@
+[
+  {
+    "id": "522266dc-8081-4824-8516-997fdaef0d30",
+    "input": "{\"n\":3}",
+    "output": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "9e0e7bce-4642-4cc6-8900-4ad3db339c23",
+    "input": "{\"n\":1}",
+    "output": "[\"()\"]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

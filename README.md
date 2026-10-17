@@ -8,9 +8,7 @@ Requires Node 22+, pnpm 10+, Wrangler 4+, and a Cloudflare account with Containe
 
 ```sh
 pnpm install
-pnpm db:generate
-pnpm db:migrate:local
-pnpm db:seed:local
+pnpm db:init:local
 pnpm dev:api
 pnpm dev:web
 pnpm dev:admin
@@ -60,7 +58,7 @@ See [Cloudflare deployment](docs/cloudflare-deployment.md) before deploying.
 
 ## 两数之和与代码模式
 
-本地迁移和 seed 会创建力扣第 1 题“两数之和”的中文题面、三个公开示例、六组测试数据和Python 及七种新增语言的核心代码和 main 模板。题目来源：https://leetcode.cn/problems/two-sum/。
+本地初始化会创建力扣第 1 题“两数之和”的中文题面、三个公开示例、六组测试数据和Python 及七种新增语言的核心代码和 main 模板。题目来源：https://leetcode.cn/problems/two-sum/。
 
 编辑器的代码模式可切换：
 
@@ -103,8 +101,25 @@ Web 端参考 LeetCode 题目工作区，使用紧凑顶栏、独立面板、题
 - 支持级别 `1` 表示可执行并返回输出，`2` 表示额外支持逐行/变量轨迹。目前仅 Python 为 `2`，其余语言为 `1`。
 - 每次编译最多 30 秒、运行最多 6 秒；stdout/stderr 各最多返回 64 KiB。任务使用独立临时目录，终止时清理进程组。原生运行进程使用 256 MiB 地址空间限制；Node/Java 设置堆限制，托管运行时和编译器的总内存依赖容器限制。
 
-现有数据库运行 `pnpm db:migrate:local` 应用 `0002_multilanguage_execution.sql`，启用新增语言并补齐两数之和模板；新数据库在迁移后运行 seed。升级保留已存在的自定义模板。然后重建上面的本地运行器镜像并重启容器/API。历史 `PythonRunner` 类名和 `PYTHON_RUNNER` 绑定名保留，以兼容已有部署。
+现有数据库运行 `pnpm db:migrate:local` 应用 `0002_multilanguage_execution.sql`，启用新增语言并补齐两数之和模板；新数据库运行 `pnpm db:init:local` 完成迁移和内容同步。升级保留已存在的自定义模板。然后重建上面的本地运行器镜像并重启容器/API。历史 `PythonRunner` 类名和 `PYTHON_RUNNER` 绑定名保留，以兼容已有部署。
 
 运行器验证：`pnpm test:runner` 使用宿主机编译器（需将编译器放入 PATH，并为 TypeScript 设置 NODE_TYPE_ROOTS）；推荐通过 `RUNNER_URL=http://localhost:8081 pnpm test:runner` 测试真实容器。这会覆盖八种语言的输入输出、两数之和全部种子用例、编译/类型/运行错误、超时、输出上限和新旧数据库升级。
 
 在独立的本地测试数据库启动 API 后，可用 `API_URL=http://localhost:8788 pnpm test:runner` 验证登录、接口校验、队列、运行器、D1/R2 结果持久化和 Python 轨迹读取的完整链路；该命令会注册测试账号并写入测试执行记录。
+
+## 内置题单与多解法
+
+首页「精选题单」进入完整的力扣 Hot 100，按官方分组展示 100 题、101 个解法和 684 份语言实现。题解覆盖 Java、C、C++、Go、Rust、Python、JavaScript、TypeScript；来源中缺少的语言不展示。两数之和保留两种解法及哈希表图解。能通过当前核心调用适配器运行的题解可载入编辑器，其余参考代码可阅读但不会误导用户直接运行。内容来源及许可见 `content/THIRD_PARTY_CONTENT.md`。浏览不需要登录，运行仍需登录。
+
+题解只有在点击「载入编辑器」并确认后才替换对应语言/模式的草稿；替换前的草稿保存在当前浏览器，可用编辑器的「撤回载入」恢复。每个题目/语言/模式保留最近一次载入前的备份；不会修改账号保存的代码。
+
+```sh
+pnpm db:init:local       # 内容校验 → 本地迁移 → 内容同步，可重复执行
+pnpm content:check      # 只校验仓库内容
+pnpm content:sync:local  # 已迁移数据库的内容更新
+pnpm test:content       # 新库、升级、幂等、回滚、用户数据保留、解法正确性
+```
+
+`pnpm dev:api` 会先执行本地初始化。`pnpm db:seed:local` 保留为新同步命令的兼容别名。旧 `scripts/seed.sql` 仅供历史升级测试，不再用于初始化或部署。
+
+源文件在 `content/`；扩充题目、修改解法、发布新环境的方法和数据保护边界见 [内置内容维护](docs/builtin-content.md)。

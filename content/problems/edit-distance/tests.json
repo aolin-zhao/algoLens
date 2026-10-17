@@ -1,0 +1,14 @@
+[
+  {
+    "id": "128e947c-e086-4a29-8e50-f22817cc3704",
+    "input": "{\"word1\":\"horse\",\"word2\":\"ros\"}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "2f79271b-3169-402c-8317-c4976d001aca",
+    "input": "{\"word1\":\"intention\",\"word2\":\"execution\"}",
+    "expected_output": "5",
+    "hidden": 0
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "id": "leetcode-palindrome-partitioning-reference",
+  "slug": "reference",
+  "title": "预处理 + DFS(回溯)",
+  "timeComplexity": "O(n × 2^n)",
+  "spaceComplexity": "O(n^2)",
+  "order": 0,
+  "diagram": null,
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-palindrome-partitioning-reference-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-palindrome-partitioning-reference-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-palindrome-partitioning-reference-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-palindrome-partitioning-reference-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-palindrome-partitioning-reference-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    }
+  ]
+}

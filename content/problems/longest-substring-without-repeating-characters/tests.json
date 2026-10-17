@@ -1,0 +1,32 @@
+[
+  {
+    "id": "115b636b-a62f-409a-8e79-9080026e6da5",
+    "input": "{\"s\":\"abcabcbb\"}",
+    "expected_output": "3",
+    "hidden": 0
+  },
+  {
+    "id": "3284279c-03ff-4c8f-88fb-6b4a16d58558",
+    "input": "{\"s\":\"bbbbb\"}",
+    "expected_output": "1",
+    "hidden": 0
+  },
+  {
+    "id": "017eb48b-e2e8-475b-8de9-cb4626f6b231",
+    "input": "{\"s\":\"pwwkew\"}",
+    "expected_output": "3",
+    "hidden": 1
+  },
+  {
+    "id": "22b22b3a-9e7c-4dd6-8d14-9b115a58e932",
+    "input": "{\"s\":\"\"}",
+    "expected_output": "0",
+    "hidden": 1
+  },
+  {
+    "id": "7de0f82d-249d-49a7-87b9-05c86ea1d78b",
+    "input": "{\"s\":\"abba\"}",
+    "expected_output": "2",
+    "hidden": 1
+  }
+]

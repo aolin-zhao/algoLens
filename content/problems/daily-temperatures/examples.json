@@ -1,0 +1,23 @@
+[
+  {
+    "id": "4aab91ce-12c1-46b0-8646-1bf32710361d",
+    "input": "{\"temperatures\":[73,74,75,71,69,72,76,73]}",
+    "output": "[1,1,4,2,1,1,0,0]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "11907899-e59e-408e-822c-653c062489a5",
+    "input": "{\"temperatures\":[30,40,50,60]}",
+    "output": "[1,1,1,0]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "e424cfc4-2474-4c05-8a69-370a56c4fd4e",
+    "input": "{\"temperatures\":[30,60,90]}",
+    "output": "[1,1,0]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

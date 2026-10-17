@@ -1,3 +1,4 @@
+-- Historical fixture for upgrade regression tests only. Use pnpm db:init:local or db:init:remote for initialization.
 INSERT OR IGNORE INTO roles (id,name,created_at,updated_at) VALUES ('admin','admin',unixepoch()*1000,unixepoch()*1000),('user','user',unixepoch()*1000,unixepoch()*1000);
 INSERT OR IGNORE INTO languages (id,label,support_level,enabled,created_at,updated_at) VALUES
 ('python','Python',2,1,unixepoch()*1000,unixepoch()*1000),

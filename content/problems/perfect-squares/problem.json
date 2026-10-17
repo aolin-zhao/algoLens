@@ -1,0 +1,59 @@
+{
+  "id": "1813a68b-d5d0-4f2c-87d8-2de5b0e73336",
+  "slug": "perfect-squares",
+  "title": "279. 完全平方数",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "breadth-first-search",
+    "math",
+    "dynamic-programming",
+    "knapsack-problem",
+    "complete-knapsack"
+  ],
+  "templates": [
+    {
+      "id": "c1648d5d-f445-4627-8df1-b151340be672",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "numSquares",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "a196540b-24fa-43e7-8042-32e4e5fb65d1",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "numSquares",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "560770e6-c8f3-4bcc-8a4f-3480ad11e689",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "numSquares",
+        "arguments": [
+          "n"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

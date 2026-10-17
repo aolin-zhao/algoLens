@@ -1,0 +1,58 @@
+{
+  "id": "3d7be30c-37fe-40f3-8615-6d9f36110704",
+  "slug": "largest-rectangle-in-histogram",
+  "title": "84. 柱状图中最大的矩形",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "array",
+    "monotonic-stack",
+    "range-minimum-maximum-query"
+  ],
+  "templates": [
+    {
+      "id": "0dabec6e-b1f3-4450-854f-ae887b859c20",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "largestRectangleArea",
+        "arguments": [
+          "heights"
+        ]
+      }
+    },
+    {
+      "id": "4bbc4779-9c03-41d1-87e5-7169985cdf87",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "largestRectangleArea",
+        "arguments": [
+          "heights"
+        ]
+      }
+    },
+    {
+      "id": "fc663459-5b7c-4fe0-8f95-4eaefd34b384",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "largestRectangleArea",
+        "arguments": [
+          "heights"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

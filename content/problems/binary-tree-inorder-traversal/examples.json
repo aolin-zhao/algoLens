@@ -1,0 +1,23 @@
+[
+  {
+    "id": "287f0041-4e83-4276-8656-585d835ad2ab",
+    "input": "{\"root\":[1,null,2,3]}",
+    "output": "[1,3,2]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "08ffbd5a-1c89-49d0-8dfd-52486e738278",
+    "input": "{\"root\":[1,2,3,4,5,null,8,null,null,6,7,9]}",
+    "output": "[]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "7707fadd-c905-4786-8e8d-73a0da3ccda1",
+    "input": "{\"root\":[]}",
+    "output": "[1]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "id": "1398a825-7328-44b4-88ca-b1a683c128ef",
+  "slug": "subsets",
+  "title": "78. 子集",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "bit-manipulation",
+    "array",
+    "backtracking"
+  ],
+  "templates": [
+    {
+      "id": "17e8ca41-b048-4c7d-896e-a6826c1c8f00",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "subsets",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "f32ef9a1-c69b-4efa-8f89-48eadcc9fc2d",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "subsets",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "df329e42-2dd7-470d-8d80-2a337f2270df",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "subsets",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

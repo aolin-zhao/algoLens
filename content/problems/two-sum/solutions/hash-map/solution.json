@@ -1,0 +1,61 @@
+{
+  "id": "leetcode-two-sum-hash-map",
+  "slug": "hash-map",
+  "title": "一遍哈希表",
+  "timeComplexity": "O(n)（平均）",
+  "spaceComplexity": "O(n)",
+  "order": 1,
+  "diagram": "two-sum-hash-map",
+  "explanation": "explanation.md",
+  "implementations": [
+    {
+      "id": "leetcode-two-sum-hash-map-java-core",
+      "languageId": "java",
+      "mode": "core",
+      "code": "java-core.java"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-cpp-core",
+      "languageId": "cpp",
+      "mode": "core",
+      "code": "cpp-core.cpp"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-c-core",
+      "languageId": "c",
+      "mode": "core",
+      "code": "c-core.c"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-python-core",
+      "languageId": "python",
+      "mode": "core",
+      "code": "python-core.py"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-go-core",
+      "languageId": "go",
+      "mode": "core",
+      "code": "go-core.go"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-javascript-core",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "javascript-core.js"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-typescript-core",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "typescript-core.ts"
+    },
+    {
+      "id": "leetcode-two-sum-hash-map-rust-core",
+      "languageId": "rust",
+      "mode": "core",
+      "code": "rust-core.rs"
+    }
+  ],
+  "sourceUrl": "https://leetcode.cn/problems/two-sum/solutions/434597/liang-shu-zhi-he-by-leetcode-solution/"
+}

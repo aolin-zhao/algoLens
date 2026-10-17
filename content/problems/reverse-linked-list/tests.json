@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a38209cf-cee6-48d6-8ee8-8b4a6bc55a88",
+    "input": "{\"head\":[1,2,3,4,5]}",
+    "expected_output": "[5,4,3,2,1]",
+    "hidden": 0
+  },
+  {
+    "id": "1337b359-fe7c-4267-8e31-4633c5387153",
+    "input": "{\"head\":[1,2]}",
+    "expected_output": "[2,1]",
+    "hidden": 0
+  },
+  {
+    "id": "01be3be9-6f5e-44b6-8beb-b82c047f4523",
+    "input": "{\"head\":[]}",
+    "expected_output": "[]",
+    "hidden": 0
+  }
+]

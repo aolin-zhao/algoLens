@@ -1,0 +1,17 @@
+{
+  "id": "2bb3ae01-40d4-4942-8cdf-2e4f2de9920b",
+  "slug": "rotate-image",
+  "title": "48. 旋转图像",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "math",
+    "matrix"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -55,6 +55,11 @@ export async function createResource(env: Bindings, actorId: string, name: strin
 export async function updateResource(env: Bindings, actorId: string, name: string, id: string, raw: unknown) {
   const spec = specFor(name);
   if (!spec || !safeId(id)) return { status: 404, body: { error: 'Resource not found' } };
+  if (['test-cases', 'language-templates', 'problem-examples'].includes(name)) {
+    const owned = await env.DB.prepare(`SELECT content_package FROM ${spec.table} WHERE id=?`).bind(id).first<{ content_package: string | null }>();
+    if (owned?.content_package) return { status: 409, body: { error: '内置内容请在项目 content 目录中修改并同步' } };
+  }
+
   const parsed = inputFor(spec).safeParse(raw);
   if (!parsed.success) return { status: 400, body: { error: parsed.error.flatten() } };
   if (name === 'roles' && id === 'admin' && parsed.data.name !== 'admin') return { status: 403, body: { error: 'Core admin role cannot be renamed' } };
@@ -72,6 +77,11 @@ export async function updateResource(env: Bindings, actorId: string, name: strin
 export async function deleteResource(env: Bindings, actorId: string, name: string, id: string) {
   const spec = specFor(name);
   if (!spec || !safeId(id)) return { status: 404, body: { error: 'Resource not found' } };
+  if (['test-cases', 'language-templates', 'problem-examples'].includes(name)) {
+    const owned = await env.DB.prepare(`SELECT content_package FROM ${spec.table} WHERE id=?`).bind(id).first<{ content_package: string | null }>();
+    if (owned?.content_package) return { status: 409, body: { error: '内置内容请在项目 content 目录中修改并同步' } };
+  }
+
   if (name === 'roles' && id === 'admin') return { status: 403, body: { error: 'Core admin role cannot be deleted' } };
   const now = Date.now();
   const result = await env.DB.prepare(`UPDATE ${spec.table} SET deleted_at=?,updated_at=? WHERE ${'key' in spec ? 'key' : 'id'}=? AND deleted_at IS NULL`).bind(now, now, id).run();

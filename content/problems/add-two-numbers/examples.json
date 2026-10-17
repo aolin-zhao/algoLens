@@ -1,0 +1,23 @@
+[
+  {
+    "id": "de0dff51-9a01-406e-8dc0-453d64b7eae5",
+    "input": "{\"l1\":[2,4,3],\"l2\":[5,6,4]}",
+    "output": "[7,0,8]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "7107319f-7c90-44c5-87c6-be206937c545",
+    "input": "{\"l1\":[0],\"l2\":[0]}",
+    "output": "[0]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "aebb6976-edd9-44b1-88f5-b7cb15352b88",
+    "input": "{\"l1\":[9,9,9,9,9,9,9],\"l2\":[9,9,9,9]}",
+    "output": "[8,9,9,9,0,0,0,1]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

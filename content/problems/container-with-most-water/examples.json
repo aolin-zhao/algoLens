@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5372b5c6-5b12-45f1-834b-869af8bc832c",
+    "input": "{\"height\":[1,8,6,2,5,4,8,3,7]}",
+    "output": "49",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "955025d5-52e9-47bb-8807-4e429c1916c1",
+    "input": "{\"height\":[1,1]}",
+    "output": "1",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

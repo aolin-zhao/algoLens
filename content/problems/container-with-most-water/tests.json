@@ -1,0 +1,26 @@
+[
+  {
+    "id": "a771d4b3-49df-4bac-8737-6ed048abbb8f",
+    "input": "{\"height\":[1,8,6,2,5,4,8,3,7]}",
+    "expected_output": "49",
+    "hidden": 0
+  },
+  {
+    "id": "e1ac408d-030e-48b3-8820-d47f66b17c32",
+    "input": "{\"height\":[1,1]}",
+    "expected_output": "1",
+    "hidden": 0
+  },
+  {
+    "id": "b9d6e471-60e2-4878-8b8e-b2fe286148c5",
+    "input": "{\"height\":[4,3,2,1,4]}",
+    "expected_output": "16",
+    "hidden": 1
+  },
+  {
+    "id": "3e36a3fe-647f-4d4f-8ef6-b4b6e24741d7",
+    "input": "{\"height\":[0,0]}",
+    "expected_output": "0",
+    "hidden": 1
+  }
+]

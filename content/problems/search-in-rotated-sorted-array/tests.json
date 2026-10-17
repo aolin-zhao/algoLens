@@ -1,0 +1,26 @@
+[
+  {
+    "id": "07582d7c-5b01-4a71-84be-d508599c4c19",
+    "input": "{\"nums\":[4,5,6,7,0,1,2],\"target\":0}",
+    "expected_output": "4",
+    "hidden": 0
+  },
+  {
+    "id": "04d817e9-5aa0-4d8f-8094-07604abffd88",
+    "input": "{\"nums\":[4,5,6,7,0,1,2],\"target\":3}",
+    "expected_output": "-1",
+    "hidden": 0
+  },
+  {
+    "id": "34da33ed-5786-46a2-8246-d70463b20acb",
+    "input": "{\"nums\":[1],\"target\":0}",
+    "expected_output": "-1",
+    "hidden": 1
+  },
+  {
+    "id": "fc4fc050-a65a-4c9d-8703-d2c7772f8f51",
+    "input": "{\"nums\":[3,1],\"target\":1}",
+    "expected_output": "1",
+    "hidden": 1
+  }
+]

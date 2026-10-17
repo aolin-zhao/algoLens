@@ -1,0 +1,14 @@
+[
+  {
+    "id": "959e5318-f62c-4d5e-8015-7df21d5daf74",
+    "input": "{\"numCourses\":2,\"prerequisites\":[[1,0]]}",
+    "expected_output": "true",
+    "hidden": 0
+  },
+  {
+    "id": "1cc313fa-83ca-469f-89b7-4e4bbf8c47d2",
+    "input": "{\"numCourses\":2,\"prerequisites\":[[1,0],[0,1]]}",
+    "expected_output": "false",
+    "hidden": 0
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "e386195c-c050-4191-8251-b6a74eb48b5f",
+  "slug": "search-in-rotated-sorted-array",
+  "title": "33. 搜索旋转排序数组",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "binary-search"
+  ],
+  "templates": [
+    {
+      "id": "4cb50cdd-ad6d-4efe-8acd-4b3c1a54f584",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "search",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "b6aa0121-163d-4ae8-894f-3471b37bc5de",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "search",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "3b8a6652-03ba-483d-8c90-9c014242c174",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "search",
+        "arguments": [
+          "nums",
+          "target"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "9cf9bca5-f713-412c-8fb4-6fbd13aec1ff",
+  "slug": "merge-intervals",
+  "title": "56. 合并区间",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "sorting",
+    "quicksort"
+  ],
+  "templates": [
+    {
+      "id": "e984bedd-c853-4e08-8dcc-ed96f05da720",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "merge",
+        "arguments": [
+          "intervals"
+        ]
+      }
+    },
+    {
+      "id": "c5dddc54-d3dd-4b25-8104-87e5510ef20e",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "merge",
+        "arguments": [
+          "intervals"
+        ]
+      }
+    },
+    {
+      "id": "50086bbf-3385-4b02-83aa-0509c60f17e2",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "merge",
+        "arguments": [
+          "intervals"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "4ce5a779-5e41-48d0-85c3-2ddc010960de",
+  "slug": "merge-k-sorted-lists",
+  "title": "23. 合并 K 个升序链表",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "linked-list",
+    "divide-and-conquer",
+    "heap-priority-queue",
+    "merge-sort",
+    "tournament-sort"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

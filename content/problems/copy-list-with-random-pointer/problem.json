@@ -1,0 +1,16 @@
+{
+  "id": "3f6b79ce-1527-49be-8ece-07fc55fda060",
+  "slug": "copy-list-with-random-pointer",
+  "title": "138. 随机链表的复制",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "linked-list"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

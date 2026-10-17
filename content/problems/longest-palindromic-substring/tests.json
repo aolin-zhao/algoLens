@@ -1,0 +1,14 @@
+[
+  {
+    "id": "4856a738-af51-42b9-8ad0-37bff04f7755",
+    "input": "{\"s\":\"babad\"}",
+    "expected_output": "\"bab\"",
+    "hidden": 0
+  },
+  {
+    "id": "0d815019-85e3-46c8-883a-d3c16eca9884",
+    "input": "{\"s\":\"cbbd\"}",
+    "expected_output": "\"bb\"",
+    "hidden": 0
+  }
+]

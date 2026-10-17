@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1b702051-2069-469e-8653-98df57076787",
+    "input": "{\"intersectVal\":8,\"listA\":[4,1,8,4,5],\"listB\":[5,6,1,8,4,5],\"skipA\":2,\"skipB\":3}",
+    "output": "\"Intersected at '8'\"",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "b0fd5428-402e-435b-8fb0-3703f2815ff7",
+    "input": "{\"intersectVal\":2,\"listA\":[1,9,1,2,4],\"listB\":[3,2,4],\"skipA\":3,\"skipB\":1}",
+    "output": "\"Intersected at '2'\"",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "2e69a6a3-0edc-431e-880f-18397863bc20",
+    "input": "{\"intersectVal\":0,\"listA\":[2,6,4],\"listB\":[1,5],\"skipA\":3,\"skipB\":2}",
+    "output": "\"No intersection\"",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

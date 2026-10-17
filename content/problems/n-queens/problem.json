@@ -1,0 +1,57 @@
+{
+  "id": "37d2cd69-ed77-4585-8cfd-814f22a7cfea",
+  "slug": "n-queens",
+  "title": "51. N 皇后",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "backtracking",
+    "algorithm-x"
+  ],
+  "templates": [
+    {
+      "id": "f505b7a1-9909-4e56-887e-00dc9f56854e",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "solveNQueens",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "6374c3a3-edff-4298-8545-68e3eda02670",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "solveNQueens",
+        "arguments": [
+          "n"
+        ]
+      }
+    },
+    {
+      "id": "8565ce50-4e27-43e9-809a-2103fd53d3da",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "solveNQueens",
+        "arguments": [
+          "n"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

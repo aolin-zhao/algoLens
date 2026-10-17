@@ -1,0 +1,9 @@
+[
+  {
+    "id": "adcb0318-4354-402e-8e0e-b497a46644bc",
+    "input": "{\"operations\":[\"LRUCache\",\"put\",\"put\",\"get\",\"put\",\"get\",\"put\",\"get\",\"get\",\"get\"],\"arguments\":[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]}",
+    "output": "[null,null,null,1,null,-1,null,-1,3,4]",
+    "explanation": null,
+    "sort_order": 0
+  }
+]

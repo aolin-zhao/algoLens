@@ -7,6 +7,7 @@ import {
   Routes,
   useParams,
   useNavigate,
+  useSearchParams,
 } from "react-router-dom";
 import {
   QueryClient,
@@ -20,7 +21,7 @@ import { create } from "zustand";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { IslandLayout } from "./workspace-layout";
-import { SolutionDiagram } from "./solution-diagram";
+import { BuiltinLists, ListDetail, SolutionBrowser, contentRequest, type ListProblem, type Implementation } from "./content-browser";
 import { ExecutionTracePanel } from "./execution-trace-panel";
 import { parseExecutionTrace, previousScopeFrames, traceLineForEditor } from "./execution-trace";
 import { editorLanguages, starterCode } from "./editor-languages";
@@ -33,6 +34,7 @@ import {
   Plus,
   X,
   WrapText,
+  Undo2,
   ListFilter,
   LogIn,
   Moon,
@@ -257,13 +259,23 @@ function AuthModal({
 function ProblemList() {
   const [q, setQ] = useState("");
   const [difficulty, setDifficulty] = useState("");
+  const [page, setPage] = useState(1);
+  const pageSize = 20;
   const { data, isLoading, error } = useQuery({
-    queryKey: ["problems", q, difficulty],
+    queryKey: ["problems", q, difficulty, page],
     queryFn: () =>
       request<{ items: Problem[]; total: number }>(
-        `/problems?q=${encodeURIComponent(q)}&difficulty=${difficulty}`,
+        `/problems?q=${encodeURIComponent(q)}&difficulty=${difficulty}&page=${page}&size=${pageSize}`,
       ),
   });
+  const pageCount = Math.ceil((data?.total ?? 0) / pageSize);
+  useEffect(() => {
+    if (data && page > Math.max(1, pageCount)) setPage(Math.max(1, pageCount));
+  }, [data, page, pageCount]);
+  const pageNumbers = Array.from(
+    { length: Math.min(5, pageCount) },
+    (_, index) => Math.min(Math.max(1, page - 2), Math.max(1, pageCount - 4)) + index,
+  );
   return (
     <main className="catalog">
       <section className="catalog-intro">
@@ -282,6 +294,7 @@ function ProblemList() {
           <div><span>在线编码</span><span>图解题解</span><span>自由布局</span></div>
         </div>
       </section>
+      <BuiltinLists />
       <div className="catalog-head" id="problem-catalog">
         <div>
           <h2><ListFilter size={19} /> 全部题目</h2>
@@ -292,13 +305,13 @@ function ProblemList() {
             aria-label="搜索题目"
             placeholder="搜索题目"
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={(e) => { setQ(e.target.value); setPage(1); }}
           />
           <Select
             className="select"
             aria-label="难度"
             value={difficulty}
-            onChange={(value) => setDifficulty(value)}
+            onChange={(value) => { setDifficulty(value); setPage(1); }}
             options={[
               { value: "", label: "全部难度" },
               { value: "easy", label: "简单" },
@@ -327,7 +340,7 @@ function ProblemList() {
               to={`/problems/${problem.id}`}
             >
               <span className="row-index">
-                {String(i + 1).padStart(2, "0")}
+                {String((page - 1) * pageSize + i + 1).padStart(2, "0")}
               </span>
               <span className="row-title">
                 {problem.title}
@@ -348,6 +361,18 @@ function ProblemList() {
             </Link>
           ))}
         </div>
+      )}
+      {!isLoading && !error && pageCount > 1 && (
+        <nav className="catalog-pagination" aria-label="题库分页">
+          <span>第 {page} / {pageCount} 页</span>
+          <div className="catalog-page-buttons">
+            <Button variant="secondary" aria-label="上一页" title="上一页" disabled={page === 1} onClick={() => setPage(page - 1)}><ChevronLeft size={16} /></Button>
+            {pageNumbers.map(number => (
+              <Button key={number} variant={number === page ? "primary" : "secondary"} aria-label={`第 ${number} 页`} aria-current={number === page ? "page" : undefined} onClick={() => setPage(number)}>{number}</Button>
+            ))}
+            <Button variant="secondary" aria-label="下一页" title="下一页" disabled={page === pageCount} onClick={() => setPage(page + 1)}><ChevronRight size={16} /></Button>
+          </div>
+        </nav>
       )}
     </main>
   );
@@ -397,19 +422,22 @@ function ProblemNavigator({ id }: { id: string }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-  const { data } = useQuery({ queryKey: ["workspace-catalog"], queryFn: () => request<{items: Problem[]}>("/problems?size=100") });
+  const [params] = useSearchParams();
+  const list = params.get("list");
+  const { data, error, isPending, refetch } = useQuery<{ items: Pick<Problem, "id" | "slug" | "title" | "difficulty">[] }>({ queryKey: ["workspace-catalog", list], queryFn: () => list ? contentRequest<{ items: ListProblem[] }>(`/problem-lists/${encodeURIComponent(list)}`) : request<{items: Problem[]}>("/problems?size=100") });
   const items = data?.items ?? [];
   const index = items.findIndex(problem => problem.id === id);
-  const go = (problem?: Problem) => { if (problem) { navigate(`/problems/${problem.id}`); setOpen(false); } };
+  const go = (problem?: Pick<Problem, "id">) => { if (problem) { navigate(`/problems/${problem.id}${list ? `?list=${encodeURIComponent(list)}` : ""}`); setOpen(false); } };
   return <><div className="problem-navigation">
-    <Button variant="ghost" aria-label="展开题库" onClick={() => setOpen(true)}><PanelLeft size={16}/><span>题库</span></Button>
+    <Button variant="ghost" aria-label="展开题库" onClick={() => setOpen(true)}><PanelLeft size={16}/><span>{list ? "当前题单" : "题库"}</span></Button>
     <Button variant="ghost" aria-label="上一题" title="上一题" disabled={index <= 0} onClick={() => go(items[index - 1])}><ChevronLeft size={17}/></Button>
     <Button variant="ghost" aria-label="下一题" title="下一题" disabled={index < 0 || index >= items.length - 1} onClick={() => go(items[index + 1])}><ChevronRight size={17}/></Button>
     <Button variant="ghost" aria-label="随机一题" title="随机一题" disabled={items.length < 2} onClick={() => { const other = items.filter(problem => problem.id !== id); go(other[Math.floor(Math.random() * other.length)]); }}><Shuffle size={16}/></Button>
-  </div><Drawer title="题库" placement="left" open={open} onClose={() => setOpen(false)} width={380} className="problem-drawer">
+  </div><Drawer title={list ? "当前题单" : "题库"} placement="left" open={open} onClose={() => setOpen(false)} width={380} className="problem-drawer">
     <Input aria-label="在题库中搜索" placeholder="搜索题目" value={search} onChange={event => setSearch(event.target.value)} />
+    {error ? <p role="alert">{errorZh(error)} <Button onClick={() => void refetch()}>重试</Button></p> : isPending ? <Empty text="正在加载题目…" /> : null}
     <div className="drawer-problems">{items.filter(problem => `${problem.title} ${problem.slug}`.toLowerCase().includes(search.toLowerCase())).map(problem => <button key={problem.id} className={problem.id === id ? "active" : ""} onClick={() => go(problem)}><span>{problem.title}</span><Badge tone={problem.difficulty === "easy" ? "green" : problem.difficulty === "medium" ? "amber" : "red"}>{labelZh(problem.difficulty)}</Badge></button>)}</div>
-    <Link to="/" onClick={() => setOpen(false)} className="drawer-catalog-link">查看全部题目 <ChevronRight size={14}/></Link>
+    <Link to={list ? `/lists/${encodeURIComponent(list)}` : "/"} onClick={() => setOpen(false)} className="drawer-catalog-link">{list ? "返回题单" : "查看全部题目"} <ChevronRight size={14}/></Link>
   </Drawer></>;
 }
 
@@ -487,6 +515,7 @@ function Workspace() {
   const drafts = useRef<Record<string, string>>({});
   const draftKey = `${id}:${language}:${mode}`;
   const [code, setCode] = useState("");
+  const [, setBackupRevision] = useState(0);
   const [input, setInput] = useState("");
   const [jobId, setJobId] = useState("");
   const [runSnapshot, setRunSnapshot] = useState({input:"",output:"",code:"",language:"python",draftKey:""});
@@ -637,6 +666,20 @@ function Workspace() {
     localStorage.setItem(`av_draft:${draftKey}`, next);
     setCode(next);
   };
+  const backupKey = `av_solution_backup:${draftKey}`;
+  // Reading after each load/restore also keeps the undo action available after refresh.
+  const backup = localStorage.getItem(backupKey);
+  const loadSolution = (implementation: Implementation) => {
+    const key = `${id}:${implementation.languageId}:${implementation.mode}`;
+    const previous = key === draftKey ? code : drafts.current[key] ?? localStorage.getItem(`av_draft:${key}`) ?? problem.templates?.find(t => t.languageId === implementation.languageId && t.mode === implementation.mode)?.code ?? "";
+    localStorage.setItem(`av_solution_backup:${key}`, previous);
+    localStorage.setItem(`av_draft:${key}`, implementation.code);
+    drafts.current[key] = implementation.code;
+    setLanguage(implementation.languageId);
+    setMode(implementation.mode);
+    setCode(implementation.code);
+    setBackupRevision(value => value + 1);
+  };
   return (
     <IslandLayout
       resultKey={jobId || message}
@@ -734,6 +777,11 @@ function Workspace() {
                 ]}
               />
               <span className="editor-autosave" />
+              {backup !== null && <Button variant="ghost" aria-label="撤回载入" title="恢复载入题解前的草稿" onClick={() => {
+                if (window.confirm("恢复载入题解前的草稿？当前编辑内容将被替换。")) {
+                  updateCode(backup); localStorage.removeItem(backupKey); setBackupRevision(value => value + 1);
+                }
+              }}><Undo2 size={14}/></Button>}
               <Button variant="ghost" aria-label="自动换行" title="自动换行" onClick={() => setPreferences({...preferences,wordWrap:!preferences.wordWrap})}><WrapText size={14}/></Button>
               <Button
                 variant="ghost"
@@ -802,7 +850,7 @@ function Workspace() {
             </footer>
           </>
         ),
-        solution: <SolutionDiagram slug={problem.slug} input={input} />,
+        solution: <SolutionBrowser key={id} problemId={id} slug={problem.slug} input={input} templates={problem.templates ?? []} onLoad={loadSolution} />,
         trace: <ExecutionTracePanel
           frames={frames} previous={scopeHistory[currentStep]} step={currentStep}
           playing={tracePlaying} speed={traceSpeed} onStep={setTraceStep} onPlaying={setTracePlaying} onSpeed={setTraceSpeed}
@@ -881,6 +929,7 @@ function App() {
         <Header dark={dark} toggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={<ProblemList />} />
+          <Route path="/lists/:slug" element={<ListDetail />} />
           <Route path="/problems/:id" element={<Workspace />} />
         </Routes>
       </div>

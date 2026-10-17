@@ -1,0 +1,56 @@
+{
+  "id": "2823df36-9d2c-4b55-808c-1cd00bd7eeea",
+  "slug": "valid-parentheses",
+  "title": "20. 有效的括号",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "string",
+    "stack"
+  ],
+  "templates": [
+    {
+      "id": "4a189b58-eb29-4217-802c-86901e3df870",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "isValid",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "dfe858c4-7ddb-4e7b-8a33-2335d6d680d7",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "isValid",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "38151f8d-dffc-45b1-82b8-4eeeed0c9d3c",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "isValid",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

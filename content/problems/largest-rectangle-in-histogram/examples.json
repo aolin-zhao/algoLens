@@ -1,0 +1,16 @@
+[
+  {
+    "id": "fb7f800c-3b6a-41d5-8ce3-db0ba18a1fd0",
+    "input": "{\"heights\":[2,1,5,6,2,3]}",
+    "output": "10",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "f0ec5caf-3701-4673-82e6-028d436c66d4",
+    "input": "{\"heights\":[2,4]}",
+    "output": "4",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

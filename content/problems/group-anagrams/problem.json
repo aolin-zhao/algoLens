@@ -1,0 +1,58 @@
+{
+  "id": "c84b5e43-5338-4add-871b-2cb6e5028ebd",
+  "slug": "group-anagrams",
+  "title": "49. 字母异位词分组",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table",
+    "string",
+    "sorting"
+  ],
+  "templates": [
+    {
+      "id": "28f1994c-2368-482a-8309-802a5ef34e3e",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "groupAnagrams",
+        "arguments": [
+          "strs"
+        ]
+      }
+    },
+    {
+      "id": "4d43c1f1-eddc-4f02-8e80-aef512ff0a44",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "groupAnagrams",
+        "arguments": [
+          "strs"
+        ]
+      }
+    },
+    {
+      "id": "718c23a5-ad95-47b7-8d72-e98ff9c7ae9b",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "groupAnagrams",
+        "arguments": [
+          "strs"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

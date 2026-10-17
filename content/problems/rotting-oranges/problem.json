@@ -1,0 +1,57 @@
+{
+  "id": "c71d2c22-6265-424b-89c8-4fa36f8e8efc",
+  "slug": "rotting-oranges",
+  "title": "994. 腐烂的橘子",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "breadth-first-search",
+    "array",
+    "matrix"
+  ],
+  "templates": [
+    {
+      "id": "66611e6d-a27b-4724-8e12-bf1be17c9e3e",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "orangesRotting",
+        "arguments": [
+          "grid"
+        ]
+      }
+    },
+    {
+      "id": "2b5995df-8d45-4d3e-8855-13bb469f0c61",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "orangesRotting",
+        "arguments": [
+          "grid"
+        ]
+      }
+    },
+    {
+      "id": "32a9892a-d790-497a-866c-e3600e093fab",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "orangesRotting",
+        "arguments": [
+          "grid"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

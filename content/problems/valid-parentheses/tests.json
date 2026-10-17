@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1c600762-e476-4e7b-8a70-9d535ef6d682",
+    "input": "{\"s\":\"()\"}",
+    "expected_output": "true",
+    "hidden": 0
+  },
+  {
+    "id": "aa1c38e0-08c1-4b5b-8467-822bd4c0b57a",
+    "input": "{\"s\":\"()[]{}\"}",
+    "expected_output": "true",
+    "hidden": 0
+  },
+  {
+    "id": "c3c99d45-557b-4755-852d-c3d1692b74dc",
+    "input": "{\"s\":\"(]\"}",
+    "expected_output": "false",
+    "hidden": 1
+  },
+  {
+    "id": "802f11f1-b5c7-4784-89af-49aeca76fb4e",
+    "input": "{\"s\":\"([])\"}",
+    "expected_output": "true",
+    "hidden": 1
+  },
+  {
+    "id": "84d49b5b-0349-4004-89ae-c7c8600641f1",
+    "input": "{\"s\":\"([)]\"}",
+    "expected_output": "false",
+    "hidden": 1
+  }
+]

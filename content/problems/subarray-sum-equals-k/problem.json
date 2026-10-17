@@ -1,0 +1,60 @@
+{
+  "id": "8f7f9a9a-2dac-4e93-81a3-db45891f9105",
+  "slug": "subarray-sum-equals-k",
+  "title": "560. 和为 K 的子数组",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table",
+    "prefix-sum"
+  ],
+  "templates": [
+    {
+      "id": "02fc15d4-f00b-47f0-85c1-bc31f2faccb5",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "subarraySum",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "eb20c5c5-b575-473c-8021-05a85991da52",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "subarraySum",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "b2030f27-7b2c-4e5f-8b02-9d9d1bd2ccc7",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "subarraySum",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "c2b219f3-c960-4555-8d14-42bffc696592",
+  "slug": "set-matrix-zeroes",
+  "title": "73. 矩阵置零",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table",
+    "matrix"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "73a1b3da-1b25-4425-8ec6-49cc98afce1e",
+  "slug": "first-missing-positive",
+  "title": "41. 缺失的第一个正数",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "hash-table"
+  ],
+  "templates": [
+    {
+      "id": "7365aeb6-3d87-420c-894c-8970dd17019f",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "firstMissingPositive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "96634570-23de-4e12-82f5-69e1eedd73bd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "firstMissingPositive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "d03c2a71-8a32-42e2-8bb9-ead37fa75fd7",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "firstMissingPositive",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

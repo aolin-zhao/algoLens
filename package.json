@@ -5,14 +5,20 @@
   "scripts": {
     "dev:web": "pnpm --filter @algovision/web dev",
     "dev:admin": "pnpm --filter @algovision/admin dev",
-    "dev:api": "pnpm --filter @algovision/api dev",
+    "dev:api": "pnpm db:init:local && pnpm --filter @algovision/api dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "test:runner": "python3 -m unittest discover -s containers/python-runner -p test_runtime.py -v",
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply algovision --local --config apps/api/wrangler.jsonc",
     "db:migrate:remote": "wrangler d1 migrations apply algovision --remote --config apps/api/wrangler.jsonc",
-    "db:seed:local": "wrangler d1 execute algovision --local --config apps/api/wrangler.jsonc --file scripts/seed.sql"
+    "db:seed:local": "node scripts/sync-content.mjs --local",
+    "content:check": "node scripts/sync-content.mjs --check",
+    "content:sync:local": "node scripts/sync-content.mjs --local",
+    "content:sync:remote": "node scripts/sync-content.mjs --remote",
+    "db:init:local": "pnpm content:check && pnpm db:migrate:local && pnpm content:sync:local",
+    "db:init:remote": "pnpm content:check && pnpm db:migrate:remote && pnpm content:sync:remote",
+    "test:content": "node --test scripts/tests/*.test.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",

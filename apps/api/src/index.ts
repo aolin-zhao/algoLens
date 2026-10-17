@@ -8,6 +8,7 @@ import { audit, auditLogs, dashboard, dbFor, executionJobs, getExecution, langua
 import { PythonRunner } from './runner';
 import { createResource, deleteResource, listResource, updateResource } from './admin-resources';
 import type { Bindings, Variables, ExecutionMessage } from './types';
+import { contentRoutes } from './content-routes';
 import { executionLanguage } from './execution-languages';
 
 export { PythonRunner };
@@ -66,6 +67,8 @@ app.post('/api/auth/bootstrap', async c => {
 });
 app.get('/api/auth/me', async c => { const user = await getUser(c.env, c.req.header('Authorization')); return user ? c.json(user) : c.json({ error: 'Unauthorized' }, 401); });
 app.post('/api/auth/logout', async c => { await revokeSession(c.env, c.req.header('Authorization')); return c.json({ ok: true }); });
+
+app.route('/api', contentRoutes);
 
 app.get('/api/problems', async c => c.json(await listProblems(c.env, { page: c.req.query('page'), size: c.req.query('size'), q: c.req.query('q'), difficulty: c.req.query('difficulty') })));
 app.get('/api/problems/:id', async c => {
@@ -196,6 +199,8 @@ app.post('/api/admin/problems', async c => {
   } catch { return c.json({ error: 'Slug already exists' }, 409); }
 });
 app.put('/api/admin/problems/:id', async c => {
+  const existing = await dbFor(c.env).select({ contentPackage: problems.contentPackage }).from(problems).where(eq(problems.id, c.req.param('id'))).get();
+  if (existing?.contentPackage) return c.json({ error: '内置题目请在项目 content 目录中修改并同步' }, 409);
   const parsed = problemInput.safeParse(await c.req.json());
   if (!parsed.success) return c.json({ error: parsed.error.flatten() }, 400);
   const result = await dbFor(c.env).update(problems).set({ ...parsed.data, updatedAt: new Date() }).where(and(eq(problems.id, c.req.param('id')), isNull(problems.deletedAt))).returning({ id: problems.id });
@@ -204,6 +209,8 @@ app.put('/api/admin/problems/:id', async c => {
   return c.json({ ok: true });
 });
 app.delete('/api/admin/problems/:id', async c => {
+  const existing = await dbFor(c.env).select({ contentPackage: problems.contentPackage }).from(problems).where(eq(problems.id, c.req.param('id'))).get();
+  if (existing?.contentPackage) return c.json({ error: '内置题目请在项目 content 目录中修改并同步' }, 409);
   const result = await dbFor(c.env).update(problems).set({ deletedAt: new Date(), updatedAt: new Date() }).where(and(eq(problems.id, c.req.param('id')), isNull(problems.deletedAt))).returning({ id: problems.id });
   if (!result.length) return c.json({ error: 'Not found' }, 404);
   await audit(c.env, c.get('user').id, 'delete', 'problem', result[0].id);

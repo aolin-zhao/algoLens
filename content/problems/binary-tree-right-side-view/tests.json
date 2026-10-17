@@ -1,0 +1,26 @@
+[
+  {
+    "id": "397ba279-1c18-4667-87b0-b0b62f8aaa39",
+    "input": "{\"root\":[1,2,3,null,5,null,4]}",
+    "expected_output": "[1,3,4]",
+    "hidden": 0
+  },
+  {
+    "id": "a4fd552e-a187-4e34-8868-ac3ac3f95318",
+    "input": "{\"root\":[1,2,3,4,null,null,null,5]}",
+    "expected_output": "[1,3,4,5]",
+    "hidden": 0
+  },
+  {
+    "id": "c33ef029-40df-41c3-8e48-1193d198e798",
+    "input": "{\"root\":[1,null,3]}",
+    "expected_output": "[1,3]",
+    "hidden": 0
+  },
+  {
+    "id": "dcc086c7-5769-4062-8c1d-783e1c011ca1",
+    "input": "{\"root\":[]}",
+    "expected_output": "[]",
+    "hidden": 0
+  }
+]

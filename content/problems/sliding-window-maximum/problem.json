@@ -1,0 +1,63 @@
+{
+  "id": "94bab4f5-9bc4-422c-86d1-969f0f14f15b",
+  "slug": "sliding-window-maximum",
+  "title": "239. 滑动窗口最大值",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "queue",
+    "array",
+    "sliding-window",
+    "monotonic-queue",
+    "heap-priority-queue",
+    "range-minimum-maximum-query"
+  ],
+  "templates": [
+    {
+      "id": "bf83ba91-dc8d-474e-829d-79ee91568247",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSlidingWindow",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "689fec8e-439f-4e55-803b-e80d7006a59a",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSlidingWindow",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "0b69af65-dafb-4354-8138-ec25b51ec407",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxSlidingWindow",
+        "arguments": [
+          "nums",
+          "k"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

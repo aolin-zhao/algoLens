@@ -1,0 +1,19 @@
+{
+  "id": "11c4ec5e-52ea-41f3-8ee1-754a73992831",
+  "slug": "find-median-from-data-stream",
+  "title": "295. 数据流的中位数",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "design",
+    "two-pointers",
+    "data-stream",
+    "sorting",
+    "heap-priority-queue"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

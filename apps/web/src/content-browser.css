@@ -1,0 +1,36 @@
+.builtin-lists { margin: 24px 0 32px; }
+.builtin-list-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.builtin-list-card { display: block; padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg); color: var(--fg); }
+.builtin-list-card h3 { margin: 14px 0 8px; }
+.builtin-list-card p, .list-detail > p { color: var(--muted); line-height: 1.7; }
+.builtin-list-card strong { color: var(--accent); }
+.list-detail > h1 { margin-top: 24px; }
+.list-detail section { margin-top: 28px; }
+.solution-browser { height: 100%; overflow: auto; padding: 24px; }
+.solution-switcher, .solution-complexity { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.solution-browser h2 { margin: 20px 0 12px; }
+.solution-code-card { margin-top: 24px; overflow: hidden; border: 1px solid var(--border); border-radius: 12px; background: var(--editor-background); }
+.solution-code-header { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 12px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.solution-language-tabs { display: flex; align-items: center; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: thin; }
+.solution-language-tabs > button { position: relative; flex: 0 0 auto; padding: 14px 12px; border: 0; border-radius: 0; background: transparent; color: var(--muted); font-family: var(--font-mono); font-size: 13px; font-weight: 500; line-height: 20px; white-space: nowrap; cursor: pointer; }
+.solution-language-tabs > button + button::before { position: absolute; left: 0; top: 18px; height: 12px; width: 1px; background: var(--border-hover); content: ''; }
+.solution-language-tabs > button[aria-selected="true"] { color: var(--fg); font-weight: 700; }
+.solution-language-tabs > button:hover { color: var(--fg); background: var(--surface-hover); }
+.solution-language-tabs > button:focus-visible, .solution-code-panel:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.solution-language-tabs small { font-size: inherit; }
+.solution-code-header .solution-load-button { flex: 0 0 auto; font-size: 12px; color: var(--muted); }
+.solution-code-panel { overflow-x: auto; }
+.solution-source { margin: 0; padding: 18px 20px; border: 0; border-radius: 0; background: transparent; color: var(--editor-foreground); font-family: var(--font-mono); font-size: 13px; line-height: 1.75; tab-size: 4; white-space: pre; }
+.solution-source code { font: inherit; background: transparent; padding: 0; }
+.solution-diagram-section { margin-top: 28px; }
+.solution-diagram-section .solution-document { height: auto; overflow: visible; padding: 0; }
+@media (max-width: 640px) { .solution-browser { padding: 16px; } }
+
+/* Keep all five language choices visible above the action in narrow workspace panels. */
+.solution-code-card { container-type: inline-size; container-name: solution-code; }
+@container solution-code (max-width: 440px) {
+  .solution-code-header { flex-wrap: wrap; gap: 0; }
+  .solution-language-tabs { flex: 1 0 100%; }
+  .solution-language-tabs > button { padding-left: 10px; padding-right: 10px; }
+  .solution-code-header .solution-load-button { margin: 0 0 6px auto; }
+}

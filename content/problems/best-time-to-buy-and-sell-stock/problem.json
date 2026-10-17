@@ -1,0 +1,56 @@
+{
+  "id": "ad08d13c-28b5-46b8-86a3-f5ad704664d7",
+  "slug": "best-time-to-buy-and-sell-stock",
+  "title": "121. 买卖股票的最佳时机",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "853b847d-c178-4e2d-8f5a-7b20a725356c",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProfit",
+        "arguments": [
+          "prices"
+        ]
+      }
+    },
+    {
+      "id": "972d0861-47c8-4087-83b0-5c16a1af4a45",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProfit",
+        "arguments": [
+          "prices"
+        ]
+      }
+    },
+    {
+      "id": "35997098-b7a0-4d7d-8c28-809744467ac2",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProfit",
+        "arguments": [
+          "prices"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

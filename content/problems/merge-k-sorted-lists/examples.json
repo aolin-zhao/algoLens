@@ -1,0 +1,23 @@
+[
+  {
+    "id": "9d447560-a290-4f6a-8505-a4f8db36d090",
+    "input": "{\"lists\":[[1,4,5],[1,3,4],[2,6]]}",
+    "output": "[1,1,2,3,4,4,5,6]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "65ed8db8-80a0-44f7-8c08-6ecd070e8599",
+    "input": "{\"lists\":[]}",
+    "output": "[]",
+    "explanation": null,
+    "sort_order": 1
+  },
+  {
+    "id": "ff5ad3c8-8fbb-4dd4-85db-b558fffd6f8a",
+    "input": "{\"lists\":[[]]}",
+    "output": "[]",
+    "explanation": null,
+    "sort_order": 2
+  }
+]

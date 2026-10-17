@@ -1,0 +1,59 @@
+{
+  "id": "89292641-4d05-4498-854b-71df150d5ac9",
+  "slug": "combination-sum",
+  "title": "39. 组合总和",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "backtracking"
+  ],
+  "templates": [
+    {
+      "id": "a20dd5c4-7aa8-4dc3-8b10-88bce54c4562",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "combinationSum",
+        "arguments": [
+          "candidates",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "7992a166-dca7-450c-83e3-da71399469e0",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "combinationSum",
+        "arguments": [
+          "candidates",
+          "target"
+        ]
+      }
+    },
+    {
+      "id": "6458a5e2-7104-4290-87ab-8a076fbfe69d",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "combinationSum",
+        "arguments": [
+          "candidates",
+          "target"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

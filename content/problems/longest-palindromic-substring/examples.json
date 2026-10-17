@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5214c9ff-0f0f-4331-8e38-85c4a4d5f775",
+    "input": "{\"s\":\"babad\"}",
+    "output": "\"bab\"",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "e9782c7e-ed41-4141-8348-8a31f16b59a5",
+    "input": "{\"s\":\"cbbd\"}",
+    "output": "\"bb\"",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

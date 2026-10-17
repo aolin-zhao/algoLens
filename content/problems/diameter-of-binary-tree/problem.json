@@ -1,0 +1,18 @@
+{
+  "id": "f3079f5a-a2b1-4db5-8276-f6a3d030cf1a",
+  "slug": "diameter-of-binary-tree",
+  "title": "543. 二叉树的直径",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "binary-tree",
+    "dp-on-trees"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

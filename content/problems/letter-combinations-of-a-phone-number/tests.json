@@ -1,0 +1,14 @@
+[
+  {
+    "id": "078f2452-59dd-4a8a-80ce-35fdc3ccf667",
+    "input": "{\"digits\":\"23\"}",
+    "expected_output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]",
+    "hidden": 0
+  },
+  {
+    "id": "978c601d-c43b-4ff9-897d-206cbf512132",
+    "input": "{\"digits\":\"2\"}",
+    "expected_output": "[\"a\",\"b\",\"c\"]",
+    "hidden": 0
+  }
+]

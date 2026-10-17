@@ -1,0 +1,56 @@
+{
+  "id": "aa28130c-308d-4cad-84fb-a5e603138efa",
+  "slug": "pascals-triangle",
+  "title": "118. 杨辉三角",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "b8f44b1d-5908-43b3-8667-ecf0cf9a55a3",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "generate",
+        "arguments": [
+          "numRows"
+        ]
+      }
+    },
+    {
+      "id": "9ae6f932-f467-4407-8e33-bae3fa1d7cfd",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "generate",
+        "arguments": [
+          "numRows"
+        ]
+      }
+    },
+    {
+      "id": "583afa98-ca46-48d2-8f12-a7b5f7d538c0",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "generate",
+        "arguments": [
+          "numRows"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

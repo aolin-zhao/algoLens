@@ -1,0 +1,20 @@
+[
+  {
+    "id": "abe44ec4-59ca-4e20-8c8e-323d68b6c3a0",
+    "input": "{\"s\":\"ADOBECODEBANC\",\"t\":\"ABC\"}",
+    "expected_output": "\"BANC\"",
+    "hidden": 0
+  },
+  {
+    "id": "167c19ad-5aa2-4eec-8ccb-c8304933999e",
+    "input": "{\"s\":\"a\",\"t\":\"a\"}",
+    "expected_output": "\"a\"",
+    "hidden": 0
+  },
+  {
+    "id": "9c73bfca-2df2-4b17-8c5c-fa22b2d37a14",
+    "input": "{\"s\":\"a\",\"t\":\"aa\"}",
+    "expected_output": "\"\"",
+    "hidden": 0
+  }
+]

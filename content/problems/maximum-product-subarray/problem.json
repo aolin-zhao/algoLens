@@ -1,0 +1,56 @@
+{
+  "id": "ea90fb70-ec60-464a-847c-47f4a664a5c3",
+  "slug": "maximum-product-subarray",
+  "title": "152. 乘积最大子数组",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming"
+  ],
+  "templates": [
+    {
+      "id": "813f7ba1-6012-483c-8afd-27cf80ce0247",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProduct",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "674b03bb-1dd5-45dd-811f-3c35e7d7d1cc",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProduct",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "febd1abe-c01e-4565-8766-747cc95e3ba0",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "maxProduct",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

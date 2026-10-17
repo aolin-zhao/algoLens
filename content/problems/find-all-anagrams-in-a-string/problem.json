@@ -1,0 +1,60 @@
+{
+  "id": "14e85353-d6a3-4321-864e-75a5ed7e022f",
+  "slug": "find-all-anagrams-in-a-string",
+  "title": "438. 找到字符串中所有字母异位词",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+  ],
+  "templates": [
+    {
+      "id": "215227ca-48db-4ecf-87c2-dfc154255337",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "findAnagrams",
+        "arguments": [
+          "s",
+          "p"
+        ]
+      }
+    },
+    {
+      "id": "52517a75-5682-4a74-8d50-a5bc48789a7c",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "findAnagrams",
+        "arguments": [
+          "s",
+          "p"
+        ]
+      }
+    },
+    {
+      "id": "0d54835d-07ae-494e-80b0-a513a4d6a8ad",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "findAnagrams",
+        "arguments": [
+          "s",
+          "p"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

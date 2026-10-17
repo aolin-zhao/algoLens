@@ -1,0 +1,58 @@
+{
+  "id": "efba70cd-587b-40ad-8633-9ed00b426c55",
+  "slug": "partition-equal-subset-sum",
+  "title": "416. 分割等和子集",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "dynamic-programming",
+    "knapsack-problem",
+    "0-1-knapsack"
+  ],
+  "templates": [
+    {
+      "id": "f3569a77-f6ed-4f61-8c9b-0914fb718d8e",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "canPartition",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "ebad97bf-4eca-4ea9-8631-de32a7e5e76e",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "canPartition",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "faa1356d-1ac3-4483-8b5f-84f6047acf9f",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "canPartition",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

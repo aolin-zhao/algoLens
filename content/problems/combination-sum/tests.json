@@ -1,0 +1,20 @@
+[
+  {
+    "id": "5259c4cc-2118-4e6a-85e8-0958bb5b17e1",
+    "input": "{\"candidates\":[2,3,6,7],\"target\":7}",
+    "expected_output": "[[2,2,3],[7]]",
+    "hidden": 0
+  },
+  {
+    "id": "5ec08fe8-7331-4dc7-85a5-f2b391b4d0ac",
+    "input": "{\"candidates\":[2,3,5],\"target\":8}",
+    "expected_output": "[[2,2,2,2],[2,3,3],[3,5]]",
+    "hidden": 0
+  },
+  {
+    "id": "be4bb49a-f997-4f13-82c0-d4ded253ea63",
+    "input": "{\"candidates\":[2],\"target\":1}",
+    "expected_output": "[]",
+    "hidden": 0
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "id": "d47e7667-76a2-4c95-8359-d7f341804fee",
+  "slug": "longest-palindromic-substring",
+  "title": "5. 最长回文子串",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "two-pointers",
+    "string",
+    "dynamic-programming",
+    "manacher"
+  ],
+  "templates": [
+    {
+      "id": "7b3f998b-20b3-4b47-87d1-c8872a0f7981",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestPalindrome",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "7b03cc32-c0f4-4e63-8dd3-2a609693d0b7",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestPalindrome",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "a3555be4-79d9-4040-8516-808e164c051c",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestPalindrome",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

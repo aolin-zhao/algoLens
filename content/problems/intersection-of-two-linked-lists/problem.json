@@ -1,0 +1,17 @@
+{
+  "id": "0b054180-dab5-4389-84cb-e90301bd585d",
+  "slug": "intersection-of-two-linked-lists",
+  "title": "160. 相交链表",
+  "difficulty": "easy",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "linked-list",
+    "two-pointers"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b61616ed-3bcb-49e4-8980-fbe5de254042",
+    "input": "{\"n\":4}",
+    "output": "[[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]",
+    "explanation": null,
+    "sort_order": 0
+  },
+  {
+    "id": "a97f3f58-9336-4293-8b2f-3ca80b7198d3",
+    "input": "{\"n\":1}",
+    "output": "[[\"Q\"]]",
+    "explanation": null,
+    "sort_order": 1
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "id": "7c704be4-1f61-41e9-86b1-b51accc1dd82",
+  "slug": "trapping-rain-water",
+  "title": "42. 接雨水",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array",
+    "two-pointers"
+  ],
+  "templates": [
+    {
+      "id": "4c82ed89-6613-4f0e-89b2-95cc13729375",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "trap",
+        "arguments": [
+          "height"
+        ]
+      }
+    },
+    {
+      "id": "98752e31-396f-4bb5-8a64-9466cfca5990",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "trap",
+        "arguments": [
+          "height"
+        ]
+      }
+    },
+    {
+      "id": "20b98952-a4ab-462c-868f-9da096ea0930",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "trap",
+        "arguments": [
+          "height"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

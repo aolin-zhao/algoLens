@@ -1,0 +1,58 @@
+{
+  "id": "376931ec-f6ad-410c-8470-c6ac3d346124",
+  "slug": "longest-valid-parentheses",
+  "title": "32. 最长有效括号",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "stack",
+    "string",
+    "dynamic-programming",
+    "bracket-sequences"
+  ],
+  "templates": [
+    {
+      "id": "4d10ef3f-3ce7-410a-8330-20c044844381",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestValidParentheses",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "6f876855-2cdb-4ff0-8ae6-af1ba62a04fa",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestValidParentheses",
+        "arguments": [
+          "s"
+        ]
+      }
+    },
+    {
+      "id": "dbfae714-ebce-4ec0-80fd-59180a591f20",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "longestValidParentheses",
+        "arguments": [
+          "s"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}

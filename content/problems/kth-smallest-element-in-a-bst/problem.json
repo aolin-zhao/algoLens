@@ -1,0 +1,18 @@
+{
+  "id": "181fdcf2-ca15-4c23-8d37-d2607c9628ed",
+  "slug": "kth-smallest-element-in-a-bst",
+  "title": "230. 二叉搜索树中第 K 小的元素",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "tree",
+    "depth-first-search",
+    "binary-search-tree",
+    "binary-tree"
+  ],
+  "templates": [],
+  "solutions": [
+    "reference"
+  ]
+}

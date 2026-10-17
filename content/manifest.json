@@ -1,0 +1,405 @@
+{
+  "id": "leetcode-hot-100",
+  "version": 5,
+  "problems": [
+    "two-sum",
+    "group-anagrams",
+    "longest-consecutive-sequence",
+    "move-zeroes",
+    "container-with-most-water",
+    "3sum",
+    "trapping-rain-water",
+    "longest-substring-without-repeating-characters",
+    "find-all-anagrams-in-a-string",
+    "subarray-sum-equals-k",
+    "sliding-window-maximum",
+    "minimum-window-substring",
+    "maximum-subarray",
+    "merge-intervals",
+    "rotate-array",
+    "product-of-array-except-self",
+    "first-missing-positive",
+    "set-matrix-zeroes",
+    "spiral-matrix",
+    "rotate-image",
+    "search-a-2d-matrix-ii",
+    "intersection-of-two-linked-lists",
+    "reverse-linked-list",
+    "palindrome-linked-list",
+    "linked-list-cycle",
+    "linked-list-cycle-ii",
+    "merge-two-sorted-lists",
+    "add-two-numbers",
+    "remove-nth-node-from-end-of-list",
+    "swap-nodes-in-pairs",
+    "reverse-nodes-in-k-group",
+    "copy-list-with-random-pointer",
+    "sort-list",
+    "merge-k-sorted-lists",
+    "lru-cache",
+    "binary-tree-inorder-traversal",
+    "maximum-depth-of-binary-tree",
+    "invert-binary-tree",
+    "symmetric-tree",
+    "diameter-of-binary-tree",
+    "binary-tree-level-order-traversal",
+    "convert-sorted-array-to-binary-search-tree",
+    "validate-binary-search-tree",
+    "kth-smallest-element-in-a-bst",
+    "binary-tree-right-side-view",
+    "flatten-binary-tree-to-linked-list",
+    "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "path-sum-iii",
+    "lowest-common-ancestor-of-a-binary-tree",
+    "binary-tree-maximum-path-sum",
+    "number-of-islands",
+    "rotting-oranges",
+    "course-schedule",
+    "implement-trie-prefix-tree",
+    "permutations",
+    "subsets",
+    "letter-combinations-of-a-phone-number",
+    "combination-sum",
+    "generate-parentheses",
+    "word-search",
+    "palindrome-partitioning",
+    "n-queens",
+    "search-insert-position",
+    "search-a-2d-matrix",
+    "find-first-and-last-position-of-element-in-sorted-array",
+    "search-in-rotated-sorted-array",
+    "find-minimum-in-rotated-sorted-array",
+    "median-of-two-sorted-arrays",
+    "valid-parentheses",
+    "min-stack",
+    "decode-string",
+    "daily-temperatures",
+    "largest-rectangle-in-histogram",
+    "kth-largest-element-in-an-array",
+    "top-k-frequent-elements",
+    "find-median-from-data-stream",
+    "best-time-to-buy-and-sell-stock",
+    "jump-game",
+    "jump-game-ii",
+    "partition-labels",
+    "climbing-stairs",
+    "pascals-triangle",
+    "house-robber",
+    "perfect-squares",
+    "coin-change",
+    "word-break",
+    "longest-increasing-subsequence",
+    "maximum-product-subarray",
+    "partition-equal-subset-sum",
+    "longest-valid-parentheses",
+    "unique-paths",
+    "minimum-path-sum",
+    "longest-palindromic-substring",
+    "longest-common-subsequence",
+    "edit-distance",
+    "single-number",
+    "majority-element",
+    "sort-colors",
+    "next-permutation",
+    "find-the-duplicate-number"
+  ],
+  "lists": [
+    "leetcode-hot-100"
+  ],
+  "tags": [
+    {
+      "id": "array",
+      "name": "数组"
+    },
+    {
+      "id": "hash-table",
+      "name": "哈希表"
+    },
+    {
+      "id": "two-pointers",
+      "name": "双指针"
+    },
+    {
+      "id": "string",
+      "name": "字符串"
+    },
+    {
+      "id": "sliding-window",
+      "name": "滑动窗口"
+    },
+    {
+      "id": "prefix-sum",
+      "name": "前缀和"
+    },
+    {
+      "id": "dynamic-programming",
+      "name": "动态规划"
+    },
+    {
+      "id": "stack",
+      "name": "栈"
+    },
+    {
+      "id": "binary-search",
+      "name": "二分查找"
+    },
+    {
+      "id": "sorting",
+      "name": "排序"
+    },
+    {
+      "id": "union-find",
+      "name": "并查集"
+    },
+    {
+      "id": "greedy",
+      "name": "贪心"
+    },
+    {
+      "id": "monotonic-stack",
+      "name": "单调栈"
+    },
+    {
+      "id": "queue",
+      "name": "队列"
+    },
+    {
+      "id": "monotonic-queue",
+      "name": "单调队列"
+    },
+    {
+      "id": "heap-priority-queue",
+      "name": "堆（优先队列）"
+    },
+    {
+      "id": "range-minimum-maximum-query",
+      "name": "range-minimum-maximum-query"
+    },
+    {
+      "id": "divide-and-conquer",
+      "name": "分治"
+    },
+    {
+      "id": "quicksort",
+      "name": "quicksort"
+    },
+    {
+      "id": "math",
+      "name": "数学"
+    },
+    {
+      "id": "matrix",
+      "name": "矩阵"
+    },
+    {
+      "id": "simulation",
+      "name": "模拟"
+    },
+    {
+      "id": "linked-list",
+      "name": "链表"
+    },
+    {
+      "id": "recursion",
+      "name": "递归"
+    },
+    {
+      "id": "floyds-cycle-finding-algorithm",
+      "name": "floyds-cycle-finding-algorithm"
+    },
+    {
+      "id": "merge-sort",
+      "name": "归并排序"
+    },
+    {
+      "id": "tournament-sort",
+      "name": "tournament-sort"
+    },
+    {
+      "id": "design",
+      "name": "设计"
+    },
+    {
+      "id": "doubly-linked-list",
+      "name": "双向链表"
+    },
+    {
+      "id": "tree",
+      "name": "树"
+    },
+    {
+      "id": "depth-first-search",
+      "name": "深度优先搜索"
+    },
+    {
+      "id": "binary-tree",
+      "name": "二叉树"
+    },
+    {
+      "id": "breadth-first-search",
+      "name": "广度优先搜索"
+    },
+    {
+      "id": "dp-on-trees",
+      "name": "dp-on-trees"
+    },
+    {
+      "id": "binary-search-tree",
+      "name": "二叉搜索树"
+    },
+    {
+      "id": "lowest-common-ancestor",
+      "name": "lowest-common-ancestor"
+    },
+    {
+      "id": "binary-lifting",
+      "name": "binary-lifting"
+    },
+    {
+      "id": "graph",
+      "name": "图"
+    },
+    {
+      "id": "topological-sort",
+      "name": "拓扑排序"
+    },
+    {
+      "id": "directed-acyclic-graph",
+      "name": "directed-acyclic-graph"
+    },
+    {
+      "id": "trie",
+      "name": "字典树"
+    },
+    {
+      "id": "backtracking",
+      "name": "回溯"
+    },
+    {
+      "id": "bit-manipulation",
+      "name": "位运算"
+    },
+    {
+      "id": "bracket-sequences",
+      "name": "bracket-sequences"
+    },
+    {
+      "id": "algorithm-x",
+      "name": "algorithm-x"
+    },
+    {
+      "id": "quickselect",
+      "name": "快速选择"
+    },
+    {
+      "id": "bucket-sort",
+      "name": "桶排序"
+    },
+    {
+      "id": "counting",
+      "name": "计数"
+    },
+    {
+      "id": "data-stream",
+      "name": "数据流"
+    },
+    {
+      "id": "memoization",
+      "name": "记忆化"
+    },
+    {
+      "id": "knapsack-problem",
+      "name": "knapsack-problem"
+    },
+    {
+      "id": "complete-knapsack",
+      "name": "complete-knapsack"
+    },
+    {
+      "id": "brute-force-search",
+      "name": "brute-force-search"
+    },
+    {
+      "id": "longest-increasing-subsequence",
+      "name": "longest-increasing-subsequence"
+    },
+    {
+      "id": "0-1-knapsack",
+      "name": "0-1-knapsack"
+    },
+    {
+      "id": "combinatorics",
+      "name": "组合数学"
+    },
+    {
+      "id": "manacher",
+      "name": "manacher"
+    },
+    {
+      "id": "longest-common-subsequence",
+      "name": "longest-common-subsequence"
+    },
+    {
+      "id": "boyer-moore-majority-vote-algorithm",
+      "name": "boyer-moore-majority-vote-algorithm"
+    },
+    {
+      "id": "bubble-sort",
+      "name": "bubble-sort"
+    },
+    {
+      "id": "pigeonhole-principle",
+      "name": "pigeonhole-principle"
+    }
+  ],
+  "languages": [
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "c",
+      "label": "C",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "cpp",
+      "label": "C++",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "go",
+      "label": "Go",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "rust",
+      "label": "Rust",
+      "supportLevel": 1,
+      "enabled": 1
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "supportLevel": 2,
+      "enabled": 1
+    }
+  ]
+}

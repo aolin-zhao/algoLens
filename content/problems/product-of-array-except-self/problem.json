@@ -1,0 +1,55 @@
+{
+  "id": "85a5f411-453a-4155-8726-cfa5d1a442a4",
+  "slug": "product-of-array-except-self",
+  "title": "238. 除自身以外数组的乘积",
+  "difficulty": "medium",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "array"
+  ],
+  "templates": [
+    {
+      "id": "b7f0b9bf-c76f-445b-85a2-03d12aef97f9",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "productExceptSelf",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "be9f14e7-e069-43aa-8141-dc0994db4822",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "productExceptSelf",
+        "arguments": [
+          "nums"
+        ]
+      }
+    },
+    {
+      "id": "526a21bc-1cdc-47b4-80fa-f9e6ab350238",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "productExceptSelf",
+        "arguments": [
+          "nums"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "optimal"
+  ]
+}

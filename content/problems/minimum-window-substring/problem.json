@@ -1,0 +1,60 @@
+{
+  "id": "8f89db97-3cb8-4606-8932-9ee41e44e0db",
+  "slug": "minimum-window-substring",
+  "title": "76. 最小覆盖子串",
+  "difficulty": "hard",
+  "status": "published",
+  "description": "description.md",
+  "tags": [
+    "hash-table",
+    "string",
+    "sliding-window"
+  ],
+  "templates": [
+    {
+      "id": "4d806130-20a8-4e59-8628-255dd4822f88",
+      "languageId": "python",
+      "mode": "core",
+      "code": "templates/python-core.py",
+      "invocation": {
+        "className": "Solution",
+        "method": "minWindow",
+        "arguments": [
+          "s",
+          "t"
+        ]
+      }
+    },
+    {
+      "id": "3b11b5e6-4f62-4b9c-8e87-2c7264d5d749",
+      "languageId": "javascript",
+      "mode": "core",
+      "code": "templates/javascript-core.js",
+      "invocation": {
+        "className": "Solution",
+        "method": "minWindow",
+        "arguments": [
+          "s",
+          "t"
+        ]
+      }
+    },
+    {
+      "id": "ddf34634-7984-4b1a-81c7-a54f2b82c08a",
+      "languageId": "typescript",
+      "mode": "core",
+      "code": "templates/typescript-core.ts",
+      "invocation": {
+        "className": "Solution",
+        "method": "minWindow",
+        "arguments": [
+          "s",
+          "t"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    "reference"
+  ]
+}
